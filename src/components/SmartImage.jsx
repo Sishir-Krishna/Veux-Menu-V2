@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 /**
  * Every food image in the app goes through here.
@@ -19,10 +19,24 @@ export default function SmartImage({
   sizes,
 }) {
   const [status, setStatus] = useState(src ? "loading" : "empty");
+  const imgRef = useRef(null);
 
   // Reset when the gallery swipes to a different photo.
   useEffect(() => {
-    setStatus(src ? "loading" : "empty");
+    if (!src) {
+      setStatus("empty");
+      return;
+    }
+    setStatus("loading");
+
+    /* A cached image can finish loading before React attaches onLoad, so
+       that event never fires and the tile would stay at opacity 0 for good.
+       This is the normal path into the dish sheet, not an edge case: the
+       category page has already fetched the very same file for its thumbnail,
+       so the hero below renders straight from cache. Ask the element what it
+       already knows instead of waiting to be told. */
+    const img = imgRef.current;
+    if (img?.complete) setStatus(img.naturalWidth > 0 ? "ready" : "empty");
   }, [src]);
 
   return (
@@ -32,6 +46,7 @@ export default function SmartImage({
     >
       {src && status !== "empty" && (
         <img
+          ref={imgRef}
           src={src}
           alt={alt}
           sizes={sizes}
