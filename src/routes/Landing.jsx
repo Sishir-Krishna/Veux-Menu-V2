@@ -57,7 +57,6 @@ export default function Landing() {
         <Rule sparkle />
         <p className="site-foot__hours label">{site.hours}</p>
         <p className="site-foot__city">{site.city}</p>
-        <p className="site-foot__parent">{site.parent}</p>
       </footer>
     </main>
   );

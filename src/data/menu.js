@@ -61,14 +61,12 @@
  * customer-facing descriptions, as they were never meant to be read by guests.
  * ═══════════════════════════════════════════════════════════════════════════ */
 
-/* Restaurant details shown on the home screen and in the footer.
-   ⚠️ CHECK THESE — hours and address were taken from the design mock. */
+/* Restaurant details shown on the home screen and in the footer. */
 export const site = {
   name: "Veux Gourmet Eatery",
   tagline: "The Infinite Craving",
   descriptor: "Pan-Asian Gourmet · All-Day Café",
-  parent: "By Baker’s Castle",
-  hours: "Open daily · 8 AM — 11 PM",
+  hours: "Open daily · 11:30 AM — 10:30 PM",
   city: "Siripuram, Visakhapatnam",
 };
 
