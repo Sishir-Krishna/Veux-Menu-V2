@@ -5,11 +5,13 @@ import {
   isGrouped,
   flattenItems,
   sectionHasPhotos,
+  findDish,
 } from "../lib/menu.js";
 import { site } from "../data/menu.js";
 import FeaturedStrip from "../components/FeaturedStrip.jsx";
 import GroupAccordion from "../components/GroupAccordion.jsx";
 import DishRow from "../components/DishRow.jsx";
+import DishOverlay from "../components/DishOverlay.jsx";
 import { Rule, Chevron, Sparkle } from "../components/Ornaments.jsx";
 import "./Category.css";
 
@@ -19,9 +21,10 @@ export default function Category() {
 
   if (!category) return <Navigate to="/" replace />;
 
-  // The dish overlay is the next milestone. Until it exists, keep the URL
-  // honest rather than leaving a route that renders nothing.
-  if (dishSlug) return <Navigate to={`/menu/${categoryId}`} replace />;
+  // A dish that no longer exists — a stale link, or a renamed plate — drops
+  // the guest onto the category rather than a dead end.
+  const dish = dishSlug ? findDish(category, dishSlug) : null;
+  if (dishSlug && !dish) return <Navigate to={`/menu/${categoryId}`} replace />;
 
   const { id, name, tagline, accent, notes, items } = category;
   const strips = featuredStrips(category);
@@ -30,7 +33,10 @@ export default function Category() {
   const flatHasThumbs = sectionHasPhotos(flat);
 
   return (
-    <main className="category" style={{ "--accent": accent }}>
+    <>
+    {/* While the sheet is open the page beneath it is inert: no tab stops,
+        nothing for a screen reader to wander into behind the dialog. */}
+    <main className="category" style={{ "--accent": accent }} inert={Boolean(dish)}>
       <div className="topbar">
         <Link className="topbar__back" to="/" aria-label="Back to all categories">
           <Chevron dir="left" />
@@ -101,5 +107,8 @@ export default function Category() {
         <p className="cat-foot__note">{site.priceNote}</p>
       </footer>
     </main>
+
+    {dish && <DishOverlay dish={dish} category={category} />}
+    </>
   );
 }

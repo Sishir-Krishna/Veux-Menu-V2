@@ -88,15 +88,38 @@ export function sectionHasPhotos(dishes) {
 }
 
 /**
- * Finds a dish by its URL slug anywhere in a category — featured strips
- * first (they carry the richer copy), then the full menu.
+ * Finds a dish by its URL slug anywhere in a category.
+ *
+ * A dish often appears twice — once in a featured strip and once in the full
+ * menu — and the two entries rarely carry the same fields. Caramelized Lamb
+ * Supreme is the clearest case: the featured entry has the `tag` and the
+ * `origin` story, while the full-menu entry is the one holding the `video`.
+ * Returning either on its own silently drops half the dish, so we merge them.
+ *
+ * Featured copy wins any conflict — it is the curated wording — and the full
+ * menu fills in whatever the strip left out. Blank fields never overwrite a
+ * real one, since `desc: ""` is used in the data to mean "nothing to add".
  */
 export function findDish(category, slug) {
+  const matches = [];
+
   for (const strip of featuredStrips(category)) {
     const hit = strip.dishes.find((d) => slugify(d.name) === slug);
-    if (hit) return hit;
+    if (hit) matches.push(hit);
   }
-  return flattenItems(category.items).find((d) => slugify(d.name) === slug) || null;
+
+  const listed = flattenItems(category.items).find((d) => slugify(d.name) === slug);
+  if (listed) matches.push(listed);
+
+  if (!matches.length) return null;
+
+  // Lowest priority first, so higher-priority entries overwrite as we go.
+  return matches.reduceRight((merged, entry) => {
+    for (const [key, value] of Object.entries(entry)) {
+      if (value !== undefined && value !== null && value !== "") merged[key] = value;
+    }
+    return merged;
+  }, {});
 }
 
 /** ₹1,240 — Indian digit grouping. */
