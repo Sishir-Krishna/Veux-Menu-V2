@@ -86,7 +86,7 @@ const menu = [
     countNoun: "plates",
     cover: "/photos/chefs-table/massaman-curry-lamb.webp",
     notes: [
-      { emoji: "🔥", text: "Reduction curries — simmered on low flame for 30 min to concentrate the flavour" },
+      { emoji: "🔥", text: "Every reduction curry spends thirty minutes on a low flame — the time the sauce needs to tighten and the flavour to gather." },
     ],
     featured: {
       ordered: [
@@ -286,7 +286,7 @@ const menu = [
     countNoun: "dishes",
     cover: "/photos/main-course/burgers/caramelized-lamb-supreme.webp",
     notes: [
-      { emoji: "👨‍🍳", text: "All dough, sauces & pasta made in-house with top quality ingredients" },
+      { emoji: "🧑‍🍳", text: "The dough, the pasta and every sauce are made in this kitchen — nothing comes out of a packet." },
     ],
     featured: {
       ordered: [
