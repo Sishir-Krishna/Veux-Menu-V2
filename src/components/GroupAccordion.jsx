@@ -10,8 +10,11 @@ import { sectionHasPhotos } from "../lib/menu.js";
  * groups in Main Course, that keeps the first paint cheap and stops the
  * browser fetching thumbnails nobody has scrolled to.
  */
-export default function GroupAccordion({ group, categoryId, defaultOpen = false }) {
-  const [open, setOpen] = useState(defaultOpen);
+export default function GroupAccordion({ group, categoryId }) {
+  // Every group starts closed, so a category opens as a clean list of
+  // headings — the guest chooses where to look rather than landing
+  // mid-way down whichever group happens to be first in the data.
+  const [open, setOpen] = useState(false);
   const id = useId();
   const showThumbs = useMemo(() => sectionHasPhotos(group.dishes), [group.dishes]);
 

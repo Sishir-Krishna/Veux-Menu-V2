@@ -235,12 +235,6 @@ const menu = [
       ],
     },
     items: [
-      { group: "Soups", dishes: [
-        { name: "Clear Tofu Soup", price: 180, desc: "", photo: "/photos/sushi-and-japanese/soups/clear-tofu-soup.webp" },
-        { name: "Tom Yum", price: 180, desc: "Hot & sour, lemongrass, galangal", photo: "/photos/sushi-and-japanese/soups/tom-yum.webp" },
-        { name: "Spicy Thai Coconut Soup", price: 200, desc: "Creamy coconut, chilli, herbs", photo: "/photos/sushi-and-japanese/soups/spicy-thai-coconut-soup.webp" },
-        { name: "Miso Soup", price: 200, desc: "Dashi, tofu, wakame", photo: "/photos/sushi-and-japanese/soups/miso-soup.webp" },
-      ]},
       { group: "Sushi — Veg", dishes: [
         { name: "Asparagus Maki Roll / Cream Cheese", price: 500, desc: "", photo: "/photos/sushi-and-japanese/sushi/veg/asparagus-maki-roll-cream-cheese.webp" },
         { name: "Mexican Hat Boy", price: 450, desc: "Asparagus tempura, cream cheese, spicy sauce, jalapeño", photo: "/photos/sushi-and-japanese/sushi/veg/mexican-hat-boy.webp" },

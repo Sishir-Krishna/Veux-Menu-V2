@@ -79,13 +79,8 @@ export default function Category() {
 
         {grouped ? (
           <div className="full__groups">
-            {items.map((group, i) => (
-              <GroupAccordion
-                key={group.group}
-                group={group}
-                categoryId={id}
-                defaultOpen={i === 0}
-              />
+            {items.map((group) => (
+              <GroupAccordion key={group.group} group={group} categoryId={id} />
             ))}
           </div>
         ) : (
