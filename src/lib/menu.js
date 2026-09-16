@@ -2,6 +2,17 @@
    Nothing here needs editing to change the menu — edit src/data/menu.js. */
 
 import menu from "../data/menu.js";
+import existingPhotos from "virtual:photos";
+
+/* The photo files that are actually on disk, collected at build time by
+   plugins/photo-manifest.js. menu.js names a path for nearly every dish,
+   but most of those photographs don't exist yet. */
+const PHOTOS = new Set(existingPhotos);
+
+/** Is there a real file behind this path? */
+export function hasPhoto(path) {
+  return Boolean(path) && PHOTOS.has(path);
+}
 
 /** "Chef Special Avocado Roll" → "chef-special-avocado-roll" (used in URLs). */
 export function slugify(name) {
@@ -59,15 +70,21 @@ export function countDishes(category) {
   return names.size;
 }
 
-/** The image a card should lead with. */
-export function leadPhoto(dish) {
-  return dish.photo || dish.photos?.[0] || null;
+/** Every image for a dish that exists on disk (0, 1 or many). */
+export function allPhotos(dish) {
+  const named = dish.photos?.length ? dish.photos : dish.photo ? [dish.photo] : [];
+  return named.filter(hasPhoto);
 }
 
-/** Every image for a dish, as an array (0, 1 or many). */
-export function allPhotos(dish) {
-  if (dish.photos?.length) return dish.photos;
-  return dish.photo ? [dish.photo] : [];
+/** The image a card should lead with, or null if the dish has no photo yet. */
+export function leadPhoto(dish) {
+  return allPhotos(dish)[0] || null;
+}
+
+/** Does any dish in this list have a photograph? Decides whether a section
+    gets a thumbnail column — a half-filled column looks like a mistake. */
+export function sectionHasPhotos(dishes) {
+  return dishes.some((d) => leadPhoto(d) !== null);
 }
 
 /**

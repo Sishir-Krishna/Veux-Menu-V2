@@ -68,6 +68,8 @@ export const site = {
   descriptor: "Pan-Asian Gourmet · All-Day Café",
   hours: "Open daily · 11:30 AM — 10:30 PM",
   city: "Siripuram, Visakhapatnam",
+  // Closing line at the foot of every category page.
+  priceNote: "All prices in ₹ · Taxes as applicable",
 };
 
 const menu = [

@@ -1,9 +1,12 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Landing from "./routes/Landing.jsx";
 import Category from "./routes/Category.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 export default function App() {
   return (
+    <>
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<Landing />} />
 
@@ -15,5 +18,6 @@ export default function App() {
 
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
+    </>
   );
 }
