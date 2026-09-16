@@ -1,0 +1,128 @@
+@import "./tokens.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: var(--fs-body);
+  font-weight: 300;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* Kill the iOS tap-highlight flash — we draw our own press states. */
+  -webkit-tap-highlight-color: transparent;
+}
+
+#root {
+  /* The whole app is a phone-width column, centred if someone opens it
+     on a laptop. Designed at 390px. */
+  max-width: 480px;
+  margin-inline: auto;
+  position: relative;
+  background: var(--cream);
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  margin: 0;
+  line-height: 1.12;
+  letter-spacing: 0.005em;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  border: 0;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Shared type utilities ─────────────────────────────── */
+
+/* The small gold letterspaced label used throughout. */
+.label {
+  font-family: var(--font-text);
+  font-size: var(--fs-micro);
+  font-weight: 400;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.rupee {
+  font-feature-settings: "tnum" 1;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Scroll reveal ─────────────────────────────────────── */
+/* Elements start slightly low and faded; useReveal() adds .is-in. */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+}
+
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}

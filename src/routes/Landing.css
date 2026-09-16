@@ -1,0 +1,244 @@
+/* ═══ LANDING ═══════════════════════════════════════════
+   Cover → index of five categories → footer.
+   Designed at 390px wide.
+   ═══════════════════════════════════════════════════════ */
+
+/* Column layout so the footer sits at the bottom of the screen even when
+   the page is short, rather than leaving a band of bare background. */
+.landing {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Hero ──────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(48px, 13vw, 72px) var(--gutter) clamp(34px, 9vw, 46px);
+  text-align: center;
+  background:
+    radial-gradient(130% 80% at 50% -10%, #ffffff 0%, transparent 62%),
+    linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.hero__leaves {
+  position: absolute;
+  inset: 0;
+  color: var(--gold);
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.hero__leaf {
+  position: absolute;
+}
+
+.hero__leaf--a {
+  top: -78px;
+  left: -104px;
+  transform: rotate(14deg);
+}
+
+.hero__leaf--b {
+  top: 14px;
+  right: -86px;
+  transform: rotate(-38deg);
+}
+
+.hero__leaf--c {
+  bottom: -64px;
+  right: 28px;
+  transform: rotate(128deg);
+  opacity: 0.6;
+}
+
+.hero__lockup {
+  position: relative;
+  width: min(62vw, 238px);
+  height: auto;
+  margin: 0 auto;
+  /* The supplied PNG carries generous transparent padding; this trims the
+     optical gap under the tagline without cropping the artwork. */
+  margin-bottom: -6px;
+  animation: lockup-in 1100ms var(--ease-out) both;
+}
+
+@keyframes lockup-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.hero__rule {
+  position: relative;
+  max-width: 218px;
+  margin: 20px auto 16px;
+  animation: fade-up 900ms 260ms var(--ease-out) both;
+}
+
+.hero__descriptor {
+  position: relative;
+  font-size: var(--fs-small);
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  animation: fade-up 900ms 360ms var(--ease-out) both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ── Index ─────────────────────────────────────────────── */
+.index {
+  padding: clamp(30px, 8vw, 40px) var(--gutter) 8px;
+}
+
+.index__rule {
+  margin-bottom: 26px;
+}
+
+.index__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── Category card ─────────────────────────────────────── */
+.cat {
+  --cat-fg: var(--ink);
+  --cat-sub: var(--ink-muted);
+
+  position: relative;
+  display: grid;
+  grid-template-columns: 78px 1fr 16px;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid var(--card-edge);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    148deg,
+    var(--card) 0%,
+    color-mix(in srgb, var(--accent) 5%, var(--card)) 100%
+  );
+  box-shadow: var(--shadow-card);
+  color: var(--cat-fg);
+  transition: transform var(--dur-fast) var(--ease),
+    box-shadow var(--dur-fast) var(--ease);
+}
+
+.cat:active {
+  transform: scale(0.985);
+  box-shadow: 0 1px 2px rgba(69, 17, 31, 0.04);
+}
+
+/* The signature card — solid aubergine, the one dark note on the page. */
+.cat--dark {
+  --cat-fg: var(--cream);
+  --cat-sub: rgba(250, 247, 242, 0.76);
+
+  border-color: transparent;
+  background: linear-gradient(140deg, var(--aubergine) 0%, var(--aubergine-lift) 100%);
+  box-shadow: var(--shadow-dark);
+}
+
+.cat__tile {
+  border-radius: var(--radius-tile);
+  border: 1px solid var(--card-edge);
+}
+
+.cat--dark .cat__tile {
+  border-color: rgba(196, 162, 101, 0.34);
+}
+
+.cat__text {
+  min-width: 0;
+}
+
+.cat__eyebrow {
+  display: block;
+  color: var(--gold-light);
+  margin-bottom: 5px;
+}
+
+.cat__name {
+  font-size: clamp(25px, 6.8vw, 28px);
+  color: var(--cat-fg);
+  margin-bottom: 4px;
+  /* Keeps "Sushi & Japanese" on one line in the narrow text column. */
+  white-space: nowrap;
+}
+
+.cat__tagline {
+  font-size: var(--fs-small);
+  line-height: 1.45;
+  color: var(--cat-sub);
+  margin-bottom: 7px;
+  text-wrap: pretty;
+}
+
+.cat__count {
+  display: block;
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.cat--dark .cat__count {
+  color: var(--gold-light);
+}
+
+.cat__chev {
+  justify-self: end;
+  color: var(--accent);
+  opacity: 0.55;
+}
+
+.cat--dark .cat__chev {
+  color: var(--gold-light);
+  opacity: 0.85;
+}
+
+/* ── Footer ────────────────────────────────────────────── */
+.site-foot {
+  margin-top: auto;
+  padding: 46px var(--gutter) calc(34px + env(safe-area-inset-bottom));
+  text-align: center;
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+}
+
+.site-foot__hours {
+  margin-top: 22px;
+  color: var(--ink-muted);
+}
+
+.site-foot__city {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 19px;
+  color: var(--gold);
+  margin-top: 6px;
+}
+
+.site-foot__parent {
+  font-size: var(--fs-small);
+  color: var(--ink-faint);
+  margin-top: 14px;
+}

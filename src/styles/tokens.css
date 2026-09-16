@@ -1,0 +1,73 @@
+/* ───────────────────────────────────────────────────────────
+   VEUX — design tokens
+   Every colour, size and easing in the app resolves to a value
+   defined here. Change a brand colour once, it changes everywhere.
+   ─────────────────────────────────────────────────────────── */
+
+:root {
+  /* Brand ------------------------------------------------- */
+  --aubergine: #45111f;
+  --aubergine-lift: #5c1a2c; /* for gradient on the dark card */
+  --rose: #6b2238;
+  --gold: #805e27;
+  --gold-light: #c4a265;
+  --gold-muted: #a8884a;
+
+  --cream: #faf7f2;
+  --cream-dark: #f0ebe2;
+  --stone: #6b6058;
+
+  --ink: #2c2118;
+  --ink-muted: #6b6058;
+  --ink-faint: #9a9089;
+
+  /* Hairlines & surfaces ---------------------------------- */
+  --rule: rgba(128, 94, 39, 0.22);
+  --rule-soft: rgba(128, 94, 39, 0.12);
+  --card: #fdfbf8;
+  --card-edge: rgba(128, 94, 39, 0.16);
+  --shadow-card: 0 1px 2px rgba(69, 17, 31, 0.03), 0 8px 24px -12px rgba(69, 17, 31, 0.1);
+  --shadow-dark: 0 2px 4px rgba(69, 17, 31, 0.12), 0 14px 32px -14px rgba(69, 17, 31, 0.45);
+
+  /* Type -------------------------------------------------- */
+  /* Swap --font-display to "Ivy Presto Display" when the licensed
+     webfont is dropped into /public/fonts (see README). */
+  --font-display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --font-text: "Jost", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
+
+  --display-weight: 300;
+
+  /* Never below 14px for body copy. */
+  --fs-micro: 11px;   /* letterspaced gold labels only — not body copy */
+  --fs-small: 14px;
+  --fs-body: 15px;
+  --fs-lead: 17px;
+
+  --track-label: 0.18em;
+  --track-wide: 0.32em;
+
+  /* Layout ------------------------------------------------ */
+  --gutter: 20px;
+  --radius: 14px;
+  --radius-lg: 18px;
+  --radius-tile: 12px;
+
+  /* Motion ------------------------------------------------ */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 380ms;
+  --dur-fast: 200ms;
+}
+
+/* Respect the system setting — no reveal animations for anyone who
+   has asked their phone to stop moving things around. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
