@@ -60,7 +60,7 @@
   height: auto;
   margin: 0 auto;
   /* The supplied PNG carries generous transparent padding; this trims the
-     optical gap under the tagline without cropping the artwork. */
+     optical gap under the wordmark without cropping the artwork. */
   margin-bottom: -6px;
   animation: lockup-in 1100ms var(--ease-out) both;
 }

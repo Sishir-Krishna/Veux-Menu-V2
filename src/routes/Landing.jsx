@@ -20,7 +20,7 @@ export default function Landing() {
 
         <img
           className="hero__lockup"
-          src="/logos/veux-primary-light.png"
+          src="/logos/veux-primary-color.png"
           alt="Veux — The Infinite Craving"
           width="5328"
           height="3899"
