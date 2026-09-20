@@ -20,10 +20,10 @@ export default function Landing() {
 
         <img
           className="hero__lockup"
-          src="/logos/logoprimaryclean.png"
-          alt={`${site.name} — ${site.tagline}`}
-          width="420"
-          height="229"
+          src="/logos/veux-primary-light.png"
+          alt="Veux — The Infinite Craving"
+          width="5328"
+          height="3899"
           fetchPriority="high"
           decoding="async"
         />

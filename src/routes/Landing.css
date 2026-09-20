@@ -56,7 +56,7 @@
 
 .hero__lockup {
   position: relative;
-  width: min(62vw, 238px);
+  width: min(62vw, 240px);
   height: auto;
   margin: 0 auto;
   /* The supplied PNG carries generous transparent padding; this trims the
