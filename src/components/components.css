@@ -56,6 +56,24 @@
     linear-gradient(150deg, var(--cream-dark), #e9e2d5);
 }
 
+/* On the dark card that opens every strip, the cream tile read as a pale
+   slab cut out of the aubergine. Same tile, tuned to its surroundings. */
+.fcard--dark .smartimg--empty,
+.cat--dark .smartimg--empty {
+  background:
+    radial-gradient(120% 90% at 30% 0%, rgba(196, 162, 101, 0.16), transparent 60%),
+    linear-gradient(150deg, var(--aubergine-lift), var(--aubergine));
+}
+
+.fcard--dark .smartimg__mark img,
+.cat--dark .smartimg__mark img {
+  opacity: 0.3;
+  /* The mark is a dark-gold PNG; recolour it to the light gold the rest of
+     the dark card uses rather than shipping a second file. */
+  filter: brightness(0) saturate(100%) invert(72%) sepia(26%) saturate(560%)
+    hue-rotate(2deg) brightness(92%) contrast(88%);
+}
+
 .smartimg__mark {
   position: absolute;
   inset: 0;

@@ -9,6 +9,8 @@ import { slugify, leadPhoto, formatPrice } from "../lib/menu.js";
  * The first card carries the dark treatment so each strip opens with weight.
  */
 export default function FeaturedStrip({ title, dishes, categoryId }) {
+  const tagging = tagsWorthShowing(dishes, title);
+
   return (
     <section className="strip">
       <Rule label={title} className="strip__rule" />
@@ -19,7 +21,7 @@ export default function FeaturedStrip({ title, dishes, categoryId }) {
             <FeaturedCard
               dish={dish}
               categoryId={categoryId}
-              stripTitle={title}
+              tag={tagging ? dish.tag : null}
               dark={i === 0}
             />
           </li>
@@ -29,32 +31,47 @@ export default function FeaturedStrip({ title, dishes, categoryId }) {
   );
 }
 
-/* The strip heading already says "Most Ordered" — repeating it on the card
-   as a pill is noise. Only show a tag that adds something. */
-function tagWorthShowing(tag, stripTitle) {
-  if (!tag) return null;
-  const norm = (s) => s.toLowerCase().replace(/[^a-z]/g, "");
-  return norm(tag) === norm(stripTitle) ? null : tag;
+/**
+ * A tag only earns its place if it distinguishes one card from its
+ * neighbours. Beverages tagged all three cards "Top pick" and Main Course
+ * tagged all four "Chef's pick" — a pill on every card says nothing the
+ * strip heading has not already said. Desserts, where each card carries a
+ * different word, keeps them.
+ */
+function tagsWorthShowing(dishes, stripTitle) {
+  const norm = (s) => (s || "").toLowerCase().replace(/[^a-z]/g, "");
+  const tags = dishes.map((d) => norm(d.tag));
+
+  if (tags.every((t) => !t)) return false;
+  if (tags.every((t) => t === tags[0])) return false;
+  return !tags.every((t) => !t || t === norm(stripTitle));
 }
 
-function FeaturedCard({ dish, categoryId, stripTitle, dark }) {
-  const tag = tagWorthShowing(dish.tag, stripTitle);
+function FeaturedCard({ dish, categoryId, tag, dark }) {
+  const photo = leadPhoto(dish);
 
   return (
     <Link
-      className={`fcard ${dark ? "fcard--dark" : ""}`}
+      className={`fcard ${dark ? "fcard--dark" : ""} ${photo ? "" : "fcard--typeonly"}`}
       to={`/menu/${categoryId}/${slugify(dish.name)}`}
     >
-      <SmartImage
-        src={leadPhoto(dish)}
-        alt={dish.name}
-        className="fcard__photo"
-        ratio="4 / 3"
-      />
+      {/* Two thirds of the menu has not been photographed. Rather than
+          reserve the photo zone for a tile that is not coming, a card with
+          no picture gives the space to the words and reads as a deliberate
+          piece of typography. */}
+      {photo && (
+        <SmartImage
+          src={photo}
+          alt={dish.name}
+          className="fcard__photo"
+          ratio="4 / 3"
+        />
+      )}
 
       <span className="fcard__caption">
         {tag && <span className="label fcard__tag">{tag}</span>}
         <span className="fcard__name">{dish.name}</span>
+        {dish.desc && <span className="fcard__desc">{dish.desc}</span>}
         <span className="fcard__price rupee">{formatPrice(dish.price)}</span>
       </span>
     </Link>

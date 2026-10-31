@@ -1,7 +1,6 @@
-import { useId, useMemo, useState } from "react";
+import { useId, useState } from "react";
 import DishRow from "./DishRow.jsx";
 import { Chevron } from "./Ornaments.jsx";
-import { sectionHasPhotos } from "../lib/menu.js";
 
 /**
  * A collapsible sub-group of the full menu (Beverages → Hot Coffees, …).
@@ -10,13 +9,12 @@ import { sectionHasPhotos } from "../lib/menu.js";
  * groups in Main Course, that keeps the first paint cheap and stops the
  * browser fetching thumbnails nobody has scrolled to.
  */
-export default function GroupAccordion({ group, categoryId }) {
+export default function GroupAccordion({ group, categoryId, showThumbs }) {
   // Every group starts closed, so a category opens as a clean list of
   // headings — the guest chooses where to look rather than landing
   // mid-way down whichever group happens to be first in the data.
   const [open, setOpen] = useState(false);
   const id = useId();
-  const showThumbs = useMemo(() => sectionHasPhotos(group.dishes), [group.dishes]);
 
   return (
     <div className={`group ${open ? "group--open" : ""}`}>

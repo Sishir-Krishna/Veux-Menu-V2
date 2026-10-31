@@ -4,7 +4,7 @@ import {
   featuredStrips,
   isGrouped,
   flattenItems,
-  sectionHasPhotos,
+  categoryHasPhotos,
   findDish,
 } from "../lib/menu.js";
 import { site } from "../data/menu.js";
@@ -30,7 +30,9 @@ export default function Category() {
   const strips = featuredStrips(category);
   const grouped = isGrouped(items);
   const flat = grouped ? [] : flattenItems(items);
-  const flatHasThumbs = sectionHasPhotos(flat);
+  /* One decision for the whole page: every group reserves the thumbnail
+     slot if any dish in the category has been photographed. */
+  const showThumbs = categoryHasPhotos(category);
 
   return (
     <>
@@ -80,7 +82,12 @@ export default function Category() {
         {grouped ? (
           <div className="full__groups">
             {items.map((group) => (
-              <GroupAccordion key={group.group} group={group} categoryId={id} />
+              <GroupAccordion
+                key={group.group}
+                group={group}
+                categoryId={id}
+                showThumbs={showThumbs}
+              />
             ))}
           </div>
         ) : (
@@ -90,7 +97,7 @@ export default function Category() {
                 key={dish.name}
                 dish={dish}
                 categoryId={id}
-                showThumbs={flatHasThumbs}
+                showThumbs={showThumbs}
               />
             ))}
           </ul>

@@ -144,10 +144,22 @@ export function leadPhoto(dish) {
   return allPhotos(dish)[0] || null;
 }
 
-/** Does any dish in this list have a photograph? Decides whether a section
-    gets a thumbnail column — a half-filled column looks like a mistake. */
+/** Does any dish in this list have a photograph? */
 export function sectionHasPhotos(dishes) {
   return dishes.some((d) => leadPhoto(d) !== null);
+}
+
+/**
+ * Whether a category reserves the thumbnail column at all.
+ *
+ * Decided once for the whole page rather than per group: Main Course has
+ * fourteen groups and only some of them have been photographed, so deciding
+ * group by group slid every dish name 68px sideways as the guest scrolled.
+ * One left edge down the page is worth an empty slot next to the dishes
+ * still waiting on the shoot.
+ */
+export function categoryHasPhotos(category) {
+  return sectionHasPhotos(flattenItems(category.items));
 }
 
 /**
