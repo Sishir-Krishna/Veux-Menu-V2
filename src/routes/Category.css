@@ -346,12 +346,64 @@
   text-wrap: pretty;
 }
 
+.row__prices {
+  display: block;
+  text-align: right;
+}
+
 .row__price {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
   font-size: var(--fs-small);
   letter-spacing: 0.04em;
   color: var(--gold);
   white-space: nowrap;
   align-self: center;
+}
+
+/* The second price sits under the first rather than inside the description,
+   where it used to read as prose and never lined up. */
+.row__variants {
+  display: block;
+  margin-top: 2px;
+  font-size: var(--fs-micro);
+  letter-spacing: 0.03em;
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+
+.row__variants .variants__item + .variants__item::before {
+  content: " · ";
+}
+
+/* ── Veg / non-veg mark ────────────────────────────────────────
+   The square every Indian menu uses. Drawn rather than imaged so it stays
+   crisp, and only ever shown for a dish whose diet the chef has confirmed. */
+.dietmark {
+  flex: none;
+  width: 11px;
+  height: 11px;
+  border: 1.5px solid currentColor;
+  border-radius: 2px;
+  position: relative;
+}
+
+.dietmark::after {
+  content: "";
+  position: absolute;
+  inset: 1.5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.dietmark--veg {
+  color: var(--veg);
+}
+
+.dietmark--nonveg {
+  color: var(--nonveg);
 }
 
 /* ── Foot ──────────────────────────────────────────────── */

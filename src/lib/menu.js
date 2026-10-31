@@ -24,6 +24,61 @@ export function slugify(name) {
     .replace(/^-|-$/g, "");
 }
 
+/* What makes two listings the same plate: what you get and what you pay.
+   `diet` and `tag` are notes about a dish, not the dish itself. */
+function orderableIdentity(dish) {
+  const photos = dish.photos?.length ? dish.photos : [dish.photo].filter(Boolean);
+  return JSON.stringify([dish.price, dish.desc || "", photos]);
+}
+
+/**
+ * Two dishes in one category that slugify the same share a URL, so one of
+ * them is unreachable — the router can only ever find the first. That is
+ * invisible until a guest taps the second one, so we check at load instead.
+ *
+ * A plate deliberately cross-listed under two headings is not that bug: both
+ * rows lead to the same plate at the same price, which is what the guest
+ * expects. We only refuse the case where the two entries differ, because
+ * there the second dish genuinely cannot be reached.
+ */
+export function assertUniqueSlugs(categories = menu) {
+  const unreachable = [];
+  const crossListed = [];
+
+  for (const category of categories) {
+    const seen = new Map();
+    for (const dish of flattenItems(category.items)) {
+      const slug = slugify(dish.name);
+      const first = seen.get(slug);
+      if (!first) {
+        seen.set(slug, dish);
+      } else if (orderableIdentity(first) === orderableIdentity(dish)) {
+        crossListed.push(`${category.id}/${slug} — "${dish.name}" is listed twice`);
+      } else {
+        unreachable.push(
+          `${category.id}/${slug} — "${first.name}" (₹${first.price}) and "${dish.name}" (₹${dish.price})`
+        );
+      }
+    }
+  }
+
+  if (crossListed.length && import.meta.env?.DEV) {
+    console.warn(
+      `The same plate appears twice under one category. Harmless — both rows open the same dish — but worth confirming it is deliberate:\n  ${crossListed.join("\n  ")}`
+    );
+  }
+
+  if (unreachable.length) {
+    const message = `Two different dishes share one URL, so only the first can ever open. Rename one of each pair in src/data/menu.js:\n  ${unreachable.join("\n  ")}`;
+    if (import.meta.env?.DEV) throw new Error(message);
+    console.error(message);
+  }
+
+  return { unreachable, crossListed };
+}
+
+assertUniqueSlugs();
+
 export function getCategory(id) {
   return menu.find((c) => c.id === id);
 }
@@ -34,6 +89,14 @@ export function flattenItems(items = []) {
     return items.flatMap((g) => g.dishes);
   }
   return items;
+}
+
+/** The same list, each dish paired with the group heading it sits under. */
+function flattenWithGroups(items = []) {
+  if (items.length && items[0].dishes) {
+    return items.flatMap((g) => g.dishes.map((dish) => ({ dish, group: g.group })));
+  }
+  return items.map((dish) => ({ dish, group: null }));
 }
 
 export function isGrouped(items = []) {
@@ -108,18 +171,27 @@ export function findDish(category, slug) {
     if (hit) matches.push(hit);
   }
 
-  const listed = flattenItems(category.items).find((d) => slugify(d.name) === slug);
-  if (listed) matches.push(listed);
+  const listed = flattenWithGroups(category.items).find(
+    (entry) => slugify(entry.dish.name) === slug
+  );
+  if (listed) matches.push(listed.dish);
 
   if (!matches.length) return null;
 
   // Lowest priority first, so higher-priority entries overwrite as we go.
-  return matches.reduceRight((merged, entry) => {
+  const merged = matches.reduceRight((acc, entry) => {
     for (const [key, value] of Object.entries(entry)) {
-      if (value !== undefined && value !== null && value !== "") merged[key] = value;
+      if (value !== undefined && value !== null && value !== "") acc[key] = value;
     }
-    return merged;
+    return acc;
   }, {});
+
+  /* The portion count lives in the group heading — "Nigiri (4 pcs)",
+     "Sashimi (3 pcs)" — so a dish opened on its own would otherwise never
+     tell the guest how many pieces arrive. Carried as `group`, not merged
+     in as data, since it belongs to the listing rather than the dish. */
+  if (listed?.group) merged.group = listed.group;
+  return merged;
 }
 
 /** ₹1,240 — Indian digit grouping. */

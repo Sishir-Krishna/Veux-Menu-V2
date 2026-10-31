@@ -21,6 +21,12 @@
   --ink-muted: #6b6058;
   --ink-faint: #9a9089;
 
+  /* Diet marks. Outside the brand palette on purpose: a guest reads the
+     green square as the standard Indian vegetarian symbol, and a brand-
+     tinted one would not carry that meaning. */
+  --veg: #1e7a1e;
+  --nonveg: #45111f;
+
   /* Hairlines & surfaces ---------------------------------- */
   --rule: rgba(128, 94, 39, 0.22);
   --rule-soft: rgba(128, 94, 39, 0.12);

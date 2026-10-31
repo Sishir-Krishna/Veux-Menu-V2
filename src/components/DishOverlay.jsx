@@ -1,7 +1,8 @@
-import { useEffect, useId, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import SmartImage from "./SmartImage.jsx";
 import { Chevron, Rule, Sparkle } from "./Ornaments.jsx";
+import Variants from "./Variants.jsx";
 import { allPhotos, formatPrice } from "../lib/menu.js";
 import { site } from "../data/menu.js";
 import useScrollLock from "../lib/useScrollLock.js";
@@ -35,10 +36,10 @@ export default function DishOverlay({ dish, category }) {
      category keeps its scroll position and the history stack stays honest.
      Arriving straight on a dish URL — a shared link, a reload, a QR code —
      has no such entry, so we step up to the category instead of leaving. */
-  function close() {
+  const close = useCallback(() => {
     if (location.key !== "default") navigate(-1);
     else navigate(`/menu/${category.id}`, { replace: true });
-  }
+  }, [location.key, navigate, category.id]);
 
   // The sheet owns the screen while it is open: send it the keyboard, and
   // let Escape dismiss it the way the back gesture does.
@@ -48,14 +49,11 @@ export default function DishOverlay({ dish, category }) {
 
   useEffect(() => {
     function onKey(e) {
-      if (e.key === "Escape") {
-        e.stopPropagation();
-        close();
-      }
+      if (e.key === "Escape") close();
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  });
+  }, [close]);
 
   return (
     <div
@@ -97,6 +95,7 @@ export default function DishOverlay({ dish, category }) {
         <div className="dish__sheet">
           <p className="label dish__eyebrow">
             {category.name}
+            {dish.group && <span className="dish__eyebrow-group"> · {dish.group}</span>}
             {dish.tag && <span className="dish__eyebrow-tag"> · {dish.tag}</span>}
           </p>
 
@@ -109,6 +108,8 @@ export default function DishOverlay({ dish, category }) {
             <span className="dish__priceline" />
             <Sparkle size={9} className="dish__pricemark" />
           </p>
+
+          <Variants variants={dish.variants} className="dish__variants" />
 
           {dish.desc && <p className="dish__desc">{dish.desc}</p>}
           {dish.origin && <p className="dish__origin">{dish.origin}</p>}
