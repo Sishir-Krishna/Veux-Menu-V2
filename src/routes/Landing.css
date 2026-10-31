@@ -183,8 +183,10 @@
   font-size: clamp(25px, 6.8vw, 28px);
   color: var(--cat-fg);
   margin-bottom: 4px;
-  /* Keeps "Sushi & Japanese" on one line in the narrow text column. */
-  white-space: nowrap;
+  /* "Sushi & Japanese" overran the card by 38px at 320px wide. Let it
+     take a second line rather than run under the chevron. */
+  text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 .cat__tagline {
@@ -210,7 +212,9 @@
 .cat__chev {
   justify-self: end;
   color: var(--accent);
-  opacity: 0.55;
+  /* The only thing telling a guest the card is tappable — it has to be
+     visible, not a suggestion. */
+  opacity: 0.8;
 }
 
 .cat--dark .cat__chev {

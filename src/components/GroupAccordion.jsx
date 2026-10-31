@@ -24,10 +24,18 @@ export default function GroupAccordion({ group, categoryId, showThumbs }) {
           className="group__head"
           aria-expanded={open}
           aria-controls={id}
+          /* The count sits hard against the name in the markup, so a screen
+             reader ran them together as "Hot Coffees10". Say it properly
+             here and hide the visual one. */
+          aria-label={`${group.group}, ${group.dishes.length} ${
+            group.dishes.length === 1 ? "item" : "items"
+          }`}
           onClick={() => setOpen((v) => !v)}
         >
           <span className="group__name">{group.group}</span>
-          <span className="group__count">{group.dishes.length}</span>
+          <span className="group__count" aria-hidden="true">
+            {group.dishes.length}
+          </span>
           <Chevron className="group__chev" />
         </button>
       </h3>

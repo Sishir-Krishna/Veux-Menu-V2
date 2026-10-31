@@ -19,12 +19,21 @@ export function Sparkle({ size = 10, className = "" }) {
 }
 
 /* A hairline rule. Pass a label for "──── EXPLORE THE MENU ────",
-   or sparkle for "──── ✦ ────". */
-export function Rule({ label, sparkle = false, className = "" }) {
+   or sparkle for "──── ✦ ────".
+
+   `as` makes the label a real heading rather than a styled span: the
+   strip titles on a category page are the only way to tell the sections
+   apart, so a screen reader needs to be able to jump between them. */
+export function Rule({ label, sparkle = false, className = "", as: As, labelId }) {
+  const Label = As || "span";
   return (
     <div className={`rule ${className}`}>
       <span className="rule__line" />
-      {label && <span className="label rule__label">{label}</span>}
+      {label && (
+        <Label className="label rule__label" id={labelId}>
+          {label}
+        </Label>
+      )}
       {sparkle && <Sparkle size={9} className="rule__sparkle" />}
       <span className="rule__line" />
     </div>

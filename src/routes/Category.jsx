@@ -62,17 +62,25 @@ export default function Category() {
         ))}
       </header>
 
-      {strips.map((strip) => (
+      {strips.map((strip, i) => (
         <FeaturedStrip
           key={strip.title}
           title={strip.title}
           dishes={strip.dishes}
           categoryId={id}
+          headingId={`${id}-strip-${i}`}
         />
       ))}
 
-      <section className="full">
-        <Rule label="The Full Menu" className="full__rule" />
+      {/* h1 masthead → h2 section titles → h3 group headings, with no
+          level skipped, so the page can be walked by headings alone. */}
+      <section className="full" aria-labelledby={`${id}-full`}>
+        <Rule
+          label="The Full Menu"
+          className="full__rule"
+          as="h2"
+          labelId={`${id}-full`}
+        />
 
         {grouped ? (
           <div className="full__groups">

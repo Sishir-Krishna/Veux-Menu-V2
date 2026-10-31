@@ -8,12 +8,12 @@ import { slugify, leadPhoto, formatPrice } from "../lib/menu.js";
  * Photo zone and caption zone are separate blocks; type never sits on food.
  * The first card carries the dark treatment so each strip opens with weight.
  */
-export default function FeaturedStrip({ title, dishes, categoryId }) {
+export default function FeaturedStrip({ title, dishes, categoryId, headingId }) {
   const tagging = tagsWorthShowing(dishes, title);
 
   return (
-    <section className="strip">
-      <Rule label={title} className="strip__rule" />
+    <section className="strip" aria-labelledby={headingId}>
+      <Rule label={title} className="strip__rule" as="h2" labelId={headingId} />
 
       <ul className="strip__track">
         {dishes.map((dish, i) => (

@@ -144,7 +144,7 @@ const menu = [
     name: "Beverages",
     tagline: "Brewed, shaken, poured — never boring",
     icon: "◉",
-    accent: "#A8884A",
+    accent: "#8A6C2D",
     countNoun: "pours",
     // ⚠️ No beverage photograph exists yet — this tile shows the clover
     // placeholder until a file lands at the path below.

@@ -127,3 +127,14 @@ ul {
   opacity: 1;
   transform: none;
 }
+
+/* Killing the transition duration alone left these sitting at opacity 0
+   until the observer fired, so content still appeared with a pop. For
+   anyone who has asked their phone to stop moving things, there is nothing
+   to reveal — the content is simply there. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

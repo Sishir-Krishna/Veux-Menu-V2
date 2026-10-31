@@ -16,10 +16,17 @@
   top: 0;
   z-index: 20;
   display: grid;
-  grid-template-columns: 40px 1fr 40px;
+  /* 44px: the iOS minimum, and this is the page's primary control. */
+  grid-template-columns: 44px 1fr 44px;
   align-items: center;
-  height: 54px;
-  padding: 0 12px;
+  /* viewport-fit=cover lets the page run under the status bar, so the
+     sticky bar has to hold its own clearance — the dish sheet already
+     does this. */
+  height: calc(54px + env(safe-area-inset-top));
+  padding-top: env(safe-area-inset-top);
+  padding-right: 12px;
+  padding-bottom: 0;
+  padding-left: 12px;
   background: rgba(250, 247, 242, 0.88);
   backdrop-filter: saturate(150%) blur(14px);
   -webkit-backdrop-filter: saturate(150%) blur(14px);
@@ -29,8 +36,8 @@
 .topbar__back {
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   color: var(--accent);
   border-radius: 50%;
   transition: background var(--dur-fast) var(--ease);
