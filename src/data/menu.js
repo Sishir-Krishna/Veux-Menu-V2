@@ -65,7 +65,7 @@
 export const site = {
   name: "Veux Gourmet Eatery",
   tagline: "The Infinite Craving",
-  descriptor: "Pan-Asian Gourmet · All-Day Café",
+  descriptor: "All-Day Café · Pan-Asian Kitchen",
   hours: "Open daily · 11:30 AM — 10:30 PM",
   city: "Siripuram, Visakhapatnam",
   // Closing line at the foot of every category page.
@@ -438,7 +438,7 @@ const menu = [
   {
     id: "desserts",
     name: "Desserts",
-    tagline: "Where Baker’s Castle meets the unexpected",
+    tagline: "Saved for the sweetest ending",
     icon: "❋",
     accent: "#6B2238",
     countNoun: "sweets",
