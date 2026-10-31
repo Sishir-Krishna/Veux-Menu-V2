@@ -81,6 +81,18 @@ export const site = {
   descriptor: "All-Day Café · Pan-Asian Kitchen",
   hours: "Open daily · 11:30 AM — 10:30 PM",
   city: "Siripuram, Visakhapatnam",
+
+  // TODO — ask Krishna. Shown to a guest whose phone has JavaScript
+  // turned off, which is the one case where they cannot read the menu
+  // on screen and need to call or ask for a printed one. Write it the
+  // way you would dial it: "+91 98765 43210".
+  phone: null,
+
+  // TODO — the address this menu is deployed at, e.g. "https://menu.veux.in".
+  // Only used to make the WhatsApp link preview absolute; the site works
+  // without it.
+  url: null,
+
   // Closing line at the foot of every category page.
   priceNote: "All prices in ₹ · Taxes as applicable",
 };

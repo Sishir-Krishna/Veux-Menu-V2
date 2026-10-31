@@ -37,6 +37,9 @@
 }
 
 .topbar__back:active {
+  /* Fallback first: a browser without color-mix() drops the line it cannot
+     parse and keeps this one, rather than losing the press state. */
+  background: rgba(107, 96, 88, 0.1);
   background: color-mix(in srgb, var(--accent) 10%, transparent);
 }
 
@@ -63,6 +66,7 @@
 .masthead {
   padding: 30px var(--gutter) 30px;
   text-align: center;
+  background: linear-gradient(180deg, var(--cream-dark) 0%, var(--cream) 100%);
   background: linear-gradient(
     180deg,
     color-mix(in srgb, var(--accent) 9%, var(--cream)) 0%,

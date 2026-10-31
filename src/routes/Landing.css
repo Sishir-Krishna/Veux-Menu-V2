@@ -132,6 +132,8 @@
   padding: 14px;
   border: 1px solid var(--card-edge);
   border-radius: var(--radius-lg);
+  /* Without this the whole card surface disappears on an older Android. */
+  background: linear-gradient(148deg, var(--card) 0%, var(--cream-dark) 100%);
   background: linear-gradient(
     148deg,
     var(--card) 0%,
