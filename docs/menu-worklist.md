@@ -213,7 +213,7 @@ Those four should be written first — they read as bare rows now.
 
 ## For the photo shoot
 
-**139** photographs are named in the menu data but have no file behind
+**147** photographs are named in the menu data but have no file behind
 them. Each one already has its path — drop a file in at exactly that path and
 it appears, with no other change needed. See the README for size and naming.
 
@@ -298,20 +298,28 @@ the clover, and its featured cards render as type with no image.
 
 </details>
 
-<details><summary><strong>Sushi & Japanese</strong> — 10 missing</summary>
+<details><summary><strong>Sushi & Japanese</strong> — 18 missing</summary>
 
 | Dish | Where | Path |
 | --- | --- | --- |
+| — the category cover — | home screen tile | `/photos/sushi-and-japanese/sushi/non-veg/rainbow-sushi.webp` |
 | Spicy Thai Basil Chicken Dimsum | featured: Most Ordered | `/photos/main-course/appetizers/non-veg/spicy-thai-basil-chicken-dimsum.webp` |
 | Har Gow | featured: Must Try | `/photos/main-course/appetizers/non-veg/har-gow.webp` |
+| Asparagus Maki Roll / Cream Cheese | Sushi — Veg | `/photos/sushi-and-japanese/sushi/veg/asparagus-maki-roll-cream-cheese.webp` |
 | Mexican Hat Boy | Sushi — Veg | `/photos/sushi-and-japanese/sushi/veg/mexican-hat-boy.webp` |
 | Veg Tempura Sushi | Sushi — Veg | `/photos/sushi-and-japanese/sushi/veg/veg-tempura-sushi.webp` |
 | Asparagus & Cream Cheese Roll | Sushi — Veg | `/photos/sushi-and-japanese/sushi/veg/asparagus-and-cream-cheese-roll.webp` |
 | Tuna Maki Roll | Sushi — Non-Veg | `/photos/sushi-and-japanese/sushi/non-veg/tuna-maki-roll.webp` |
 | Ebi Tempura Sushi Roll | Sushi — Non-Veg | `/photos/sushi-and-japanese/sushi/non-veg/ebi-tempura-sushi-roll.webp` |
 | Chicken Katsu Sushi | Sushi — Non-Veg | `/photos/sushi-and-japanese/sushi/non-veg/chicken-katsu-sushi.webp` |
+| Avocado Nigiri | Nigiri (4 pcs) — Veg | `/photos/sushi-and-japanese/nigiri/veg/avocado-nigiri.webp` |
+| Teriyaki Baby Corn Nigiri | Nigiri (4 pcs) — Veg | `/photos/sushi-and-japanese/nigiri/veg/teriyaki-baby-corn-nigiri.webp` |
+| Salmon Nigiri | Nigiri (4 pcs) — Non-Veg | `/photos/sushi-and-japanese/nigiri/non-veg/salmon-nigiri.webp` |
 | Tuna Nigiri | Nigiri (4 pcs) — Non-Veg | `/photos/sushi-and-japanese/nigiri/non-veg/tuna-nigiri.webp` |
+| Yellowtail Nigiri | Nigiri (4 pcs) — Non-Veg | `/photos/sushi-and-japanese/nigiri/non-veg/yellowtail-nigiri.webp` |
+| Salmon Sashimi | Sashimi (3 pcs) | `/photos/sushi-and-japanese/sashimi/salmon-sashimi.webp` |
 | Tuna Sashimi | Sashimi (3 pcs) | `/photos/sushi-and-japanese/sashimi/tuna-sashimi.webp` |
+| Yellowtail Sashimi | Sashimi (3 pcs) | `/photos/sushi-and-japanese/sashimi/yellowtail-sashimi.webp` |
 
 </details>
 
