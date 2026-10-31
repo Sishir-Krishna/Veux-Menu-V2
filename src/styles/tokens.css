@@ -36,8 +36,9 @@
   --shadow-dark: 0 2px 4px rgba(69, 17, 31, 0.12), 0 14px 32px -14px rgba(69, 17, 31, 0.45);
 
   /* Type -------------------------------------------------- */
-  /* Swap --font-display to "Ivy Presto Display" when the licensed
-     webfont is dropped into /public/fonts (see README). */
+  /* Swap --font-display to "Ivy Presto Display" when the licensed webfont
+     is dropped into /public/fonts — see README, "Swapping in a licensed
+     display face". */
   --font-display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
   --font-text: "Jost", ui-sans-serif, -apple-system, "Segoe UI", sans-serif;
 

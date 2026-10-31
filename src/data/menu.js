@@ -50,7 +50,7 @@
  * ---------------------------------------------------------------------------
  *   id         The web address: id "sushi" lives at /menu/sushi.
  *              CHANGING AN id BREAKS ANY PRINTED QR CODE POINTING AT IT.
- *   name, tagline, icon
+ *   name, tagline
  *   accent     The category's tint. Brand palette only — see PALETTE below.
  *   eyebrow    Optional tiny label above the name on the home screen.
  *   countNoun  "plates" / "pours" — used for "26 plates" on the home screen.
@@ -105,7 +105,6 @@ const menu = [
     id: "signatures",
     name: "Chef’s Table",
     tagline: "What the kitchen is proudest of",
-    icon: "✦",
     accent: "#45111F",
     eyebrow: "Signature",
     countNoun: "plates",
@@ -143,7 +142,6 @@ const menu = [
     id: "beverages",
     name: "Beverages",
     tagline: "Brewed, shaken, poured — never boring",
-    icon: "◉",
     accent: "#8A6C2D",
     countNoun: "pours",
     // ⚠️ No beverage photograph exists yet — this tile shows the clover
@@ -243,7 +241,6 @@ const menu = [
     id: "sushi",
     name: "Sushi & Japanese",
     tagline: "Rolled, sliced, and composed with care",
-    icon: "◇",
     accent: "#6B6058",
     countNoun: "plates",
     cover: "/photos/sushi-and-japanese/sushi/non-veg/rainbow-sushi.webp",
@@ -306,7 +303,6 @@ const menu = [
     id: "mains",
     name: "Main Course",
     tagline: "Where four cuisines share one kitchen",
-    icon: "▣",
     accent: "#805E27",
     countNoun: "dishes",
     cover: "/photos/main-course/burgers/caramelized-lamb-supreme.webp",
@@ -464,7 +460,6 @@ const menu = [
     id: "desserts",
     name: "Desserts",
     tagline: "Saved for the sweetest ending",
-    icon: "❋",
     accent: "#6B2238",
     countNoun: "sweets",
     cover: "/photos/desserts/classic-tiramisu.webp",
