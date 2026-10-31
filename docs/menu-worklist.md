@@ -1,0 +1,411 @@
+# Menu worklist
+
+Everything in the menu that needs a person to decide, grouped by who. Each
+item says what is missing and where it lives, so it can be answered without
+going looking.
+
+Generated from `src/data/menu.js` on 2026-10-31. Re-check it after any
+large edit to the data.
+
+## For Krishna
+
+### 1. The duplicate Chicken Nuggets listing
+
+`Chicken Nuggets (2pc)`, ₹349, appears twice in **Main Course** — once under
+**Appetizers — Non-Veg** and once under **Around the World** — with the same
+price, the same description and the same photograph.
+
+Both rows currently open the same dish page, so nothing is broken for a guest.
+Neither was deleted. The question is whether that is deliberate:
+
+- **If it is a cross-listing** — the same plate offered under two headings —
+  leave it. It works.
+- **If one is a leftover**, say which and it goes.
+- **If they are meant to be two different things** (different portion, different
+  sauce), they need different names, because two dishes with one name in one
+  category cannot both be reachable.
+
+### 2. The restaurant's phone number
+
+`site.phone` in `src/data/menu.js` is `null`.
+
+It is shown to a guest whose phone has JavaScript turned off — the one case
+where they cannot read the menu on screen at all. Right now that block tells
+them the name, address and hours and asks them to request a printed menu, but
+it cannot offer a number to call.
+
+Write it the way you would dial it: `phone: "+91 98765 43210"`.
+
+### 3. Where the menu is deployed
+
+`site.url` is `null`. It is only used to make the WhatsApp link preview point
+at an absolute address. The preview card itself works without it; set it to
+the real address — `https://menu.veux.in` or whatever it ends up being — and
+the preview becomes a proper link rather than a bare image.
+
+### 4. Two descriptions for the same dish
+
+There are **16** dishes whose featured-strip wording differs from their
+full-menu wording. A guest sees both on the same page. Pick one per dish, or
+confirm the difference is deliberate — the strip copy is generally the
+curated version, the full-menu copy the plainer one.
+
+**Chef’s Table**
+
+| Dish | In the featured strip | In the full menu |
+| --- | --- | --- |
+| Massaman Curry Lamb | Slow-braised lamb in a Thai curry with peanuts, potato, and warm spice. | — *(blank)* |
+| Salmon Carpaccio | Thin slices of raw salmon with onion, jalapeño, micro green, onion dressing. | Raw salmon, onion, jalapeño, micro green, onion dressing |
+
+**Beverages**
+
+| Dish | In the featured strip | In the full menu |
+| --- | --- | --- |
+| Biscoff Latte | Espresso layered with Biscoff spread — speculoos in a cup. | A shot of our espresso blended with Biscoff spread and steamed milk |
+| Coconut Pine Cooler | Tropical, refreshing, impossible to drink slowly. | — *(blank)* |
+| Tropical Punch | House signature blend — fruity, punchy, always a conversation starter. | — *(blank)* |
+| Cinnamon Brew | Hot or iced. Warm spice, smooth coffee, a finish that lingers. | Hot or iced |
+
+**Sushi & Japanese**
+
+| Dish | In the featured strip | In the full menu |
+| --- | --- | --- |
+| Chef Special Avocado Roll | Crunchy tempura, Hass avocado, truffle mayo, spring roll. | Crunchy tempura, Hass avocado, truffle mayo, spring roll |
+| Veg California Roll | Cucumber, cream cheese, asparagus wrapped with avocado, goma dressing. | Cucumber, cream cheese, asparagus wrapped with avocado, goma dressing |
+| Rainbow Sushi | Prawn tempura, crab stick, wrapped hamachi, salmon, tuna, teriyaki & spicy sauce. | Prawn tempura, crab stick, wrapped hamachi, salmon, tuna, teriyaki & spicy sauce |
+| Tiger Roll | Tempura soft shell crab, lettuce, tobiko, drizzle with teriyaki sauce. | Tempura soft shell crab, lettuce, tobiko, teriyaki sauce |
+
+**Main Course**
+
+| Dish | In the featured strip | In the full menu |
+| --- | --- | --- |
+| Caramelized Lamb Supreme | Double minced lamb, double cheese, red onion, garlic mayo, pickle veg & caramelized onion. | Non-veg — double minced lamb, double cheese, red onion, garlic mayo, pickle veg, caramelized onion |
+| Ravioli Pasta | Homemade ravioli with spinach & cottage cheese. Choice of Alfredo / Pink / Pesto / Arrabbiata. | Homemade — spinach & cottage cheese. Alfredo / Pink / Pesto / Arrabbiata |
+| Romano Margherita | Mozzarella, burrata cheese, bocconcini, tomato, olive, house-made pizza sauce. | Mozzarella, burrata, bocconcini, tomato, olive, pizza sauce |
+| Spicy Buffalo Pulled Chicken | Sriracha mayo, garlic mayo, fried egg, cheese. | Non-veg — sriracha mayo, garlic mayo, fried egg, cheese |
+| Lasagna | Layered baked pasta with pomodori pelati. | Layered baked pasta, pomodori pelati |
+| Sloppy Joe | Hoisin chicken, lettuce mayo, caramelized onion, cheddar, pulled chicken. | Non-veg — hoisin chicken, lettuce mayo, caramelized onion, cheddar, pulled chicken |
+
+### 5. One lowercase description
+
+`Mexican Tacos (3pc)` now reads `with sour cream`, because the price fragment
+was removed from the front of it and the rest was left exactly as written.
+It probably wants a capital, or a fuller sentence.
+
+---
+
+## For the chef
+
+### 1. Allergens — nothing is recorded anywhere
+
+The menu has no allergen data at all, and none was inferred: a dish name is
+not evidence. This is the item on this list with the most at stake.
+
+Four need naming explicitly, because a guest asking about them is usually
+asking for a medical reason:
+
+- **Nuts** — the peanut sauces (satay, Vietnamese rice paper roll, massaman),
+  the cashew stir-fries, the almond prawn roll, the hazelnut and Biscoff drinks.
+- **Raw fish** — the sashimi, the nigiri, both carpaccios, several rolls.
+- **Dairy** — the cream-cheese rolls, the cheesecakes, every milk-based drink.
+- **Gluten** — the tempura, the pasta, the pizza, the bao and dumpling wrappers,
+  and the soy sauces that are not tamari.
+
+Those four are a starting point, not a finding. The whole menu needs going
+through, and the site has nowhere to display the answer yet — that can be
+built once there is something to display.
+
+### 2. Dishes still missing a veg / non-veg mark
+
+**102** of 181 rows. The mark was filled in only where a group heading
+states it outright — `Appetizers — Veg`, `Curry — Non-Veg` and so on — which
+covered 81. The rest are mixed groups or drinks, and were deliberately left
+blank rather than guessed.
+
+Two worth looking at first:
+
+- **Sashimi (3 pcs)** — raw fish, but the group heading does not say so, so
+  the rule did not apply. Three rows.
+- **Bruschetta (4pc)** sits under *Appetizers — Veg* and is marked vegetarian,
+  but it carries a non-veg option at ₹349. One mark cannot say both.
+
+**Chef’s Table** — 5
+
+- *(no group)* (5): Salmon Carpaccio, Tuna Carpaccio, Thai Green Curry with Steamed Jasmine Rice, Thai Red Curry with Steamed Jasmine Rice, Massaman Curry Lamb
+
+**Beverages** — 51
+
+- *Signature* (5): Saigon Brew, Cinnamon Brew, Tropical Punch, Signature Hot Chocolate, Hot Chocolate
+- *Hot Coffees* (10): Single Origin Espresso, Double Espresso, Americano, Morning Reset, Classic Cappuccino, Latte, House Mocha, Hazelnut Velvet, Biscoff Latte, Nutella Cappuccino
+- *On The Rocks* (6): Iced Long Black, Iced Over Coffee, Iced Velvet Latte, Iced House Mocha, Veux Cold Coffee, Signature Frappe
+- *Cold Brews* (4): Classic Cold Brew, Peach, Cranberry, Orange
+- *Frappes* (5): Mocha, Brownie Blend, Cookies & Cream, Caramel Hazelnut Blend, Biscoff
+- *Mocktails* (8): Orange Basil Cooler, Heat & Melon, Blue Smoke, Wild Cat, Coconut Pine Cooler, Saffron Citrus Spritz, Berry Blend, Classic Mojito
+- *Milkshakes* (4): Brownie Indulgence, Cream Cookie, Strawberry Cheesecake, Blueberry Cheesecake
+- *Iced Teas* (3): Citrus Iced Tea, Summer Peach Tea, Raspberry Iced Tea
+- *Hot Tea* (3): Herbal Detox, Green Tea, Ginger & Lemon Infusion
+- *Matcha* (3): Iced Matcha Latte, Mango Infused Matcha, Infused Strawberry Matcha
+
+**Sushi & Japanese** — 3
+
+- *Sashimi (3 pcs)* (3): Salmon Sashimi, Tuna Sashimi, Yellowtail Sashimi
+
+**Main Course** — 39
+
+- *Soups* (4): Clear Tofu Soup, Tom Yum, Spicy Thai Coconut Soup, Miso Soup
+- *Pasta* (7): Penne (Choice of Sauce), Fettuccine (Choice of Sauce), Spaghetti (Choice of Sauce), Macaroni, Tortellini Pasta, Ravioli Pasta, Lasagna
+- *Burgers* (5): Crumbfried Truffle Mushroom, Cottage Cheese, Veux Katsu, Basil Chicken Mince, Caramelized Lamb Supreme
+- *Sandwiches* (7): Grilled Veg Croissant Sandwich, Smoked Cottage Cheese in Focaccia, Japanese Egg Sandwich, Egg Mustard Sandwich, Sloppy Joe, Creole Chicken in Croissant, Spicy Buffalo Pulled Chicken
+- *Rice & Noodles* (12): Olive and Edamame Fried Rice, Blue Pea Exotic Veg Fried Rice, Seafood Spicy XO Fried Rice, Korean Kimchi Fried Rice, Khao Pad Kar Pow, Garlic Fried Rice, Steamed Jasmine Rice (Half / Full), Drunken Noodle, Pad Thai Noodle, Street Hakka Noodle, Pan Fried Noodles Hunan Style, Udon Noodles with Chilli Black Bean
+- *Around the World* (4): Mexican Tacos (3pc), Mexican Rice Bowl, Falafel with Hummus (5pc), Chicken Nuggets (2pc)
+
+**Desserts** — 4
+
+- *(no group)* (4): The Chocolate Affair, Classic Tiramisu, Matcha Cheesecake, Biscoff Cheesecake
+
+### 3. Dishes with no description
+
+**76** rows have nothing under the name. A guest reading the list sees a
+name and a price and has to ask. Not every dish needs a line, but these are
+the ones that have none.
+
+Four of them were emptied by this pass, when a second price was moved out of
+the description and into its own field, leaving nothing behind:
+
+- `Thai Green Curry with Steamed Jasmine Rice`
+- `Thai Red Curry with Steamed Jasmine Rice`
+- `Udon Noodles with Chilli Black Bean`
+- `Steamed Jasmine Rice (Half / Full)`
+
+Those four should be written first — they read as bare rows now.
+
+**Chef’s Table** — 3
+
+- *(no group)* (3): Thai Green Curry with Steamed Jasmine Rice, Thai Red Curry with Steamed Jasmine Rice, Massaman Curry Lamb
+
+**Beverages** — 27
+
+- *Signature* (4): Saigon Brew, Tropical Punch, Signature Hot Chocolate, Hot Chocolate
+- *Frappes* (5): Mocha, Brownie Blend, Cookies & Cream, Caramel Hazelnut Blend, Biscoff
+- *Mocktails* (8): Orange Basil Cooler, Heat & Melon, Blue Smoke, Wild Cat, Coconut Pine Cooler, Saffron Citrus Spritz, Berry Blend, Classic Mojito
+- *Milkshakes* (4): Brownie Indulgence, Cream Cookie, Strawberry Cheesecake, Blueberry Cheesecake
+- *Iced Teas* (3): Citrus Iced Tea, Summer Peach Tea, Raspberry Iced Tea
+- *Hot Tea* (3): Herbal Detox, Green Tea, Ginger & Lemon Infusion
+
+**Sushi & Japanese** — 15
+
+- *Sushi — Veg* (2): Asparagus Maki Roll / Cream Cheese, Asparagus & Cream Cheese Roll
+- *Sushi — Non-Veg* (4): Salmon Maki Roll, Tuna Maki Roll, Spicy Tuna Maki Roll, Ebi Tempura Sushi Roll
+- *Nigiri (4 pcs) — Veg* (3): Avocado Nigiri, Teriyaki Baby Corn Nigiri, Asparagus Nigiri
+- *Nigiri (4 pcs) — Non-Veg* (3): Salmon Nigiri, Tuna Nigiri, Yellowtail Nigiri
+- *Sashimi (3 pcs)* (3): Salmon Sashimi, Tuna Sashimi, Yellowtail Sashimi
+
+**Main Course** — 31
+
+- *Soups* (1): Clear Tofu Soup
+- *Appetizers — Veg* (5): Kung Pao Tofu Dry, Edamame Steamed Truffle (Salted), Spicy Baby Potato, Crispy Lotus Stem & Water Chestnut, Teriyaki Miso Eggplant
+- *Appetizers — Non-Veg* (7): Thai Style Chilli Chicken, Sichuan Mala Chicken, Leeks and Chicken Skewers, Chilli Basil Prawn, Wasabi Prawn, Thai Fish Cake, Crispy Tempura Calamari (Squid)
+- *Curry — Veg* (5): Stir Fry Aubergine in Thai Chilli Sauce, Assorted Wild Mushroom in Ginger Soy Sauce, Stir Fry Asian Green in Butter Garlic Sauce, Wok Tossed Mock Meat in Thai Chilli Paste, Stir Fry Tofu with Cashew Nut
+- *Curry — Non-Veg* (7): Pad Karpow Gai (Minced Chicken Chilli Basil), Stir Fried Chicken With Cashew Nut, Kung Pao Chicken, Stir Fried Chicken in Chilli Black Bean Sauce, Stir Fried Prawn in Chilli Basil Sauce, Wok Tossed Sea Bass in Thai Chilli Sauce, Wok Tossed Lamb in Chilli Black Bean Sauce
+- *Rice & Noodles* (6): Korean Kimchi Fried Rice, Garlic Fried Rice, Steamed Jasmine Rice (Half / Full), Pad Thai Noodle, Street Hakka Noodle, Udon Noodles with Chilli Black Bean
+
+---
+
+## For the photo shoot
+
+**136** photographs are named in the menu data but have no file on disk.
+Each one has its path already — drop a file in at exactly that path and it
+appears, with no other change needed. See the README for size and naming.
+
+The layout is built to work without them, so this is not urgent everywhere.
+It is urgent in the places marked below, where the absence is most visible.
+
+### Highest priority
+
+**The Beverages category cover and its six featured drinks.** Beverages is the
+only category with no photograph at all — 51 drinks, not one picture. Its tile
+on the home screen falls back to the clover, and all six of its featured cards
+render as type with no image. Six drinks and one cover photograph would fix the
+emptiest surface in the app:
+
+- `/photos/beverages/signature/tropical-punch.webp` — **the category cover**, the tile on the home screen
+- `/photos/beverages/lattes/biscoff-latte.webp` — Biscoff Latte *(featured: Most Ordered)*
+- `/photos/beverages/mocktails/coconut-pine-cooler.webp` — Coconut Pine Cooler *(featured: Most Ordered)*
+- `/photos/beverages/signature/tropical-punch.webp` — Tropical Punch *(featured: Most Ordered)*
+- `/photos/beverages/signature/cinnamon-brew.webp` — Cinnamon Brew *(featured: Must Try)*
+- `/photos/beverages/cold-brews/cranberry-cold-brew.webp` — Cranberry Cold Brew *(featured: Must Try)*
+- `/photos/beverages/milkshakes/blueberry-cheesecake-shake.webp` — Blueberry Cheesecake Shake *(featured: Must Try)*
+
+### Everything else, by category
+
+<details><summary><strong>Chef’s Table</strong> — 2 missing</summary>
+
+| Dish | Where | Path |
+| --- | --- | --- |
+| Thai Green Curry with Steamed Jasmine Rice | null | `/photos/chefs-table/thai-green-curry-with-steamed-jasmine-rice.webp` |
+| Thai Red Curry with Steamed Jasmine Rice | null | `/photos/chefs-table/thai-red-curry-with-steamed-jasmine-rice.webp` |
+
+</details>
+
+<details><summary><strong>Beverages</strong> — 55 missing</summary>
+
+| Dish | Where | Path |
+| --- | --- | --- |
+| — category cover — | category cover | `/photos/beverages/signature/tropical-punch.webp` |
+| Saigon Brew | Signature | `/photos/beverages/signature/saigon-brew.webp` |
+| Cinnamon Brew | Signature | `/photos/beverages/signature/cinnamon-brew.webp` |
+| Tropical Punch | Signature | `/photos/beverages/signature/tropical-punch.webp` |
+| Signature Hot Chocolate | Signature | `/photos/beverages/signature/signature-hot-chocolate.webp` |
+| Hot Chocolate | Signature | `/photos/beverages/signature/hot-chocolate.webp` |
+| Single Origin Espresso | Hot Coffees | `/photos/beverages/hot-coffees/single-origin-espresso.webp` |
+| Double Espresso | Hot Coffees | `/photos/beverages/hot-coffees/double-espresso.webp` |
+| Americano | Hot Coffees | `/photos/beverages/hot-coffees/americano.webp` |
+| Morning Reset | Hot Coffees | `/photos/beverages/hot-coffees/morning-reset.webp` |
+| Classic Cappuccino | Hot Coffees | `/photos/beverages/hot-coffees/classic-cappuccino.webp` |
+| Latte | Hot Coffees | `/photos/beverages/hot-coffees/latte.webp` |
+| House Mocha | Hot Coffees | `/photos/beverages/hot-coffees/house-mocha.webp` |
+| Hazelnut Velvet | Hot Coffees | `/photos/beverages/hot-coffees/hazelnut-velvet.webp` |
+| Biscoff Latte | Hot Coffees | `/photos/beverages/hot-coffees/biscoff-latte.webp` |
+| Nutella Cappuccino | Hot Coffees | `/photos/beverages/hot-coffees/nutella-cappuccino.webp` |
+| Iced Long Black | On The Rocks | `/photos/beverages/on-the-rocks/iced-long-black.webp` |
+| Iced Over Coffee | On The Rocks | `/photos/beverages/on-the-rocks/iced-over-coffee.webp` |
+| Iced Velvet Latte | On The Rocks | `/photos/beverages/on-the-rocks/iced-velvet-latte.webp` |
+| Iced House Mocha | On The Rocks | `/photos/beverages/on-the-rocks/iced-house-mocha.webp` |
+| Veux Cold Coffee | On The Rocks | `/photos/beverages/on-the-rocks/veux-cold-coffee.webp` |
+| Signature Frappe | On The Rocks | `/photos/beverages/on-the-rocks/signature-frappe.webp` |
+| Classic Cold Brew | Cold Brews | `/photos/beverages/cold-brews/classic-cold-brew.webp` |
+| Peach | Cold Brews | `/photos/beverages/cold-brews/peach.webp` |
+| Cranberry | Cold Brews | `/photos/beverages/cold-brews/cranberry.webp` |
+| Orange | Cold Brews | `/photos/beverages/cold-brews/orange.webp` |
+| Mocha | Frappes | `/photos/beverages/frappes/mocha.webp` |
+| Brownie Blend | Frappes | `/photos/beverages/frappes/brownie-blend.webp` |
+| Cookies & Cream | Frappes | `/photos/beverages/frappes/cookies-cream.webp` |
+| Caramel Hazelnut Blend | Frappes | `/photos/beverages/frappes/caramel-hazelnut-blend.webp` |
+| Biscoff | Frappes | `/photos/beverages/frappes/biscoff.webp` |
+| Orange Basil Cooler | Mocktails | `/photos/beverages/mocktails/orange-basil-cooler.webp` |
+| Heat & Melon | Mocktails | `/photos/beverages/mocktails/heat-melon.webp` |
+| Blue Smoke | Mocktails | `/photos/beverages/mocktails/blue-smoke.webp` |
+| Wild Cat | Mocktails | `/photos/beverages/mocktails/wild-cat.webp` |
+| Coconut Pine Cooler | Mocktails | `/photos/beverages/mocktails/coconut-pine-cooler.webp` |
+| Saffron Citrus Spritz | Mocktails | `/photos/beverages/mocktails/saffron-citrus-spritz.webp` |
+| Berry Blend | Mocktails | `/photos/beverages/mocktails/berry-blend.webp` |
+| Classic Mojito | Mocktails | `/photos/beverages/mocktails/classic-mojito.webp` |
+| Brownie Indulgence | Milkshakes | `/photos/beverages/milkshakes/brownie-indulgence.webp` |
+| Cream Cookie | Milkshakes | `/photos/beverages/milkshakes/cream-cookie.webp` |
+| Strawberry Cheesecake | Milkshakes | `/photos/beverages/milkshakes/strawberry-cheesecake.webp` |
+| Blueberry Cheesecake | Milkshakes | `/photos/beverages/milkshakes/blueberry-cheesecake.webp` |
+| Citrus Iced Tea | Iced Teas | `/photos/beverages/iced-teas/citrus-iced-tea.webp` |
+| Summer Peach Tea | Iced Teas | `/photos/beverages/iced-teas/summer-peach-tea.webp` |
+| Raspberry Iced Tea | Iced Teas | `/photos/beverages/iced-teas/raspberry-iced-tea.webp` |
+| Herbal Detox | Hot Tea | `/photos/beverages/hot-tea/herbal-detox.webp` |
+| Green Tea | Hot Tea | `/photos/beverages/hot-tea/green-tea.webp` |
+| Ginger & Lemon Infusion | Hot Tea | `/photos/beverages/hot-tea/ginger-lemon-infusion.webp` |
+| Iced Matcha Latte | Matcha | `/photos/beverages/matcha/iced-matcha-latte.webp` |
+| Mango Infused Matcha | Matcha | `/photos/beverages/matcha/mango-infused-matcha.webp` |
+| Infused Strawberry Matcha | Matcha | `/photos/beverages/matcha/infused-strawberry-matcha.webp` |
+| Biscoff Latte | featured: Most Ordered | `/photos/beverages/lattes/biscoff-latte.webp` |
+| Cranberry Cold Brew | featured: Must Try | `/photos/beverages/cold-brews/cranberry-cold-brew.webp` |
+| Blueberry Cheesecake Shake | featured: Must Try | `/photos/beverages/milkshakes/blueberry-cheesecake-shake.webp` |
+
+</details>
+
+<details><summary><strong>Sushi & Japanese</strong> — 9 missing</summary>
+
+| Dish | Where | Path |
+| --- | --- | --- |
+| Mexican Hat Boy | Sushi — Veg | `/photos/sushi-and-japanese/sushi/veg/mexican-hat-boy.webp` |
+| Veg Tempura Sushi | Sushi — Veg | `/photos/sushi-and-japanese/sushi/veg/veg-tempura-sushi.webp` |
+| Asparagus & Cream Cheese Roll | Sushi — Veg | `/photos/sushi-and-japanese/sushi/veg/asparagus-and-cream-cheese-roll.webp` |
+| Tuna Maki Roll | Sushi — Non-Veg | `/photos/sushi-and-japanese/sushi/non-veg/tuna-maki-roll.webp` |
+| Ebi Tempura Sushi Roll | Sushi — Non-Veg | `/photos/sushi-and-japanese/sushi/non-veg/ebi-tempura-sushi-roll.webp` |
+| Classic California Roll | Sushi — Non-Veg | `/photos/sushi-and-japanese/sushi/non-veg/classic-california-roll.webp` |
+| Chicken Katsu Sushi | Sushi — Non-Veg | `/photos/sushi-and-japanese/sushi/non-veg/chicken-katsu-sushi.webp` |
+| Tuna Nigiri | Nigiri (4 pcs) — Non-Veg | `/photos/sushi-and-japanese/nigiri/non-veg/tuna-nigiri.webp` |
+| Tuna Sashimi | Sashimi (3 pcs) | `/photos/sushi-and-japanese/sashimi/tuna-sashimi.webp` |
+
+</details>
+
+<details><summary><strong>Main Course</strong> — 67 missing</summary>
+
+| Dish | Where | Path |
+| --- | --- | --- |
+| Clear Tofu Soup | Soups | `/photos/main-course/soups/clear-tofu-soup.webp` |
+| Tom Yum | Soups | `/photos/main-course/soups/tom-yum.webp` |
+| Exotic Asian Green Salad | Salads — Veg | `/photos/main-course/salads/veg/exotic-asian-green-salad.webp` |
+| Tempura Soft Shell Crab Salad | Salads — Non-Veg | `/photos/main-course/salads/non-veg/tempura-soft-shell-crab-salad.webp` |
+| Asian Grilled Chicken Salad | Salads — Non-Veg | `/photos/main-course/salads/non-veg/asian-grilled-chicken-salad.webp` |
+| Yum Woon Sen | Salads — Non-Veg | `/photos/main-course/salads/non-veg/yum-woon-sen.webp` |
+| Japanese Vegetable Gyoza | Appetizers — Veg | `/photos/main-course/appetizers/veg/japanese-vegetable-gyoza.webp` |
+| Edamame Steamed Truffle (Salted) | Appetizers — Veg | `/photos/main-course/appetizers/veg/edamame-steamed-truffle-salted.webp` |
+| Spicy Baby Potato | Appetizers — Veg | `/photos/main-course/appetizers/veg/spicy-baby-potato.webp` |
+| Lemongrass Mock Meat | Appetizers — Veg | `/photos/main-course/appetizers/veg/lemongrass-mock-meat.webp` |
+| Teriyaki Miso Eggplant | Appetizers — Veg | `/photos/main-course/appetizers/veg/teriyaki-miso-eggplant.webp` |
+| Thai Style Tofu Satay | Appetizers — Veg | `/photos/main-course/appetizers/veg/thai-style-tofu-satay.webp` |
+| Bruschetta (4pc) | Appetizers — Veg | `/photos/main-course/appetizers/veg/bruschetta-4pc.webp` |
+| Arancini (Sicilian Rice Balls) | Appetizers — Veg | `/photos/main-course/appetizers/veg/arancini-sicilian-rice-balls.webp` |
+| Japanese Chicken Gyoza | Appetizers — Non-Veg | `/photos/main-course/appetizers/non-veg/japanese-chicken-gyoza.webp` |
+| Sichuan Mala Chicken | Appetizers — Non-Veg | `/photos/main-course/appetizers/non-veg/sichuan-mala-chicken.webp` |
+| Leeks and Chicken Skewers | Appetizers — Non-Veg | `/photos/main-course/appetizers/non-veg/leeks-and-chicken-skewers.webp` |
+| Panko Crumbed Prawn | Appetizers — Non-Veg | `/photos/main-course/appetizers/non-veg/panko-crumbed-prawn.webp` |
+| Wasabi Prawn | Appetizers — Non-Veg | `/photos/main-course/appetizers/non-veg/wasabi-prawn.webp` |
+| Crispy Tempura Calamari (Squid) | Appetizers — Non-Veg | `/photos/main-course/appetizers/non-veg/crispy-tempura-calamari-squid.webp` |
+| Crispy Soft Shell Crab | Appetizers — Non-Veg | `/photos/main-course/appetizers/non-veg/crispy-soft-shell-crab.webp` |
+| Chicken Katsu with Tonkatsu Dip | Appetizers — Non-Veg | `/photos/main-course/appetizers/non-veg/chicken-katsu-with-tonkatsu-dip.webp` |
+| Malaysian Style Chicken | Appetizers — Non-Veg | `/photos/main-course/appetizers/non-veg/malaysian-style-chicken.webp` |
+| Stir Fry Aubergine in Thai Chilli Sauce | Curry — Veg | `/photos/main-course/curry/veg/stir-fry-aubergine-in-thai-chilli-sauce.webp` |
+| Stir Fry Asian Green in Butter Garlic Sauce | Curry — Veg | `/photos/main-course/curry/veg/stir-fry-asian-green-in-butter-garlic-sauce.webp` |
+| Wok Tossed Mock Meat in Thai Chilli Paste | Curry — Veg | `/photos/main-course/curry/veg/wok-tossed-mock-meat-in-thai-chilli-paste.webp` |
+| Stir Fry Baby Bokchoy, Bamboo Shoot & Broccoli | Curry — Veg | `/photos/main-course/curry/veg/stir-fry-baby-bokchoy-bamboo-shoot-broccoli.webp` |
+| Pad Karpow Gai (Minced Chicken Chilli Basil) | Curry — Non-Veg | `/photos/main-course/curry/non-veg/pad-karpow-gai-minced-chicken-chilli-basil.webp` |
+| Kung Pao Chicken | Curry — Non-Veg | `/photos/main-course/curry/non-veg/kung-pao-chicken.webp` |
+| Stir Fried Chicken in Chilli Black Bean Sauce | Curry — Non-Veg | `/photos/main-course/curry/non-veg/stir-fried-chicken-in-chilli-black-bean-sauce.webp` |
+| Stir Fried Prawn in Chilli Basil Sauce | Curry — Non-Veg | `/photos/main-course/curry/non-veg/stir-fried-prawn-in-chilli-basil-sauce.webp` |
+| Wok Tossed Sea Bass in Thai Chilli Sauce | Curry — Non-Veg | `/photos/main-course/curry/non-veg/wok-tossed-sea-bass-in-thai-chilli-sauce.webp` |
+| Wok Tossed Lamb in Chilli Black Bean Sauce | Curry — Non-Veg | `/photos/main-course/curry/non-veg/wok-tossed-lamb-in-chilli-black-bean-sauce.webp` |
+| Penne (Choice of Sauce) | Pasta | `/photos/main-course/pasta/penne-alfredo.webp` |
+| Fettuccine (Choice of Sauce) | Pasta | `/photos/main-course/pasta/fettuccine-pesto.webp` |
+| Fettuccine (Choice of Sauce) | Pasta | `/photos/main-course/pasta/fettuccine-arrabiata.webp` |
+| Fettuccine (Choice of Sauce) | Pasta | `/photos/main-course/pasta/fettuccine-alfredo.webp` |
+| Spaghetti (Choice of Sauce) | Pasta | `/photos/main-course/pasta/spaghetti-pesto.webp` |
+| Spaghetti (Choice of Sauce) | Pasta | `/photos/main-course/pasta/spaghetti-arrabiata.webp` |
+| Macaroni | Pasta | `/photos/main-course/pasta/macaroni.webp` |
+| Tortellini Pasta | Pasta | `/photos/main-course/pasta/tortellini-pasta.webp` |
+| Ravioli Pasta | Pasta | `/photos/main-course/pasta/ravioli-pasta.webp` |
+| Asian Green | Pizza — Veg | `/photos/main-course/pizza/veg/asian-green.webp` |
+| Peri Peri Cottage Cheese | Pizza — Veg | `/photos/main-course/pizza/veg/peri-peri-cottage-cheese.webp` |
+| Romano Margherita | Pizza — Veg | `/photos/main-course/pizza/veg/romano-margherita.webp` |
+| Veggie Nepolitana | Pizza — Veg | `/photos/main-course/pizza/veg/veggie-nepolitana.webp` |
+| Simply Cheese | Pizza — Veg | `/photos/main-course/pizza/veg/simply-cheese.webp` |
+| Thai Chilli Chicken | Pizza — Non-Veg | `/photos/main-course/pizza/non-veg/thai-chilli-chicken.webp` |
+| Hawaiian Delicacy | Pizza — Non-Veg | `/photos/main-course/pizza/non-veg/hawaiian-delicacy.webp` |
+| Crumbfried Truffle Mushroom | Burgers | `/photos/main-course/burgers/crumbfried-truffle-mushroom.webp` |
+| Cottage Cheese | Burgers | `/photos/main-course/burgers/cottage-cheese.webp` |
+| Veux Katsu | Burgers | `/photos/main-course/burgers/veux-katsu.webp` |
+| Basil Chicken Mince | Burgers | `/photos/main-course/burgers/basil-chicken-mince.webp` |
+| Grilled Veg Croissant Sandwich | Sandwiches | `/photos/main-course/sandwiches/veg/grilled-veg-croissant-sandwich.webp` |
+| Smoked Cottage Cheese in Focaccia | Sandwiches | `/photos/main-course/sandwiches/veg/smoked-cottage-cheese-in-focaccia.webp` |
+| Egg Mustard Sandwich | Sandwiches | `/photos/main-course/sandwiches/non-veg/egg-mustard-sandwich.webp` |
+| Spicy Buffalo Pulled Chicken | Sandwiches | `/photos/main-course/sandwiches/non-veg/spicy-buffalo-pulled-chicken.webp` |
+| Olive and Edamame Fried Rice | Rice & Noodles | `/photos/main-course/rice-and-noodles/olive-and-edamame-fried-rice.webp` |
+| Seafood Spicy XO Fried Rice | Rice & Noodles | `/photos/main-course/rice-and-noodles/seafood-spicy-xo-fried-rice.webp` |
+| Khao Pad Kar Pow | Rice & Noodles | `/photos/main-course/rice-and-noodles/khao-pad-kar-pow.webp` |
+| Steamed Jasmine Rice (Half / Full) | Rice & Noodles | `/photos/main-course/rice-and-noodles/steamed-jasmine-rice.webp` |
+| Drunken Noodle | Rice & Noodles | `/photos/main-course/rice-and-noodles/drunken-noodle.webp` |
+| Pan Fried Noodles Hunan Style | Rice & Noodles | `/photos/main-course/rice-and-noodles/pan-fried-noodles-hunan-style.webp` |
+| Mexican Rice Bowl | Around the World | `/photos/main-course/around-the-world/mexican-rice-bowl.webp` |
+| Crumbfried Truffle Mushroom Burger | featured: Must Try | `/photos/main-course/burgers/crumbfried-truffle-mushroom-burger.webp` |
+| Veggie Nepolitana Pizza | featured: Must Try | `/photos/main-course/pizza/veg/veggie-nepolitana-pizza.webp` |
+| Veux Katsu Burger | featured: Must Try | `/photos/main-course/burgers/veux-katsu-burger.webp` |
+
+</details>
+
+<details><summary><strong>Desserts</strong> — 3 missing</summary>
+
+| Dish | Where | Path |
+| --- | --- | --- |
+| The Chocolate Affair | null | `/photos/desserts/the-chocolate-affair.webp` |
+| Matcha Cheesecake | null | `/photos/desserts/matcha-cheesecake.webp` |
+| Biscoff Cheesecake | null | `/photos/desserts/biscoff-cheesecake.webp` |
+
+</details>
+
