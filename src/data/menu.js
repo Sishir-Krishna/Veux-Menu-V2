@@ -144,9 +144,10 @@ const menu = [
     tagline: "Brewed, shaken, poured — never boring",
     accent: "#8A6C2D",
     countNoun: "pours",
-    // ⚠️ No beverage photograph exists yet — this tile shows the clover
-    // placeholder until a file lands at the path below.
-    cover: "/photos/beverages/signature/tropical-punch.webp",
+    // The signature pours have not been shot yet; the cappuccino stands in.
+    // It is also the most on-brand tile available now that the landing page
+    // leads with "All-Day Café".
+    cover: "/photos/beverages/hot-coffees/classic-cappuccino.webp",
     featured: {
       ordered: [
         { name: "Biscoff Latte", price: 280, desc: "Espresso layered with Biscoff spread — speculoos in a cup.", tag: "Top pick", origin: "The Belgian cookie meets Italian espresso.", photo: "/photos/beverages/lattes/biscoff-latte.webp" },
@@ -243,7 +244,10 @@ const menu = [
     tagline: "Rolled, sliced, and composed with care",
     accent: "#6B6058",
     countNoun: "plates",
-    cover: "/photos/sushi-and-japanese/sushi/non-veg/rainbow-sushi.webp",
+    // Was the rainbow sushi until that photograph was withdrawn. The Alaska
+    // roll is the closest surviving plate: a colourful non-veg roll, clean
+    // background, still legible at the 78px the tile renders at.
+    cover: "/photos/sushi-and-japanese/sushi/non-veg/alaska-roll.webp",
     featured: {
       ordered: [
         { name: "Chef Special Avocado Roll", price: 550, desc: "Crunchy tempura, Hass avocado, truffle mayo, spring roll.", tag: "Most ordered", photo: "/photos/sushi-and-japanese/sushi/veg/chef-special-avocado-roll.webp" },
@@ -305,7 +309,9 @@ const menu = [
     tagline: "Where four cuisines share one kitchen",
     accent: "#805E27",
     countNoun: "dishes",
-    cover: "/photos/main-course/burgers/caramelized-lamb-supreme.webp",
+    // Was the caramelized lamb supreme until that photograph was withdrawn.
+    // Kept it a burger — the other one the kitchen has shot.
+    cover: "/photos/main-course/burgers/crumbfried-truffle-mushroom-burger.webp",
     notes: [
       { emoji: "🧑‍🍳", text: "The dough, the pasta and every sauce are made in this kitchen — nothing comes out of a packet." },
     ],

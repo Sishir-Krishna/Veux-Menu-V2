@@ -222,13 +222,19 @@ It is urgent where marked below.
 
 ### Highest priority
 
-**The Beverages cover and its featured drinks.** Beverages is still the only
-category with almost no photography. Its tile on the home screen falls back to
-the clover, and its featured cards render as type with no image.
+**The six featured drinks.** Beverages is still the thinnest category — eight
+photographs across 51 drinks — and five of its six featured cards render as
+type with no image at all.
 
-- `/photos/beverages/signature/tropical-punch.webp` — **the category cover**, the tile on the home screen
+All five category covers now resolve, so the home screen is fully
+photographed. Three of them are stand-ins pointed at a surviving dish photo
+rather than a picture chosen for the job, and they are worth revisiting once
+these are shot: Beverages shows the cappuccino, Sushi the Alaska roll, and
+Main Course the truffle mushroom burger.
+
 - `/photos/beverages/lattes/biscoff-latte.webp` — Biscoff Latte *(featured: Most Ordered)*
 - `/photos/beverages/mocktails/coconut-pine-cooler.webp` — Coconut Pine Cooler *(featured: Most Ordered)*
+- `/photos/beverages/signature/tropical-punch.webp` — Tropical Punch *(featured: Most Ordered)*
 - `/photos/beverages/signature/cinnamon-brew.webp` — Cinnamon Brew *(featured: Must Try)*
 - `/photos/beverages/cold-brews/cranberry-cold-brew.webp` — Cranberry Cold Brew *(featured: Must Try)*
 
@@ -250,9 +256,9 @@ the clover, and its featured cards render as type with no image.
 
 | Dish | Where | Path |
 | --- | --- | --- |
-| — the category cover — | home screen tile | `/photos/beverages/signature/tropical-punch.webp` |
 | Biscoff Latte | featured: Most Ordered | `/photos/beverages/lattes/biscoff-latte.webp` |
 | Coconut Pine Cooler | featured: Most Ordered | `/photos/beverages/mocktails/coconut-pine-cooler.webp` |
+| Tropical Punch | featured: Most Ordered | `/photos/beverages/signature/tropical-punch.webp` |
 | Cinnamon Brew | featured: Must Try | `/photos/beverages/signature/cinnamon-brew.webp` |
 | Cranberry Cold Brew | featured: Must Try | `/photos/beverages/cold-brews/cranberry-cold-brew.webp` |
 | Saigon Brew | Signature | `/photos/beverages/signature/saigon-brew.webp` |
@@ -302,8 +308,8 @@ the clover, and its featured cards render as type with no image.
 
 | Dish | Where | Path |
 | --- | --- | --- |
-| — the category cover — | home screen tile | `/photos/sushi-and-japanese/sushi/non-veg/rainbow-sushi.webp` |
 | Spicy Thai Basil Chicken Dimsum | featured: Most Ordered | `/photos/main-course/appetizers/non-veg/spicy-thai-basil-chicken-dimsum.webp` |
+| Rainbow Sushi | featured: Must Try | `/photos/sushi-and-japanese/sushi/non-veg/rainbow-sushi.webp` |
 | Har Gow | featured: Must Try | `/photos/main-course/appetizers/non-veg/har-gow.webp` |
 | Asparagus Maki Roll / Cream Cheese | Sushi — Veg | `/photos/sushi-and-japanese/sushi/veg/asparagus-maki-roll-cream-cheese.webp` |
 | Mexican Hat Boy | Sushi — Veg | `/photos/sushi-and-japanese/sushi/veg/mexican-hat-boy.webp` |
@@ -327,7 +333,7 @@ the clover, and its featured cards render as type with no image.
 
 | Dish | Where | Path |
 | --- | --- | --- |
-| — the category cover — | home screen tile | `/photos/main-course/burgers/caramelized-lamb-supreme.webp` |
+| Caramelized Lamb Supreme | featured: Most Ordered | `/photos/main-course/burgers/caramelized-lamb-supreme.webp` |
 | Ravioli Pasta | featured: Most Ordered | `/photos/main-course/pasta/ravioli-pasta.webp` |
 | Romano Margherita | featured: Most Ordered | `/photos/main-course/pizza/veg/romano-margherita.webp` |
 | Spicy Buffalo Pulled Chicken | featured: Most Ordered | `/photos/main-course/sandwiches/non-veg/spicy-buffalo-pulled-chicken.webp` |
