@@ -69,6 +69,52 @@
   opacity: 0.5;
 }
 
+/* ── Search ────────────────────────────────────────────────
+   Pinned directly beneath the topbar: 212 dishes behind as many as
+   fourteen collapsed headings is a guessing game without it. */
+.search {
+  position: sticky;
+  top: calc(54px + env(safe-area-inset-top));
+  z-index: 19;
+  padding: 10px var(--gutter);
+  background: rgba(250, 247, 242, 0.92);
+  backdrop-filter: saturate(150%) blur(14px);
+  -webkit-backdrop-filter: saturate(150%) blur(14px);
+  border-bottom: 1px solid var(--rule-soft);
+}
+
+.search__field {
+  width: 100%;
+  height: 40px;
+  padding: 0 14px;
+  font: inherit;
+  font-size: var(--fs-small);
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--card-edge);
+  border-radius: 999px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.search__field::placeholder {
+  color: var(--ink-faint);
+}
+
+.search__field:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.search__count {
+  margin-top: 7px;
+  font-size: var(--fs-micro);
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--accent);
+  text-align: center;
+}
+
 /* ── Masthead ──────────────────────────────────────────── */
 .masthead {
   padding: 30px var(--gutter) 30px;

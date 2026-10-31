@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import {
   getCategory,
@@ -12,13 +13,36 @@ import FeaturedStrip from "../components/FeaturedStrip.jsx";
 import GroupAccordion from "../components/GroupAccordion.jsx";
 import DishRow from "../components/DishRow.jsx";
 import DishOverlay from "../components/DishOverlay.jsx";
+import MenuSearch, { fold, dishMatches } from "../components/MenuSearch.jsx";
 import { Rule, Chevron, Sparkle } from "../components/Ornaments.jsx";
 import VeuxMark from "../components/VeuxMark.jsx";
 import "./Category.css";
 
 export default function Category() {
   const { categoryId, dishSlug } = useParams();
+  const [query, setQuery] = useState("");
   const category = getCategory(categoryId);
+
+  /* Filtering the full menu down to what matches. An empty query means
+     the normal page: every group present, every one of them collapsed. */
+  const { groups, flatRows, matchCount } = useMemo(() => {
+    const q = fold(query).trim();
+    const items = category?.items || [];
+    const grouped = isGrouped(items);
+    if (!q) {
+      return { groups: grouped ? items.map((g) => [g, g.dishes]) : null,
+               flatRows: grouped ? null : flattenItems(items), matchCount: 0 };
+    }
+    if (grouped) {
+      const hits = items
+        .map((g) => [g, g.dishes.filter((d) => dishMatches(d, q))])
+        .filter(([, found]) => found.length);
+      return { groups: hits, flatRows: null,
+               matchCount: hits.reduce((n, [, f]) => n + f.length, 0) };
+    }
+    const found = flattenItems(items).filter((d) => dishMatches(d, q));
+    return { groups: null, flatRows: found, matchCount: found.length };
+  }, [category, query]);
 
   if (!category) return <Navigate to="/" replace />;
 
@@ -30,10 +54,11 @@ export default function Category() {
   const { id, name, tagline, accent, notes, items } = category;
   const strips = featuredStrips(category);
   const grouped = isGrouped(items);
-  const flat = grouped ? [] : flattenItems(items);
   /* One decision for the whole page: every group reserves the thumbnail
      slot if any dish in the category has been photographed. */
   const showThumbs = categoryHasPhotos(category);
+  const searching = query.trim().length > 0;
+  const total = flattenItems(items).length;
 
   return (
     <>
@@ -47,6 +72,8 @@ export default function Category() {
         <span className="topbar__title">{name}</span>
         <VeuxMark className="topbar__mark" />
       </div>
+
+      <MenuSearch value={query} onChange={setQuery} total={total} matches={matchCount} />
 
       <header className="masthead">
         <h1 className="masthead__name">{name}</h1>
@@ -62,7 +89,7 @@ export default function Category() {
         ))}
       </header>
 
-      {strips.map((strip, i) => (
+      {!searching && strips.map((strip, i) => (
         <FeaturedStrip
           key={strip.title}
           title={strip.title}
@@ -76,7 +103,7 @@ export default function Category() {
           level skipped, so the page can be walked by headings alone. */}
       <section className="full" aria-labelledby={`${id}-full`}>
         <Rule
-          label="The Full Menu"
+          label={searching ? "Matches" : "The Full Menu"}
           className="full__rule"
           as="h2"
           labelId={`${id}-full`}
@@ -84,10 +111,12 @@ export default function Category() {
 
         {grouped ? (
           <div className="full__groups">
-            {items.map((group) => (
+            {groups.map(([group, dishes]) => (
               <GroupAccordion
                 key={group.group}
                 group={group}
+                dishes={dishes}
+                forceOpen={searching}
                 categoryId={id}
                 showThumbs={showThumbs}
               />
@@ -95,7 +124,7 @@ export default function Category() {
           </div>
         ) : (
           <ul className="full__list">
-            {flat.map((dish) => (
+            {flatRows.map((dish) => (
               <DishRow
                 key={dish.name}
                 dish={dish}
