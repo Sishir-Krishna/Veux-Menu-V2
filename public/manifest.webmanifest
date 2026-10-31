@@ -1,0 +1,15 @@
+{
+  "name": "Veux Gourmet Eatery",
+  "short_name": "Veux",
+  "description": "All-day cafe and Pan-Asian kitchen in Siripuram, Visakhapatnam.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#FAF7F2",
+  "icons": [
+    { "src": "/logos/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/logos/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/logos/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

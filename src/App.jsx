@@ -2,11 +2,13 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Landing from "./routes/Landing.jsx";
 import Category from "./routes/Category.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
+import { VeuxMarkSprite } from "./components/VeuxMark.jsx";
 
 export default function App() {
   return (
     <>
     <ScrollToTop />
+    <VeuxMarkSprite />
     <Routes>
       <Route path="/" element={<Landing />} />
 

@@ -65,13 +65,12 @@
     linear-gradient(150deg, var(--aubergine-lift), var(--aubergine));
 }
 
-.fcard--dark .smartimg__mark img,
-.cat--dark .smartimg__mark img {
-  opacity: 0.3;
-  /* The mark is a dark-gold PNG; recolour it to the light gold the rest of
-     the dark card uses rather than shipping a second file. */
-  filter: brightness(0) saturate(100%) invert(72%) sepia(26%) saturate(560%)
-    hue-rotate(2deg) brightness(92%) contrast(88%);
+/* Drawn rather than imaged, so the dark card just asks for a lighter gold
+   instead of needing a second file. */
+.fcard--dark .smartimg__mark .veuxmark,
+.cat--dark .smartimg__mark .veuxmark {
+  color: var(--gold-light);
+  opacity: 0.32;
 }
 
 .smartimg__mark {
@@ -81,8 +80,10 @@
   place-items: center;
 }
 
-.smartimg__mark img {
+.smartimg__mark .veuxmark {
   width: 46%;
   max-width: 76px;
+  height: auto;
+  color: var(--gold);
   opacity: 0.22;
 }

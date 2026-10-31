@@ -103,16 +103,16 @@ const menu = [
     ],
     featured: {
       ordered: [
-        { name: "Chef Special Avocado Roll", price: 550, desc: "Crunchy tempura, Hass avocado, truffle mayo, spring roll.", tag: "Most ordered", origin: "The chef’s personal creation — built around the best Hass avocados, finished with truffle mayo.", photo: "/photos/chefs-table/chef-special-avocado-roll.webp" },
-        { name: "7 Spice Chicken", price: 399, desc: "Tempura-battered fried chicken dusted with Japanese spices.", tag: "Most ordered", origin: "Seven spices, each from a different corner of Japan — sansho, ginger, nori, sesame, citrus peel, shiso, and poppy seed.", photo: "/photos/chefs-table/seven-spice-chicken.webp" },
-        { name: "Vietnamese Rice Paper Roll", price: 299, desc: "Grilled cottage cheese & seasonal greens with peanut sauce.", tag: "Most ordered", origin: "Fresh, not fried. The rice paper stays translucent so you see exactly what you’re eating.", photo: "/photos/chefs-table/vietnamese-rice-paper-roll.webp" },
-        { name: "Exotic Asian Veg & Cheese Dimsum", price: 399, desc: "Crystal dough — water chestnut, bokchoy, broccoli & cheese in green curry reduction.", tag: "Most ordered", origin: "The translucent crystal dough is made from starch — steamed until it turns glassy.", photo: "/photos/chefs-table/exotic-asian-veg-cheese-dimsum.webp" },
+        { name: "Chef Special Avocado Roll", price: 550, desc: "Crunchy tempura, Hass avocado, truffle mayo, spring roll.", tag: "Most ordered", origin: "The chef’s personal creation — built around the best Hass avocados, finished with truffle mayo.", photo: "/photos/sushi-and-japanese/sushi/veg/chef-special-avocado-roll.webp" },
+        { name: "7 Spice Chicken", price: 399, desc: "Tempura-battered fried chicken dusted with Japanese spices.", tag: "Most ordered", origin: "Seven spices, each from a different corner of Japan — sansho, ginger, nori, sesame, citrus peel, shiso, and poppy seed.", photo: "/photos/main-course/appetizers/non-veg/seven-spice-chicken.webp" },
+        { name: "Vietnamese Rice Paper Roll", price: 299, desc: "Grilled cottage cheese & seasonal greens with peanut sauce.", tag: "Most ordered", origin: "Fresh, not fried. The rice paper stays translucent so you see exactly what you’re eating.", photo: "/photos/main-course/appetizers/veg/vietnamese-rice-paper-roll.webp" },
+        { name: "Exotic Asian Veg & Cheese Dimsum", price: 399, desc: "Crystal dough — water chestnut, bokchoy, broccoli & cheese in green curry reduction.", tag: "Most ordered", origin: "The translucent crystal dough is made from starch — steamed until it turns glassy.", photo: "/photos/main-course/appetizers/veg/exotic-asian-veg-cheese-dimsum.webp" },
       ],
       tryThis: [
         { name: "Massaman Curry Lamb", price: 700, desc: "Slow-braised lamb in a Thai curry with peanuts, potato, and warm spice.", tag: "Must try", origin: "From the kitchens of Southern Thailand — a Muslim-Thai crossover that became a royal favourite.", photo: "/photos/chefs-table/massaman-curry-lamb.webp" },
-        { name: "Blue Pea Exotic Fried Rice", price: 450, desc: "Blue pea jasmine rice with edamame & vegetables. The colour is natural.", tag: "Must try", origin: "The blue comes from butterfly pea flower — zero dye, zero gimmick.", photo: "/photos/chefs-table/blue-pea-exotic-fried-rice.webp" },
+        { name: "Blue Pea Exotic Fried Rice", price: 450, desc: "Blue pea jasmine rice with edamame & vegetables. The colour is natural.", tag: "Must try", origin: "The blue comes from butterfly pea flower — zero dye, zero gimmick.", photo: "/photos/main-course/rice-and-noodles/blue-pea-exotic-fried-rice.webp" },
         { name: "Salmon Carpaccio", price: 800, desc: "Thin slices of raw salmon with onion, jalapeño, micro green, onion dressing.", tag: "Must try", origin: "Italian technique meets Japanese-grade salmon. Best eaten slowly.", photo: "/photos/chefs-table/salmon-carpaccio.webp" },
-        { name: "Har Gow", price: 499, desc: "Cantonese-style prawn dimsum with coconut & gochujang reduction.", tag: "Must try", origin: "The pleats on a har gow test a dim sum chef’s skill — tradition says at least seven folds.", photo: "/photos/chefs-table/har-gow.webp" },
+        { name: "Har Gow", price: 499, desc: "Cantonese-style prawn dimsum with coconut & gochujang reduction.", tag: "Must try", origin: "The pleats on a har gow test a dim sum chef’s skill — tradition says at least seven folds.", photo: "/photos/main-course/appetizers/non-veg/har-gow.webp" },
       ],
     },
     items: [
@@ -239,12 +239,12 @@ const menu = [
       ordered: [
         { name: "Chef Special Avocado Roll", price: 550, desc: "Crunchy tempura, Hass avocado, truffle mayo, spring roll.", tag: "Most ordered", photo: "/photos/sushi-and-japanese/sushi/veg/chef-special-avocado-roll.webp" },
         { name: "Veg California Roll", price: 475, desc: "Cucumber, cream cheese, asparagus wrapped with avocado, goma dressing.", tag: "Most ordered", photo: "/photos/sushi-and-japanese/sushi/veg/veg-california-roll.webp" },
-        { name: "Spicy Thai Basil Chicken Dimsum", price: 449, desc: "Crystal dough with Thai basil chicken, coconut-herb reduction.", tag: "Most ordered", photo: "/photos/sushi-and-japanese/spicy-thai-basil-chicken-dimsum.webp" },
+        { name: "Spicy Thai Basil Chicken Dimsum", price: 449, desc: "Crystal dough with Thai basil chicken, coconut-herb reduction.", tag: "Most ordered", photo: "/photos/main-course/appetizers/non-veg/spicy-thai-basil-chicken-dimsum.webp" },
       ],
       tryThis: [
         { name: "Rainbow Sushi", price: 850, desc: "Prawn tempura, crab stick, wrapped hamachi, salmon, tuna, teriyaki & spicy sauce.", tag: "Must try", origin: "Named for the way each slice catches light differently.", photo: "/photos/sushi-and-japanese/sushi/non-veg/rainbow-sushi.webp" },
         { name: "Tiger Roll", price: 750, desc: "Tempura soft shell crab, lettuce, tobiko, drizzle with teriyaki sauce.", tag: "Must try", photo: "/photos/sushi-and-japanese/sushi/non-veg/tiger-roll.webp" },
-        { name: "Har Gow", price: 499, desc: "Cantonese-style prawn dimsum with coconut & gochujang reduction.", tag: "Must try", photo: "/photos/sushi-and-japanese/har-gow.webp" },
+        { name: "Har Gow", price: 499, desc: "Cantonese-style prawn dimsum with coconut & gochujang reduction.", tag: "Must try", photo: "/photos/main-course/appetizers/non-veg/har-gow.webp" },
       ],
     },
     items: [

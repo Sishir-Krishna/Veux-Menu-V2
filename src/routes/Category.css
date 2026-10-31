@@ -55,6 +55,7 @@
   justify-self: end;
   width: 26px;
   height: auto;
+  color: var(--gold);
   opacity: 0.5;
 }
 

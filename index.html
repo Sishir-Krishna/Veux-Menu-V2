@@ -11,13 +11,28 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- Display + text faces. Cormorant Garamond 300 stands in for Ivy Presto Display Thin
-         until the licensed webfont arrives (see README → "Swapping in Ivy Presto"). -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Display + text faces, served from our own origin (see src/styles/fonts.css).
+         Cormorant Garamond 300 stands in for Ivy Presto Display Thin until the
+         licensed webfont arrives — see README → "Swapping in a licensed display face".
+
+         Only the two faces above the fold are preloaded: the display 300 that
+         sets every heading, and the Jost 400 behind the gold labels. The rest
+         are fetched by the stylesheet as they are needed. -->
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap"
+      rel="preload"
+      href="/fonts/cormorant-garamond-300-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/jost-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
   </head>
   <body>

@@ -13,6 +13,7 @@ import GroupAccordion from "../components/GroupAccordion.jsx";
 import DishRow from "../components/DishRow.jsx";
 import DishOverlay from "../components/DishOverlay.jsx";
 import { Rule, Chevron, Sparkle } from "../components/Ornaments.jsx";
+import VeuxMark from "../components/VeuxMark.jsx";
 import "./Category.css";
 
 export default function Category() {
@@ -44,13 +45,7 @@ export default function Category() {
           <Chevron dir="left" />
         </Link>
         <span className="topbar__title">{name}</span>
-        <img
-          className="topbar__mark"
-          src="/logos/veux-symbol.png"
-          alt=""
-          width="26"
-          height="16"
-        />
+        <VeuxMark className="topbar__mark" />
       </div>
 
       <header className="masthead">

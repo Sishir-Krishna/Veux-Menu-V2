@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import VeuxMark from "./VeuxMark.jsx";
 
 /**
  * Every food image in the app goes through here.
@@ -61,7 +62,7 @@ export default function SmartImage({
 
       {status === "empty" && (
         <span className="smartimg__mark" aria-hidden="true">
-          <img src="/logos/veux-symbol.png" alt="" loading="lazy" decoding="async" />
+          <VeuxMark />
         </span>
       )}
     </div>
