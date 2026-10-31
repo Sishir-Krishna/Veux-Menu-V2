@@ -156,7 +156,7 @@ const menu = [
       tryThis: [
         { name: "Cinnamon Brew", price: 350, desc: "Hot or iced. Warm spice, smooth coffee, a finish that lingers.", tag: "Must try", origin: "Vietnamese-inspired, with a cinnamon twist unlike any coffee in Vizag.", photo: "/photos/beverages/signature/cinnamon-brew.webp" },
         { name: "Cranberry Cold Brew", price: 280, desc: "One of our most popular cold brew variants, classic cold brew meets the tangy cranberry", tag: "Must try", photo: "/photos/beverages/cold-brews/cranberry-cold-brew.webp" },
-        { name: "Blueberry Cheesecake Shake", price: 400, desc: "Dessert in a glass — blueberry, cream cheese, biscuit crumble.", tag: "Must try", photo: "/photos/beverages/milkshakes/blueberry-cheesecake-shake.webp" },
+        { name: "Blueberry Cheesecake Shake", price: 400, desc: "Dessert in a glass — blueberry, cream cheese, biscuit crumble.", tag: "Must try", photo: "/photos/beverages/milkshakes/blueberry-cheesecake.webp" },
       ],
     },
     items: [
@@ -442,7 +442,7 @@ const menu = [
         { name: "Pad Thai Noodle", price: 500, desc: "", photo: "/photos/main-course/rice-and-noodles/pad-thai-noodle.webp" },
         { name: "Street Hakka Noodle", price: 450, desc: "", photo: "/photos/main-course/rice-and-noodles/street-hakka-noodle.webp" },
         { name: "Pan Fried Noodles Hunan Style", price: 350, variants: [{ label: "Chicken", price: 450 }], desc: "Hunan sauce — Exotic greens", photo: "/photos/main-course/rice-and-noodles/pan-fried-noodles-hunan-style.webp" },
-        { name: "Udon Noodles with Chilli Black Bean", price: 450, variants: [{ label: "Chicken", price: 500 }, { label: "Seafood", price: 550 }], desc: "", photo: "/photos/main-course/rice-and-noodles/udon-noodles.webp" },
+        { name: "Udon Noodles with Chilli Black Bean", price: 450, variants: [{ label: "Chicken", price: 500 }, { label: "Seafood", price: 550 }], desc: "", photo: "/photos/main-course/rice-and-noodles/udon-noodles-with-chilli-black-bean.webp" },
       ]},
       { group: "Around the World", dishes: [
         { name: "Mexican Tacos (3pc)", price: 299, variants: [{ label: "Chicken", price: 399 }], desc: "with sour cream", photo: "/photos/main-course/around-the-world/mexican-tacos.webp" },
