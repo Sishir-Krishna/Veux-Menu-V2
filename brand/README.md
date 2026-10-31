@@ -5,8 +5,8 @@ site itself never loads them.
 
 | File            | What it is                       |
 | --------------- | -------------------------------- |
-| `VeuxLogo.ai`   | Illustrator master               |
-| `VeuxLogo.eps`  | EPS export of the same artwork   |
+| `veux-logo.ai`  | Illustrator master               |
+| `veux-logo.eps` | EPS export of the same artwork   |
 
 The `.ai` is PDF-backed and holds thirteen artboards: the full lockup in
 several colourways, the clover symbol on its own, and wordmark-only cuts.
@@ -18,7 +18,7 @@ design sources to every visitor for no reason.
 ## The clover in the app is vector
 
 `src/components/VeuxMark.jsx` is the clover symbol, converted from
-**artboard 7** of `VeuxLogo.ai` — eleven filled paths, no text and no
+**artboard 7** of `veux-logo.ai` — eleven filled paths, no text and no
 embedded raster, so it is the real curve data rather than a trace. It takes
 its colour from CSS, which is why the same definition serves the gold mark
 in the topbar and the pale gold one on the dark cards.
