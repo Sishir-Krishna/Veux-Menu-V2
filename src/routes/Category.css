@@ -98,7 +98,7 @@
 }
 
 .search__field::placeholder {
-  color: var(--ink-faint);
+  color: var(--ink-muted);
 }
 
 .search__field:focus-visible {
@@ -364,7 +364,7 @@
 .group__count {
   font-size: var(--fs-micro);
   letter-spacing: var(--track-label);
-  color: var(--ink-faint);
+  color: var(--ink-muted);
 }
 
 .group__chev {
@@ -588,5 +588,5 @@
   margin-top: 12px;
   font-size: var(--fs-small);
   letter-spacing: 0.04em;
-  color: var(--ink-faint);
+  color: var(--ink-muted);
 }
