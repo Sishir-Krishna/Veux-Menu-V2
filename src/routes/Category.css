@@ -417,6 +417,35 @@
   grid-template-columns: 54px 1fr auto;
 }
 
+/* The allergen column exists only on rows that carry marks, so an unmarked
+   row keeps its two (or three) columns and the same gaps as before. */
+.row--allergens .row__link {
+  grid-template-columns: 1fr auto auto;
+}
+
+.row--thumbs.row--allergens .row__link {
+  grid-template-columns: 54px 1fr auto auto;
+}
+
+/* Full gold, not a tint: these carry safety information, and the faded
+   decorative gold fails contrast on cream. Never below 13px. */
+.row__allergens {
+  display: flex;
+  align-items: center;
+  color: var(--gold);
+}
+
+.row__allergens .allergens {
+  display: flex;
+  gap: 5px;
+}
+
+.row__allergens svg {
+  flex: none;
+  min-width: 13px;
+  min-height: 13px;
+}
+
 /* Reserved slot: keeps every name in a section on the same left edge, even
    when this particular dish has no photograph yet. */
 .row__slot {
@@ -527,6 +556,32 @@
 .cat-foot__mark {
   color: var(--gold);
   opacity: 0.7;
+}
+
+/* The legend printed at the foot of the physical card. Each symbol stays
+   with its words; on a narrow phone the five wrap onto two lines. */
+.cat-foot__legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 14px;
+  margin-top: 14px;
+  font-size: 9px;
+  letter-spacing: 0.01em;
+  color: var(--gold);
+}
+
+.cat-foot__legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.cat-foot__legend svg {
+  flex: none;
+  min-width: 13px;
+  min-height: 13px;
 }
 
 .cat-foot__note {

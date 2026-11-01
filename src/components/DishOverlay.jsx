@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import SmartImage from "./SmartImage.jsx";
 import { Chevron, Rule, Sparkle } from "./Ornaments.jsx";
 import Variants from "./Variants.jsx";
+import { AllergenMark, ALLERGEN_LABELS, ALLERGEN_ORDER } from "./Allergens.jsx";
 import { allPhotos, formatPrice } from "../lib/menu.js";
 import { site } from "../data/menu.js";
 import useScrollLock from "../lib/useScrollLock.js";
@@ -29,6 +30,7 @@ export default function DishOverlay({ dish, category }) {
 
   const photos = allPhotos(dish);
   const chips = [dish.diet].filter(Boolean);
+  const allergens = ALLERGEN_ORDER.filter((k) => dish.allergens?.includes(k));
 
   useScrollLock();
 
@@ -119,6 +121,21 @@ export default function DishOverlay({ dish, category }) {
               {chips.map((chip) => (
                 <li className="dish__chip" key={chip}>
                   {chip}
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {/* Words as well as symbols: a guest checking one dish should not
+              have to decode the legend. The symbol is decorative here. */}
+          {allergens.length > 0 && (
+            <ul className="dish__allergens">
+              {allergens.map((k) => (
+                <li className="dish__allergen" key={k}>
+                  <span aria-hidden="true">
+                    <AllergenMark kind={k} size={15} />
+                  </span>
+                  {ALLERGEN_LABELS[k]}
                 </li>
               ))}
             </ul>

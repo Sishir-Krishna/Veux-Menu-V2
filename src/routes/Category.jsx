@@ -16,6 +16,7 @@ import DishOverlay from "../components/DishOverlay.jsx";
 import MenuSearch, { fold, dishMatches } from "../components/MenuSearch.jsx";
 import { Rule, Chevron, Sparkle } from "../components/Ornaments.jsx";
 import VeuxMark from "../components/VeuxMark.jsx";
+import { AllergenLegend } from "../components/Allergens.jsx";
 import "./Category.css";
 
 export default function Category() {
@@ -59,6 +60,10 @@ export default function Category() {
   const showThumbs = categoryHasPhotos(category);
   const searching = query.trim().length > 0;
   const total = flattenItems(items).length;
+  /* The legend only earns its place once the chef has marked a dish here;
+     until then it would be a strip of symbols that apply to nothing. */
+  const showLegend = [...flattenItems(items), ...strips.flatMap((s) => s.dishes)]
+    .some((d) => d.allergens?.length);
 
   return (
     <>
@@ -138,6 +143,7 @@ export default function Category() {
 
       <footer className="cat-foot">
         <Sparkle size={9} className="cat-foot__mark" />
+        {showLegend && <AllergenLegend className="cat-foot__legend" />}
         <p className="cat-foot__note">{site.priceNote}</p>
       </footer>
     </main>

@@ -36,6 +36,15 @@
  *   diet    (optional)  "Vegetarian" or "Non-vegetarian". Shows as a coloured
  *                       square in the list and as a chip in the dish view.
  *                       Allergen wording does NOT belong here — see the chef.
+ *   allergens (optional) Only what the chef has confirmed. Any of:
+ *                         allergens: ["gluten", "milk"]
+ *                       gluten → Contains Wheat/Rye/Barley/Oats
+ *                       nuts   → Contains Nuts
+ *                       egg    → Contains Egg
+ *                       milk   → Contains Milk
+ *                       soy    → Contains Soy
+ *                       Shows as symbols in the list, with the wording in
+ *                       the dish view, and adds the legend to the page foot.
  *   variants(optional)  A second price, for dishes served more than one way:
  *                         variants: [{ label: "Chicken", price: 569 }]
  *                       Add supplement: true when the number is an add-on

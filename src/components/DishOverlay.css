@@ -221,6 +221,32 @@
   background: var(--card);
 }
 
+/* ── Allergens ─────────────────────────────────────────── */
+.dish__allergens {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.dish__allergen {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--fs-small);
+  line-height: 1.4;
+  color: var(--ink-muted);
+}
+
+/* Full gold and never below 13px — safety information, not decoration. */
+.dish__allergen svg {
+  flex: none;
+  display: block;
+  min-width: 13px;
+  min-height: 13px;
+  color: var(--gold);
+}
+
 /* ── Watch it being made ───────────────────────────────── */
 .dish__make {
   margin-top: 34px;
