@@ -122,7 +122,7 @@ const menu = [
       tryThis: [
         { name: "Massaman Curry Lamb", price: 700, desc: "Slow-braised lamb in a Thai curry with peanuts, potato, and warm spice.", tag: "Must try", origin: "From the kitchens of Southern Thailand — a Muslim-Thai crossover that became a royal favourite.", photo: "/photos/chefs-table/massaman-curry-lamb.webp" },
         { name: "Blue Pea Exotic Fried Rice", price: 450, desc: "Blue pea jasmine rice with edamame & vegetables. The colour is natural.", tag: "Must try", origin: "The blue comes from butterfly pea flower — zero dye, zero gimmick.", photo: "/photos/main-course/rice-and-noodles/blue-pea-exotic-fried-rice.webp" },
-        { name: "Salmon Carpaccio", price: 800, desc: "Thin slices of raw salmon with onion, jalapeño, micro green, onion dressing.", tag: "Must try", origin: "Italian technique meets Japanese-grade salmon. Best eaten slowly.", photo: "/photos/chefs-table/salmon-carpaccio.webp" },
+        { name: "Salmon Carpaccio", price: 800, desc: "Thin slices of raw salmon with onion, jalapeño, micro green, onion dressing.", tag: "Must try", origin: "Italian technique, Japanese-grade salmon. Carpaccio was invented at Harry’s Bar in Venice in 1950, for a countess whose doctor had told her to avoid cooked meat.", photo: "/photos/chefs-table/salmon-carpaccio.webp" },
         { name: "Har Gow", price: 499, desc: "Cantonese-style prawn dimsum with coconut & gochujang reduction.", tag: "Must try", origin: "The pleats on a har gow test a dim sum chef’s skill — tradition says at least seven folds.", photo: "/photos/main-course/appetizers/non-veg/har-gow.webp" },
       ],
     },
@@ -151,13 +151,13 @@ const menu = [
     featured: {
       ordered: [
         { name: "Biscoff Latte", price: 280, desc: "Espresso layered with Biscoff spread — speculoos in a cup.", tag: "Top pick", origin: "The Belgian cookie meets Italian espresso.", photo: "/photos/beverages/lattes/biscoff-latte.webp" },
-        { name: "Coconut Pine Cooler", price: 330, desc: "Tropical, refreshing, impossible to drink slowly.", tag: "Top pick", photo: "/photos/beverages/mocktails/coconut-pine-cooler.webp" },
+        { name: "Coconut Pine Cooler", price: 330, desc: "Tropical, refreshing, impossible to drink slowly.", tag: "Top pick", origin: "Tender coconut and pineapple — a pairing the coast relied on long before anyone called it a mocktail.", photo: "/photos/beverages/mocktails/coconut-pine-cooler.webp" },
         { name: "Tropical Punch", price: 350, desc: "House signature blend — fruity, punchy, always a conversation starter.", tag: "Top pick", origin: "The recipe stays in the kitchen. Customers have tried guessing for months.", photo: "/photos/beverages/signature/tropical-punch.webp" },
       ],
       tryThis: [
         { name: "Cinnamon Brew", price: 350, desc: "Hot or iced. Warm spice, smooth coffee, a finish that lingers.", tag: "Must try", origin: "Vietnamese-inspired, with a cinnamon twist unlike any coffee in Vizag.", photo: "/photos/beverages/signature/cinnamon-brew.webp" },
-        { name: "Cranberry Cold Brew", price: 280, desc: "One of our most popular cold brew variants, classic cold brew meets the tangy cranberry", tag: "Must try", photo: "/photos/beverages/cold-brews/cranberry-cold-brew.webp" },
-        { name: "Blueberry Cheesecake Shake", price: 400, desc: "Dessert in a glass — blueberry, cream cheese, biscuit crumble.", tag: "Must try", photo: "/photos/beverages/milkshakes/blueberry-cheesecake.webp" },
+        { name: "Cranberry Cold Brew", price: 280, desc: "One of our most popular cold brew variants, classic cold brew meets the tangy cranberry", tag: "Must try", origin: "Cold brew is steeped, never heated, which is why it reads smooth rather than sharp. The cranberry puts the edge back.", photo: "/photos/beverages/cold-brews/cranberry-cold-brew.webp" },
+        { name: "Blueberry Cheesecake Shake", price: 400, desc: "Dessert in a glass — blueberry, cream cheese, biscuit crumble.", tag: "Must try", origin: "A dessert worked backwards into a glass. The cream cheese is the whole difference between this and a blueberry milkshake.", photo: "/photos/beverages/milkshakes/blueberry-cheesecake.webp" },
       ],
     },
     items: [
@@ -250,14 +250,14 @@ const menu = [
     cover: "/photos/sushi-and-japanese/sushi/non-veg/alaska-roll.webp",
     featured: {
       ordered: [
-        { name: "Chef Special Avocado Roll", price: 550, desc: "Crunchy tempura, Hass avocado, truffle mayo, spring roll.", tag: "Most ordered", photo: "/photos/sushi-and-japanese/sushi/veg/chef-special-avocado-roll.webp" },
-        { name: "Veg California Roll", price: 475, desc: "Cucumber, cream cheese, asparagus wrapped with avocado, goma dressing.", tag: "Most ordered", photo: "/photos/sushi-and-japanese/sushi/veg/veg-california-roll.webp" },
-        { name: "Spicy Thai Basil Chicken Dimsum", price: 449, desc: "Crystal dough with Thai basil chicken, coconut-herb reduction.", tag: "Most ordered", photo: "/photos/main-course/appetizers/non-veg/spicy-thai-basil-chicken-dimsum.webp" },
+        { name: "Chef Special Avocado Roll", price: 550, desc: "Crunchy tempura, Hass avocado, truffle mayo, spring roll.", tag: "Most ordered", origin: "The chef’s personal creation — built around the best Hass avocados, finished with truffle mayo.", photo: "/photos/sushi-and-japanese/sushi/veg/chef-special-avocado-roll.webp" },
+        { name: "Veg California Roll", price: 475, desc: "Cucumber, cream cheese, asparagus wrapped with avocado, goma dressing.", tag: "Most ordered", origin: "Invented in Los Angeles, not Japan — avocado standing in for fatty tuna, and the rice turned outside so the seaweed never put anyone off.", photo: "/photos/sushi-and-japanese/sushi/veg/veg-california-roll.webp" },
+        { name: "Spicy Thai Basil Chicken Dimsum", price: 449, desc: "Crystal dough with Thai basil chicken, coconut-herb reduction.", tag: "Most ordered", origin: "Thai basil, not Italian. The aniseed note is the part that survives the steam.", photo: "/photos/main-course/appetizers/non-veg/spicy-thai-basil-chicken-dimsum.webp" },
       ],
       tryThis: [
         { name: "Rainbow Sushi", price: 850, desc: "Prawn tempura, crab stick, wrapped hamachi, salmon, tuna, teriyaki & spicy sauce.", tag: "Must try", origin: "Named for the way each slice catches light differently.", photo: "/photos/sushi-and-japanese/sushi/non-veg/rainbow-sushi.webp" },
-        { name: "Tiger Roll", price: 750, desc: "Tempura soft shell crab, lettuce, tobiko, drizzle with teriyaki sauce.", tag: "Must try", photo: "/photos/sushi-and-japanese/sushi/non-veg/tiger-roll.webp" },
-        { name: "Har Gow", price: 499, desc: "Cantonese-style prawn dimsum with coconut & gochujang reduction.", tag: "Must try", photo: "/photos/main-course/appetizers/non-veg/har-gow.webp" },
+        { name: "Tiger Roll", price: 750, desc: "Tempura soft shell crab, lettuce, tobiko, drizzle with teriyaki sauce.", tag: "Must try", origin: "Soft shell crab is a crab caught in the days after it moults, when the whole shell is still edible. The window is a few days long.", photo: "/photos/sushi-and-japanese/sushi/non-veg/tiger-roll.webp" },
+        { name: "Har Gow", price: 499, desc: "Cantonese-style prawn dimsum with coconut & gochujang reduction.", tag: "Must try", origin: "The pleats on a har gow test a dim sum chef’s skill — tradition says at least seven folds.", photo: "/photos/main-course/appetizers/non-veg/har-gow.webp" },
       ],
     },
     items: [
@@ -320,12 +320,12 @@ const menu = [
         { name: "Caramelized Lamb Supreme", price: 650, desc: "Double minced lamb, double cheese, red onion, garlic mayo, pickle veg & caramelized onion.", tag: "Chef’s pick", origin: "The Italian chef’s pride — double-patty, caramelized onion, garlic mayo made fresh daily.", photo: "/photos/main-course/burgers/caramelized-lamb-supreme.webp" },
         { name: "Ravioli Pasta", price: 499, desc: "Homemade ravioli with spinach & cottage cheese. Choice of Alfredo / Pink / Pesto / Arrabbiata.", tag: "Chef’s pick", origin: "Rolled and filled by hand every morning.", photo: "/photos/main-course/pasta/ravioli-pasta.webp" },
         { name: "Romano Margherita", price: 600, desc: "Mozzarella, burrata cheese, bocconcini, tomato, olive, house-made pizza sauce.", tag: "Chef’s pick", origin: "House-made dough, house-made sauce, real burrata.", photo: "/photos/main-course/pizza/veg/romano-margherita.webp" },
-        { name: "Spicy Buffalo Pulled Chicken", price: 425, desc: "Sriracha mayo, garlic mayo, fried egg, cheese.", tag: "Chef’s pick", photo: "/photos/main-course/sandwiches/non-veg/spicy-buffalo-pulled-chicken.webp" },
+        { name: "Spicy Buffalo Pulled Chicken", price: 425, desc: "Sriracha mayo, garlic mayo, fried egg, cheese.", tag: "Chef’s pick", origin: "Buffalo sauce was improvised in a bar in Buffalo, New York, in 1964 — cayenne cut with butter, and nothing else.", photo: "/photos/main-course/sandwiches/non-veg/spicy-buffalo-pulled-chicken.webp" },
       ],
       tryThis: [
         { name: "Lasagna", price: 499, variants: [{ label: "Chicken", price: 569 }], desc: "Layered baked pasta with pomodori pelati.", tag: "Must try", origin: "Pomodori pelati — Italian whole peeled tomatoes. Sauce takes 4 hours, bake takes 40 minutes.", photo: "/photos/main-course/pasta/lasagna.webp" },
-        { name: "Crumbfried Truffle Mushroom Burger", price: 400, desc: "Sriracha mayo, tonkatsu sauce, lettuce, coleslaw, cheese, fries.", tag: "Must try", photo: "/photos/main-course/burgers/crumbfried-truffle-mushroom-burger.webp" },
-        { name: "Veggie Nepolitana Pizza", price: 500, desc: "Mozzarella, burrata, peppers, mushroom, olive, spiced pineapple.", tag: "Must try", photo: "/photos/main-course/pizza/veg/veggie-nepolitana-pizza.webp" },
+        { name: "Crumbfried Truffle Mushroom Burger", price: 400, desc: "Sriracha mayo, tonkatsu sauce, lettuce, coleslaw, cheese, fries.", tag: "Must try", origin: "Tonkatsu sauce — fruit, vinegar and soy — is Japan’s answer to brown sauce, and the reason a crumbed patty reads Tokyo rather than diner.", photo: "/photos/main-course/burgers/crumbfried-truffle-mushroom-burger.webp" },
+        { name: "Veggie Nepolitana Pizza", price: 500, desc: "Mozzarella, burrata, peppers, mushroom, olive, spiced pineapple.", tag: "Must try", origin: "Burrata is mozzarella wrapped around fresh cream. It is made to be eaten within two days of the curd being pulled.", photo: "/photos/main-course/pizza/veg/veggie-nepolitana-pizza.webp" },
         { name: "Sloppy Joe", price: 425, desc: "Hoisin chicken, lettuce mayo, caramelized onion, cheddar, pulled chicken.", tag: "Must try", origin: "American comfort food via East Asia — the hoisin marinade makes ours different.", photo: "/photos/main-course/sandwiches/non-veg/sloppy-joe.webp" },
         { name: "Veux Katsu Burger", price: 475, desc: "Panko fried chicken, Asian slaw, fried egg, sriracha mayo, cheese.", tag: "Must try", origin: "Continental meets Japanese in a brioche bun.", photo: "/photos/main-course/burgers/veux-katsu-burger.webp" },
       ],
@@ -472,7 +472,7 @@ const menu = [
     // A single featured strip (a plain list, not ordered/tryThis).
     featuredTitle: "Worth Saving Room For",
     featured: [
-      { name: "The Chocolate Affair", price: 450, desc: "Layers of dark chocolate mousse, ganache, and a molten centre.", tag: "Indulgent", photo: "/photos/desserts/the-chocolate-affair.webp" },
+      { name: "The Chocolate Affair", price: 450, desc: "Layers of dark chocolate mousse, ganache, and a molten centre.", tag: "Indulgent", origin: "Three textures of one chocolate — mousse, ganache, and a centre still liquid when it reaches the table.", photo: "/photos/desserts/the-chocolate-affair.webp" },
       { name: "Classic Tiramisu", price: 400, desc: "Mascarpone, espresso-soaked ladyfingers, and a dusting of cocoa.", tag: "Timeless", origin: "From Treviso, Italy. We use our own single-origin espresso in the soak.", photo: "/photos/desserts/classic-tiramisu.webp" },
     ],
     items: [
