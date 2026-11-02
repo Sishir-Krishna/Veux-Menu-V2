@@ -226,7 +226,7 @@ Main Course the truffle mushroom burger.
 | Spicy Thai Basil Chicken Dimsum (4pc) | featured: Most Ordered | `/photos/main-course/appetizers/non-veg/spicy-thai-basil-chicken-dimsum.webp` |
 | Rainbow Sushi | featured: Must Try | `/photos/sushi-and-japanese/sushi/non-veg/rainbow-sushi.webp` |
 | Har Gow (Prawns Dimsum) (4pc) | featured: Must Try | `/photos/main-course/appetizers/non-veg/har-gow.webp` |
-| Asparagus Maki Roll / Cream Cheese | Sushi — Veg | `/photos/sushi-and-japanese/sushi/veg/asparagus-maki-roll-cream-cheese.webp` |
+| Asparagus Maki Roll | Sushi — Veg | `/photos/sushi-and-japanese/sushi/veg/asparagus-maki-roll.webp` |
 | Mexican Hat Boy | Sushi — Veg | `/photos/sushi-and-japanese/sushi/veg/mexican-hat-boy.webp` |
 | Veg Tempura Sushi | Sushi — Veg | `/photos/sushi-and-japanese/sushi/veg/veg-tempura-sushi.webp` |
 | Asparagus & Cream Cheese Roll | Sushi — Veg | `/photos/sushi-and-japanese/sushi/veg/asparagus-and-cream-cheese-roll.webp` |

@@ -270,7 +270,7 @@ const menu = [
     },
     items: [
       { group: "Sushi — Veg", dishes: [
-        { name: "Asparagus Maki Roll", price: 500, desc: "Blanched asparagus, rolled in rice and nori, sliced. Clean and simple.", diet: "Vegetarian", photo: "/photos/sushi-and-japanese/sushi/veg/asparagus-maki-roll-cream-cheese.webp" },
+        { name: "Asparagus Maki Roll", price: 500, desc: "Blanched asparagus, rolled in rice and nori, sliced. Clean and simple.", diet: "Vegetarian", photo: "/photos/sushi-and-japanese/sushi/veg/asparagus-maki-roll.webp" },
         { name: "Mexican Hat Boy", price: 450, desc: "Asparagus tempura, cream cheese inside. Spicy sauce, sliced jalapeño on top.", diet: "Vegetarian", photo: "/photos/sushi-and-japanese/sushi/veg/mexican-hat-boy.webp" },
         { name: "Chef Special Avocado Roll", price: 550, desc: "Hass avocado, crunchy tempura crumb, truffle mayo. The rich one on the veg side.", diet: "Vegetarian", photo: "/photos/sushi-and-japanese/sushi/veg/chef-special-avocado-roll.webp" },
         { name: "Veg California Roll", price: 475, desc: "Cucumber, cream cheese, asparagus inside. Avocado-wrapped. Goma dressing.", diet: "Vegetarian", photo: "/photos/sushi-and-japanese/sushi/veg/veg-california-roll.webp" },
@@ -357,7 +357,7 @@ const menu = [
       { group: "Appetizers — Veg", dishes: [
         { name: "Veggies Spring Roll", price: 400, desc: "Crisp-fried vegetable rolls. Sweet chilli dip.", diet: "Vegetarian", photo: "/photos/main-course/appetizers/veg/veggies-spring-roll.webp" },
         { name: "Japanese Vegetable Gyoza", price: 380, desc: "Pan-seared vegetable dumplings, crisp base, soft top. Chilli ponzu.", diet: "Vegetarian", photo: "/photos/main-course/appetizers/veg/japanese-vegetable-gyoza.webp" },
-        { name: "Kung Pao Tofu Dry", price: 400, desc: "Wok-tossed tofu, cashew, dried chilli, Sichuan pepper. No sauce.", diet: "Vegetarian", photo: "/photos/main-course/appetizers/veg/kung-pao-tofu-dry.webp" },
+        { name: "Kung Pao Tofu Dry", price: 400, desc: "Wok-tossed tofu, cashews, dried chilli, Sichuan pepper. No sauce.", diet: "Vegetarian", photo: "/photos/main-course/appetizers/veg/kung-pao-tofu-dry.webp" },
         { name: "Edamame with Pods", price: 400, desc: "Steamed edamame pods. Choose salted, truffle or spicy.", diet: "Vegetarian", photo: "/photos/main-course/appetizers/veg/edamame-steamed-truffle-salted.webp" },
         { name: "Spicy Baby Potato", price: 400, desc: "Crisp baby potatoes in chilli-garlic glaze. Wok-finished.", diet: "Vegetarian", photo: "/photos/main-course/appetizers/veg/spicy-baby-potato.webp" },
         { name: "Lemongrass Mock Meat", price: 400, desc: "Lemongrass-marinated soya chop, crisp-fried. Spicy chilli dip.", diet: "Vegetarian", photo: "/photos/main-course/appetizers/veg/lemongrass-mock-meat.webp" },
