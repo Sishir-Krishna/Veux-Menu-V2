@@ -59,7 +59,6 @@ export default function Category() {
      slot if any dish in the category has been photographed. */
   const showThumbs = categoryHasPhotos(category);
   const searching = query.trim().length > 0;
-  const total = flattenItems(items).length;
   /* The legend only earns its place once the chef has marked a dish here;
      until then it would be a strip of symbols that apply to nothing. */
   const showLegend = [...flattenItems(items), ...strips.flatMap((s) => s.dishes)]
@@ -78,7 +77,7 @@ export default function Category() {
         <VeuxMark className="topbar__mark" />
       </div>
 
-      <MenuSearch value={query} onChange={setQuery} total={total} matches={matchCount} />
+      <MenuSearch value={query} onChange={setQuery} matches={matchCount} />
 
       <header className="masthead">
         <h1 className="masthead__name">{name}</h1>

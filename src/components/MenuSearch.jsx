@@ -16,7 +16,7 @@ export const dishMatches = (dish, q) =>
  * of them is a guessing game about which heading it lives under. Typing is
  * faster than guessing.
  */
-export default function MenuSearch({ value, onChange, total, matches }) {
+export default function MenuSearch({ value, onChange, matches }) {
   const id = useId();
   const searching = value.trim().length > 0;
 
@@ -31,7 +31,7 @@ export default function MenuSearch({ value, onChange, total, matches }) {
         type="search"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        placeholder={`Search ${total} dishes`}
+        placeholder="Search this menu"
         autoComplete="off"
         enterKeyHint="search"
       />

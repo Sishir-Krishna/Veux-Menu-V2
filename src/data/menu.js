@@ -166,7 +166,7 @@ const menu = [
       tryThis: [
         { name: "Cinnamon Brew", price: 350, desc: "Espresso, steamed milk and cinnamon under a foam cap. Hot or iced.", tag: "Must try", origin: "The iced version is built stronger — more coffee, more cinnamon — because cold flattens both.", photo: "/photos/beverages/signature/cinnamon-brew.webp" },
         { name: "Cranberry Cold Brew", price: 280, desc: "Cold brew cut with cranberry juice. Tart against the smooth.", tag: "Must try", origin: "Cold brew is steeped, never heated, which is why it reads smooth rather than sharp. The cranberry puts the edge back.", photo: "/photos/beverages/cold-brews/cranberry-cold-brew.webp" },
-        { name: "Blueberry Cheesecake Shake", price: 400, desc: "Blueberry, cream cheese and biscuit crumble in a glass.", tag: "Must try", origin: "A dessert worked backwards into a glass. The cream cheese is the whole difference between this and a blueberry milkshake.", photo: "/photos/beverages/milkshakes/blueberry-cheesecake.webp" },
+        { name: "Blueberry Cheesecake", price: 400, desc: "Blueberry, cream cheese and biscuit crumble in a glass.", tag: "Must try", origin: "A dessert worked backwards into a glass. The cream cheese is the whole difference between this and a blueberry milkshake.", photo: "/photos/beverages/milkshakes/blueberry-cheesecake.webp" },
       ],
     },
     items: [
@@ -198,9 +198,9 @@ const menu = [
       ]},
       { group: "Cold Brews", dishes: [
         { name: "Classic Cold Brew", price: 250, desc: "Steeped cold for hours, never heated. Served long over ice.", photo: "/photos/beverages/cold-brews/classic-cold-brew.webp" },
-        { name: "Peach", price: 280, desc: "Cold brew with peach. A lighter, sweeter cup.", photo: "/photos/beverages/cold-brews/peach.webp" },
-        { name: "Cranberry", price: 280, desc: "Cold brew cut with cranberry juice. Tart against the smooth.", photo: "/photos/beverages/cold-brews/cranberry.webp" },
-        { name: "Orange", price: 280, desc: "Cold brew and orange juice in equal measure. Citrus-forward.", photo: "/photos/beverages/cold-brews/orange.webp" },
+        { name: "Peach Cold Brew", price: 280, desc: "Cold brew with peach. A lighter, sweeter cup.", photo: "/photos/beverages/cold-brews/peach-cold-brew.webp" },
+        { name: "Cranberry Cold Brew", price: 280, desc: "Cold brew cut with cranberry juice. Tart against the smooth.", photo: "/photos/beverages/cold-brews/cranberry-cold-brew.webp" },
+        { name: "Orange Cold Brew", price: 280, desc: "Cold brew and orange juice in equal measure. Citrus-forward.", photo: "/photos/beverages/cold-brews/orange-cold-brew.webp" },
       ]},
       { group: "Frappes", dishes: [
         { name: "Mocha", price: 350, desc: "Chocolate, espresso, milk and ice cream, blended.", photo: "/photos/beverages/frappes/mocha.webp" },
@@ -332,10 +332,10 @@ const menu = [
       ],
       tryThis: [
         { name: "Lasagna", price: 499, variants: [{ label: "Chicken", price: 569 }], desc: "Layered baked pasta, pomodori pelati sauce, English vegetables.", tag: "Must try", origin: "Pomodori pelati — Italian whole peeled tomatoes. Sauce takes 4 hours, bake takes 40 minutes.", photo: "/photos/main-course/pasta/lasagna.webp" },
-        { name: "Crumbfried Truffle Mushroom Burger", price: 400, desc: "Crumb-fried mushroom patty, truffle finish. Truffle mayo, tonkatsu sauce, cheese. Served with fries.", tag: "Must try", origin: "Tonkatsu sauce — fruit, vinegar and soy — is Japan’s answer to brown sauce, and the reason a crumbed patty reads Tokyo rather than diner.", photo: "/photos/main-course/burgers/crumbfried-truffle-mushroom-burger.webp" },
-        { name: "Veggie Nepolitana Pizza", price: 500, desc: "Mozzarella, bell peppers, cherry tomato, mushroom, olive, spiced pineapple. Loaded.", tag: "Must try", origin: "Burrata is mozzarella wrapped around fresh cream. It is made to be eaten within two days of the curd being pulled.", photo: "/photos/main-course/pizza/veg/veggie-nepolitana-pizza.webp" },
+        { name: "Crumbfried Truffle Mushroom", price: 400, desc: "Crumb-fried mushroom patty, truffle finish. Truffle mayo, tonkatsu sauce, cheese. Served with fries.", tag: "Must try", origin: "Tonkatsu sauce — fruit, vinegar and soy — is Japan’s answer to brown sauce, and the reason a crumbed patty reads Tokyo rather than diner.", photo: "/photos/main-course/burgers/crumbfried-truffle-mushroom-burger.webp" },
+        { name: "Veggie Nepolitana", price: 500, desc: "Mozzarella, bell peppers, cherry tomato, mushroom, olive, spiced pineapple. Loaded.", diet: "Vegetarian", tag: "Must try", origin: "Burrata is mozzarella wrapped around fresh cream. It is made to be eaten within two days of the curd being pulled.", photo: "/photos/main-course/pizza/veg/veggie-nepolitana.webp" },
         { name: "Sloppy Joe", price: 425, desc: "Hoisin-marinated pulled chicken, cheddar, lettuce, garlic mayo. Asian take on the American original.", tag: "Must try", origin: "American comfort food via East Asia — the hoisin marinade makes ours different.", photo: "/photos/main-course/sandwiches/non-veg/sloppy-joe.webp" },
-        { name: "Veux Katsu Burger", price: 475, desc: "Panko-fried chicken, Asian slaw, fried egg, sriracha mayo, cheese. The house burger — Japanese-inspired, substantial.", tag: "Must try", origin: "Continental meets Japanese in a brioche bun.", photo: "/photos/main-course/burgers/veux-katsu-burger.webp" },
+        { name: "Veux Katsu", price: 475, desc: "Panko-fried chicken, Asian slaw, fried egg, sriracha mayo, cheese. The house burger — Japanese-inspired, substantial.", tag: "Must try", origin: "Continental meets Japanese in a brioche bun.", photo: "/photos/main-course/burgers/veux-katsu.webp" },
       ],
     },
     items: [
@@ -429,7 +429,7 @@ const menu = [
         { name: "Chilli Garlic Shrimp", price: 700, desc: "Wok-tossed shrimp, feta crumble, mozzarella, peppers, onion. The premium pizza — priced accordingly.", diet: "Non-vegetarian", photo: "/photos/main-course/pizza/non-veg/chilli-garlic-shrimp.webp" },
       ]},
       { group: "Burgers", dishes: [
-        { name: "Crumbfried Truffle Mushroom", price: 400, desc: "Crumb-fried mushroom patty, truffle finish. Truffle mayo, tonkatsu sauce, cheese. Served with fries.", photo: "/photos/main-course/burgers/crumbfried-truffle-mushroom.webp" },
+        { name: "Crumbfried Truffle Mushroom", price: 400, desc: "Crumb-fried mushroom patty, truffle finish. Truffle mayo, tonkatsu sauce, cheese. Served with fries.", photo: "/photos/main-course/burgers/crumbfried-truffle-mushroom-burger.webp" },
         { name: "Cottage Cheese", price: 400, desc: "Grilled cottage cheese, kimchi, truffle mayo, cheese. Served with fries. The Korean-leaning one.", photo: "/photos/main-course/burgers/cottage-cheese.webp" },
         { name: "Veux Katsu", price: 475, desc: "Panko-fried chicken, Asian slaw, fried egg, sriracha mayo, cheese. The house burger — Japanese-inspired, substantial.", photo: "/photos/main-course/burgers/veux-katsu.webp" },
         { name: "Basil Chicken Mince", price: 500, desc: "Grilled chicken mince patty, garlic mayo, Asian slaw, cheese. Lighter than the Katsu.", photo: "/photos/main-course/burgers/basil-chicken-mince.webp" },

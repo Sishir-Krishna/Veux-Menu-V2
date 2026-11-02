@@ -44,6 +44,15 @@ function orderableIdentity(dish) {
 export function assertUniqueSlugs(categories = menu) {
   const unreachable = [];
   const crossListed = [];
+  const drifted = [];
+
+  /* Every slug any category lists. A featured dish found in another
+     category's list is a deliberate cross-category feature (Chef's Table,
+     Sushi & Japanese); one found in no list at all has drifted from its
+     list name, which splits it across two URLs. */
+  const listedAnywhere = new Set(
+    categories.flatMap((c) => flattenItems(c.items).map((d) => slugify(d.name)))
+  );
 
   for (const category of categories) {
     const seen = new Map();
@@ -60,6 +69,21 @@ export function assertUniqueSlugs(categories = menu) {
         );
       }
     }
+
+    for (const strip of featuredStrips(category)) {
+      for (const dish of strip.dishes) {
+        const slug = slugify(dish.name);
+        if (!seen.has(slug) && !listedAnywhere.has(slug)) {
+          drifted.push(`${category.id}/${slug} — featured "${dish.name}" matches no full-menu entry`);
+        }
+      }
+    }
+  }
+
+  if (drifted.length && import.meta.env?.DEV) {
+    console.warn(
+      `A featured dish matches no full-menu entry in any category, so it has a URL of its own and its list row has another. Usually the names have drifted apart — make them match in src/data/menu.js:\n  ${drifted.join("\n  ")}`
+    );
   }
 
   if (crossListed.length && import.meta.env?.DEV) {
@@ -74,7 +98,7 @@ export function assertUniqueSlugs(categories = menu) {
     console.error(message);
   }
 
-  return { unreachable, crossListed };
+  return { unreachable, crossListed, drifted };
 }
 
 assertUniqueSlugs();
