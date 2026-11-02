@@ -127,6 +127,7 @@ export const RENAMED = {
   "signatures/har-gow": "signatures/har-gow-prawns-dimsum-4pc",
   "sushi/spicy-thai-basil-chicken-dimsum": "sushi/spicy-thai-basil-chicken-dimsum-4pc",
   "sushi/har-gow": "sushi/har-gow-prawns-dimsum-4pc",
+  "sushi/asparagus-maki-roll-cream-cheese": "sushi/asparagus-maki-roll",
   // Earlier renames. The bare fish names were shared by Nigiri and Sashimi;
   // the old URL always opened the first, which was the Nigiri.
   "sushi/avocado": "sushi/avocado-nigiri",
