@@ -117,7 +117,7 @@ built once there is something to display.
 
 ### 2. Dishes still missing a veg / non-veg mark
 
-**102** of 181 rows. The mark was filled in only where a group heading
+**101** of 180 rows. The mark was filled in only where a group heading
 states it outright — `Appetizers — Veg`, `Curry — Non-Veg` and so on — which
 covered 81. The rest are mixed groups or drinks, and were deliberately left
 blank rather than guessed.
@@ -133,10 +133,10 @@ Two worth looking at first:
 
 - *(no group)* (5): Salmon Carpaccio, Tuna Carpaccio, Thai Green Curry with Steamed Jasmine Rice, Thai Red Curry with Steamed Jasmine Rice, Massaman Curry Lamb
 
-**Beverages** — 51
+**Beverages** — 50
 
 - *Signature* (5): Saigon Brew, Cinnamon Brew, Tropical Punch, Signature Hot Chocolate, Hot Chocolate
-- *Hot Coffees* (10): Single Origin Espresso, Double Espresso, Americano, Morning Reset, Classic Cappuccino, Latte, House Mocha, Hazelnut Velvet, Biscoff Latte, Nutella Cappuccino
+- *Hot Coffees* (9): Single Origin Espresso, Double Espresso, Americano, Classic Cappuccino, Latte, House Mocha, Hazelnut Velvet, Biscoff Latte, Nutella Cappuccino
 - *On The Rocks* (6): Iced Long Black, Iced Over Coffee, Iced Velvet Latte, Iced House Mocha, Veux Cold Coffee, Signature Frappe
 - *Cold Brews* (4): Classic Cold Brew, Peach, Cranberry, Orange
 - *Frappes* (5): Mocha, Brownie Blend, Cookies & Cream, Caramel Hazelnut Blend, Biscoff
@@ -213,7 +213,7 @@ Those four should be written first — they read as bare rows now.
 
 ## For the photo shoot
 
-**147** photographs are named in the menu data but have no file behind
+**146** photographs are named in the menu data but have no file behind
 them. Each one already has its path — drop a file in at exactly that path and
 it appears, with no other change needed. See the README for size and naming.
 
@@ -223,7 +223,7 @@ It is urgent where marked below.
 ### Highest priority
 
 **The six featured drinks.** Beverages is still the thinnest category — eight
-photographs across 51 drinks — and five of its six featured cards render as
+photographs across 50 drinks — and five of its six featured cards render as
 type with no image at all.
 
 All five category covers now resolve, so the home screen is fully
@@ -252,7 +252,7 @@ Main Course the truffle mushroom burger.
 
 </details>
 
-<details><summary><strong>Beverages</strong> — 45 missing</summary>
+<details><summary><strong>Beverages</strong> — 44 missing</summary>
 
 | Dish | Where | Path |
 | --- | --- | --- |
@@ -267,7 +267,6 @@ Main Course the truffle mushroom burger.
 | Single Origin Espresso | Hot Coffees | `/photos/beverages/hot-coffees/single-origin-espresso.webp` |
 | Double Espresso | Hot Coffees | `/photos/beverages/hot-coffees/double-espresso.webp` |
 | Americano | Hot Coffees | `/photos/beverages/hot-coffees/americano.webp` |
-| Morning Reset | Hot Coffees | `/photos/beverages/hot-coffees/morning-reset.webp` |
 | Latte | Hot Coffees | `/photos/beverages/hot-coffees/latte.webp` |
 | House Mocha | Hot Coffees | `/photos/beverages/hot-coffees/house-mocha.webp` |
 | Hazelnut Velvet | Hot Coffees | `/photos/beverages/hot-coffees/hazelnut-velvet.webp` |
