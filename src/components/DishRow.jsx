@@ -50,8 +50,9 @@ export default function DishRow({ dish, categoryId, showThumbs }) {
             <DietMark diet={dish.diet} />
             {formatPrice(dish.price)}
           </span>
-          <Variants variants={dish.variants} className="row__variants" />
         </span>
+
+        <Variants variants={dish.variants} className="row__variants" />
       </Link>
     </li>
   );

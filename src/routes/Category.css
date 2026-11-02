@@ -506,12 +506,29 @@
 /* The second price sits under the first rather than inside the description,
    where it used to read as prose and never lined up. */
 .row__variants {
-  display: block;
-  margin-top: 2px;
+  grid-column: 1 / -1;
+  margin-top: 4px;
   font-size: var(--fs-micro);
   letter-spacing: 0.03em;
   color: var(--ink-muted);
+  text-align: left;
+}
+
+/* Align the line with the dish name, not the thumbnail. */
+.row--thumbs .row__link > .row__variants {
+  grid-column: 2 / -1;
+}
+
+/* The line may wrap between items, never inside one —
+   "Lamb meatball + ₹ 250" must not break across lines. */
+.row__variants .variants__item {
   white-space: nowrap;
+}
+
+/* The separator is drawn inside the item, so it has to opt back in to
+   wrapping or the whole line becomes one unbreakable run. */
+.row__variants .variants__item::before {
+  white-space: normal;
 }
 
 .row__variants .variants__item + .variants__item::before {
