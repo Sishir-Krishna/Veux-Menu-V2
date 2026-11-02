@@ -79,9 +79,9 @@ built once there is something to display.
 
 ### 2. Dishes still missing a veg / non-veg mark
 
-**101** of 182 rows. The mark was filled in only where a group heading
+**100** of 182 rows. The mark was filled in only where a group heading
 states it outright — `Appetizers — Veg`, `Curry — Non-Veg` and so on — which
-covered 81. The rest are mixed groups or drinks, and were deliberately left
+covered 81, plus Blue Pea Exotic Veg Fried Rice, confirmed vegetarian. The rest are mixed groups or drinks, and were deliberately left
 blank rather than guessed.
 
 Two worth looking at first:
@@ -112,13 +112,13 @@ Two worth looking at first:
 
 - *Sashimi (4 pcs)* (3): Salmon Sashimi, Tuna Sashimi, Yellowtail Sashimi
 
-**Main Course** — 39
+**Main Course** — 38
 
 - *Soups* (4): Clear Tofu Soup, Tom Yum, Spicy Thai Coconut Soup, Miso Soup
 - *Pasta* (7): Penne (Choice of Sauce), Fettuccine (Choice of Sauce), Spaghetti (Choice of Sauce), Macaroni, Tortellini Pasta, Ravioli Pasta, Lasagna
 - *Burgers* (5): Crumbfried Truffle Mushroom, Cottage Cheese, Veux Katsu, Basil Chicken Mince, Caramelized Lamb Supreme
 - *Sandwiches* (7): Grilled Veg Croissant Sandwich, Smoked Cottage Cheese in Focaccia, Japanese Egg Sandwich, Egg Mustard Sandwich, Sloppy Joe, Creole Chicken in Croissant, Spicy Buffalo Pulled Chicken
-- *Rice & Noodles* (12): Olive and Edamame Fried Rice, Blue Pea Exotic Veg Fried Rice, Seafood Spicy XO Fried Rice, Korean Kimchi Fried Rice, Khao Pad Kar Pow, Garlic Fried Rice, Steamed Jasmine Rice (Half / Full), Drunken Noodle, Pad Thai Noodle, Street Hakka Noodle, Pan Fried Noodles Hunan Style, Udon Noodles with Chilli Black Bean
+- *Rice & Noodles* (11): Olive and Edamame Fried Rice, Seafood Spicy XO Fried Rice, Korean Kimchi Fried Rice, Khao Pad Kar Pow, Garlic Fried Rice, Steamed Jasmine Rice (Half / Full), Drunken Noodle, Pad Thai Noodle, Street Hakka Noodle, Pan Fried Noodles Hunan Style, Udon Noodles with Chilli Black Bean
 - *Around the World* (4): Mexican Tacos (3pc), Mexican Rice Bowl, Falafel with Hummus (5pc), Chicken Nuggets (2pc)
 
 **Desserts** — 4

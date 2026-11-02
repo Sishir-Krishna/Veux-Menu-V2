@@ -130,7 +130,7 @@ const menu = [
       ],
       tryThis: [
         { name: "Massaman Curry Lamb", price: 700, desc: "Slow-cooked lamb in massaman paste, coconut milk, peanut, potato. The heaviest curry on the menu. Thai-Malay crossover.", tag: "Must try", origin: "From the kitchens of Southern Thailand — a Muslim-Thai crossover that became a royal favourite.", photo: "/photos/chefs-table/massaman-curry-lamb.webp" },
-        { name: "Blue Pea Exotic Veg Fried Rice", price: 450, desc: "Jasmine rice coloured with butterfly pea flower. Edamame, seasonal vegetables. Looks vivid, tastes clean.", tag: "Must try", origin: "The blue comes from butterfly pea flower — zero dye, zero gimmick.", photo: "/photos/main-course/rice-and-noodles/blue-pea-exotic-fried-rice.webp" },
+        { name: "Blue Pea Exotic Veg Fried Rice", price: 450, desc: "Jasmine rice coloured with butterfly pea flower. Edamame, seasonal vegetables. Looks vivid, tastes clean.", diet: "Vegetarian", tag: "Must try", origin: "The blue comes from butterfly pea flower — zero dye, zero gimmick.", photo: "/photos/main-course/rice-and-noodles/blue-pea-exotic-fried-rice.webp" },
         { name: "Salmon Carpaccio", price: 800, desc: "Thin-sliced raw salmon, jalapeño, microgreens, onion dressing. Plated cold.", tag: "Must try", origin: "Italian technique, Japanese-grade salmon. Carpaccio was invented at Harry’s Bar in Venice in 1950, for a countess whose doctor had told her to avoid cooked meat.", photo: "/photos/chefs-table/salmon-carpaccio.webp" },
         { name: "Har Gow (Prawns Dimsum) (4pc)", price: 499, desc: "Translucent-skinned prawn dimsum, Cantonese style. Coconut-gochujang dip.", diet: "Non-vegetarian", tag: "Must try", origin: "The pleats on a har gow test a dim sum chef’s skill — tradition says at least seven folds.", photo: "/photos/main-course/appetizers/non-veg/har-gow.webp" },
       ],
@@ -327,7 +327,7 @@ const menu = [
       ordered: [
         { name: "Caramelized Lamb Supreme", price: 650, desc: "Double lamb mince, double cheese, garlic mayo, pickled vegetables, caramelised onion. The heaviest burger on the menu.", tag: "Chef’s pick", origin: "The Italian chef’s pride — double-patty, caramelized onion, garlic mayo made fresh daily.", photo: "/photos/main-course/burgers/caramelized-lamb-supreme.webp" },
         { name: "Ravioli Pasta", price: 499, desc: "Handmade in-house. Spinach and cottage cheese filling. Choose alfredo, pink, pesto, or arrabbiata sauce.", tag: "Chef’s pick", origin: "Rolled and filled by hand every morning.", photo: "/photos/main-course/pasta/ravioli-pasta.webp" },
-        { name: "Romano Margherita", price: 600, desc: "Mozzarella, tomato, olive. The straightforward one.", tag: "Chef’s pick", origin: "House-made dough, house-made sauce, real burrata.", photo: "/photos/main-course/pizza/veg/romano-margherita.webp" },
+        { name: "Romano Margherita", price: 600, desc: "Mozzarella, tomato, olive. The straightforward one.", tag: "Chef’s pick", origin: "House-made dough, house-made sauce.", photo: "/photos/main-course/pizza/veg/romano-margherita.webp" },
         { name: "Spicy Buffalo Pulled Chicken", price: 425, desc: "Pulled chicken in buffalo sauce, sriracha mayo, garlic mayo, fried egg, cheese. Double sauce, double mayo — not subtle.", tag: "Chef’s pick", origin: "Buffalo sauce was improvised in a bar in Buffalo, New York, in 1964 — cayenne cut with butter, and nothing else.", photo: "/photos/main-course/sandwiches/non-veg/spicy-buffalo-pulled-chicken.webp" },
       ],
       tryThis: [
@@ -446,7 +446,7 @@ const menu = [
       ]},
       { group: "Rice & Noodles", dishes: [
         { name: "Olive and Edamame Fried Rice", price: 500, desc: "Jasmine rice wok-fried with olive, edamame, garlic. Veg. Clean, Mediterranean-meets-Asian.", photo: "/photos/main-course/rice-and-noodles/olive-and-edamame-fried-rice.webp" },
-        { name: "Blue Pea Exotic Veg Fried Rice", price: 450, desc: "Jasmine rice coloured with butterfly pea flower. Edamame, seasonal vegetables. Looks vivid, tastes clean.", photo: "/photos/main-course/rice-and-noodles/blue-pea-exotic-fried-rice.webp" },
+        { name: "Blue Pea Exotic Veg Fried Rice", price: 450, desc: "Jasmine rice coloured with butterfly pea flower. Edamame, seasonal vegetables. Looks vivid, tastes clean.", diet: "Vegetarian", photo: "/photos/main-course/rice-and-noodles/blue-pea-exotic-fried-rice.webp" },
         { name: "Seafood Spicy XO Fried Rice", price: 650, desc: "Jasmine rice with mixed seafood in XO sauce. The premium fried rice — XO sauce is not a cheap ingredient.", photo: "/photos/main-course/rice-and-noodles/seafood-spicy-xo-fried-rice.webp" },
         { name: "Korean Kimchi Fried Rice", price: 500, desc: "Jasmine rice, house kimchi, sesame oil. Wok-charred. Veg. Fermented tang.", photo: "/photos/main-course/rice-and-noodles/korean-kimchi-fried-rice.webp" },
         { name: "Khao Pad Kar Pow", price: 500, desc: "Spicy Thai basil fried rice. Veg. Same flavour profile as the Pad Karpow Gai main, in rice form.", photo: "/photos/main-course/rice-and-noodles/khao-pad-kar-pow.webp" },
