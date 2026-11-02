@@ -12,19 +12,9 @@ Re-check it after any large edit to the data.
 
 ### 1. The duplicate Chicken Nuggets listing
 
-`Chicken Nuggets (2pc)`, ₹349, appears twice in **Main Course** — once under
-**Appetizers — Non-Veg** and once under **Around the World** — with the same
-price, the same description and the same photograph.
-
-Both rows currently open the same dish page, so nothing is broken for a guest.
-Neither was deleted. The question is whether that is deliberate:
-
-- **If it is a cross-listing** — the same plate offered under two headings —
-  leave it. It works.
-- **If one is a leftover**, say which and it goes.
-- **If they are meant to be two different things** (different portion, different
-  sauce), they need different names, because two dishes with one name in one
-  category cannot both be reachable.
+Resolved. Mithil's call: `Chicken Nuggets (2pc)` stays under **Around the
+World** and has left **Appetizers — Non-Veg**. Its non-vegetarian mark came
+with it, and it keeps the same photograph.
 
 ### 2. The restaurant's phone number
 
@@ -79,17 +69,20 @@ built once there is something to display.
 
 ### 2. Dishes still missing a veg / non-veg mark
 
-**100** of 182 rows. The mark was filled in only where a group heading
-states it outright — `Appetizers — Veg`, `Curry — Non-Veg` and so on — which
-covered 81, plus Blue Pea Exotic Veg Fried Rice, confirmed vegetarian. The rest are mixed groups or drinks, and were deliberately left
-blank rather than guessed.
+**96** of 181 rows. The mark was first filled in only where a group heading
+states it outright — `Appetizers — Veg`, `Curry — Non-Veg` and so on. Since
+then Blue Pea Exotic Veg Fried Rice has been confirmed vegetarian and every
+dish in *Around the World* has been marked. The rest are mixed groups or
+drinks, and were deliberately left blank rather than guessed.
 
 Two worth looking at first:
 
 - **Sashimi (4 pcs)** — raw fish, but the group heading does not say so, so
   the rule did not apply. Three rows.
-- **Bruschetta (4pc)** sits under *Appetizers — Veg* and is marked vegetarian,
-  but it carries a non-veg option at ₹349. One mark cannot say both.
+- **Dishes with a meat option** follow one convention now: `diet` describes
+  the base dish and `variants` carries the meat. Bruschetta (4pc), Mexican
+  Tacos (3pc) and Mexican Rice Bowl are marked vegetarian on that basis —
+  worth a glance to confirm the base really is meat-free.
 
 **Chef’s Table** — 5
 
@@ -112,14 +105,13 @@ Two worth looking at first:
 
 - *Sashimi (4 pcs)* (3): Salmon Sashimi, Tuna Sashimi, Yellowtail Sashimi
 
-**Main Course** — 38
+**Main Course** — 34
 
 - *Soups* (4): Clear Tofu Soup, Tom Yum, Spicy Thai Coconut Soup, Miso Soup
 - *Pasta* (7): Penne (Choice of Sauce), Fettuccine (Choice of Sauce), Spaghetti (Choice of Sauce), Macaroni, Tortellini Pasta, Ravioli Pasta, Lasagna
 - *Burgers* (5): Crumbfried Truffle Mushroom, Cottage Cheese, Veux Katsu, Basil Chicken Mince, Caramelized Lamb Supreme
 - *Sandwiches* (7): Grilled Veg Croissant Sandwich, Smoked Cottage Cheese in Focaccia, Japanese Egg Sandwich, Egg Mustard Sandwich, Sloppy Joe, Creole Chicken in Croissant, Spicy Buffalo Pulled Chicken
 - *Rice & Noodles* (11): Olive and Edamame Fried Rice, Seafood Spicy XO Fried Rice, Korean Kimchi Fried Rice, Khao Pad Kar Pow, Garlic Fried Rice, Steamed Jasmine Rice (Half / Full), Drunken Noodle, Pad Thai Noodle, Street Hakka Noodle, Pan Fried Noodles Hunan Style, Udon Noodles with Chilli Black Bean
-- *Around the World* (4): Mexican Tacos (3pc), Mexican Rice Bowl, Falafel with Hummus (5pc), Chicken Nuggets (2pc)
 
 **Desserts** — 4
 
@@ -127,7 +119,7 @@ Two worth looking at first:
 
 ### 3. Dishes with no description
 
-Resolved. All 182 rows have a description.
+Resolved. All 181 rows have a description.
 
 ---
 
