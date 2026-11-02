@@ -7,6 +7,7 @@ import {
   flattenItems,
   categoryHasPhotos,
   findDish,
+  renamedDishPath,
 } from "../lib/menu.js";
 import { site } from "../data/menu.js";
 import FeaturedStrip from "../components/FeaturedStrip.jsx";
@@ -47,10 +48,13 @@ export default function Category() {
 
   if (!category) return <Navigate to="/" replace />;
 
-  // A dish that no longer exists — a stale link, or a renamed plate — drops
-  // the guest onto the category rather than a dead end.
+  // A renamed plate's old URL goes to the dish it used to open. A dish that
+  // no longer exists at all drops the guest onto the category rather than a
+  // dead end.
   const dish = dishSlug ? findDish(category, dishSlug) : null;
-  if (dishSlug && !dish) return <Navigate to={`/menu/${categoryId}`} replace />;
+  if (dishSlug && !dish) {
+    return <Navigate to={renamedDishPath(categoryId, dishSlug) || `/menu/${categoryId}`} replace />;
+  }
 
   const { id, name, tagline, accent, notes, items } = category;
   const strips = featuredStrips(category);

@@ -5,7 +5,7 @@ item says what is missing and where it lives, so it can be answered without
 going looking.
 
 Generated from `src/data/menu.js` on 2026-10-31. The description, veg /
-non-veg and photo-count sections were re-checked against it on 2026-11-02.
+non-veg and photo sections were re-checked against it on 2026-11-02.
 Re-check it after any large edit to the data.
 
 ## For Krishna
@@ -100,7 +100,7 @@ Two worth looking at first:
 - *Signature* (5): Saigon Brew, Cinnamon Brew, Tropical Punch, Signature Hot Chocolate, Hot Chocolate
 - *Hot Coffees* (9): Single Origin Espresso, Double Espresso, Americano, Classic Cappuccino, Latte, House Mocha, Hazelnut Velvet, Biscoff Latte, Nutella Cappuccino
 - *On The Rocks* (6): Iced Long Black, Iced Over Coffee, Iced Velvet Latte, Iced House Mocha, Veux Cold Coffee, Signature Frappe
-- *Cold Brews* (4): Classic Cold Brew, Peach, Cranberry, Orange
+- *Cold Brews* (4): Classic Cold Brew, Peach Cold Brew, Cranberry Cold Brew, Orange Cold Brew
 - *Frappes* (5): Mocha, Brownie Blend, Cookies & Cream, Caramel Hazelnut Blend, Biscoff
 - *Mocktails* (8): Orange Basil Cooler, Heat & Melon, Blue Smoke, Wild Cat, Coconut Pine Cooler, Saffron Citrus Spritz, Berry Blend, Classic Mojito
 - *Milkshakes* (4): Brownie Indulgence, Cream Cookie, Strawberry Cheesecake, Blueberry Cheesecake
@@ -133,13 +133,13 @@ Resolved. All 182 rows have a description.
 
 ## For the photo shoot
 
-**143** photographs are named in the menu data but have no file behind
+**139** photographs are named in the menu data but have no file behind
 them. Each one already has its path — drop a file in at exactly that path and
 it appears, with no other change needed. See the README for size and naming.
 
-The tables below have 146 rows, not 143, because a dish listed in more than
+The tables below have 142 rows, not 139, because a dish listed in more than
 one place keeps one path: Har Gow appears three times (Chef’s Table strip,
-Main Course strip, Main Course full menu) and Spicy Thai Basil Chicken Dimsum
+Sushi & Japanese strip, Main Course full menu) and Spicy Thai Basil Chicken Dimsum
 twice. One file covers every listing.
 
 The layout is built to work without them, so this is not urgent everywhere.
@@ -170,14 +170,14 @@ Main Course the truffle mushroom burger.
 | Dish | Where | Path |
 | --- | --- | --- |
 | Salmon Carpaccio | featured: Must Try | `/photos/chefs-table/salmon-carpaccio.webp` |
-| Har Gow | featured: Must Try | `/photos/main-course/appetizers/non-veg/har-gow.webp` |
+| Har Gow (Prawns Dimsum) (4pc) | featured: Must Try | `/photos/main-course/appetizers/non-veg/har-gow.webp` |
 | Tuna Carpaccio | — | `/photos/chefs-table/tuna-carpaccio.webp` |
 | Thai Green Curry with Steamed Jasmine Rice | — | `/photos/chefs-table/thai-green-curry-with-steamed-jasmine-rice.webp` |
 | Thai Red Curry with Steamed Jasmine Rice | — | `/photos/chefs-table/thai-red-curry-with-steamed-jasmine-rice.webp` |
 
 </details>
 
-<details><summary><strong>Beverages</strong> — 44 missing</summary>
+<details><summary><strong>Beverages</strong> — 43 missing</summary>
 
 | Dish | Where | Path |
 | --- | --- | --- |
@@ -202,9 +202,8 @@ Main Course the truffle mushroom burger.
 | Veux Cold Coffee | On The Rocks | `/photos/beverages/on-the-rocks/veux-cold-coffee.webp` |
 | Signature Frappe | On The Rocks | `/photos/beverages/on-the-rocks/signature-frappe.webp` |
 | Classic Cold Brew | Cold Brews | `/photos/beverages/cold-brews/classic-cold-brew.webp` |
-| Peach | Cold Brews | `/photos/beverages/cold-brews/peach.webp` |
-| Cranberry | Cold Brews | `/photos/beverages/cold-brews/cranberry.webp` |
-| Orange | Cold Brews | `/photos/beverages/cold-brews/orange.webp` |
+| Peach Cold Brew | Cold Brews | `/photos/beverages/cold-brews/peach-cold-brew.webp` |
+| Orange Cold Brew | Cold Brews | `/photos/beverages/cold-brews/orange-cold-brew.webp` |
 | Mocha | Frappes | `/photos/beverages/frappes/mocha.webp` |
 | Brownie Blend | Frappes | `/photos/beverages/frappes/brownie-blend.webp` |
 | Cookies & Cream | Frappes | `/photos/beverages/frappes/cookies-cream.webp` |
@@ -232,9 +231,9 @@ Main Course the truffle mushroom burger.
 
 | Dish | Where | Path |
 | --- | --- | --- |
-| Spicy Thai Basil Chicken Dimsum | featured: Most Ordered | `/photos/main-course/appetizers/non-veg/spicy-thai-basil-chicken-dimsum.webp` |
+| Spicy Thai Basil Chicken Dimsum (4pc) | featured: Most Ordered | `/photos/main-course/appetizers/non-veg/spicy-thai-basil-chicken-dimsum.webp` |
 | Rainbow Sushi | featured: Must Try | `/photos/sushi-and-japanese/sushi/non-veg/rainbow-sushi.webp` |
-| Har Gow | featured: Must Try | `/photos/main-course/appetizers/non-veg/har-gow.webp` |
+| Har Gow (Prawns Dimsum) (4pc) | featured: Must Try | `/photos/main-course/appetizers/non-veg/har-gow.webp` |
 | Asparagus Maki Roll / Cream Cheese | Sushi — Veg | `/photos/sushi-and-japanese/sushi/veg/asparagus-maki-roll-cream-cheese.webp` |
 | Mexican Hat Boy | Sushi — Veg | `/photos/sushi-and-japanese/sushi/veg/mexican-hat-boy.webp` |
 | Veg Tempura Sushi | Sushi — Veg | `/photos/sushi-and-japanese/sushi/veg/veg-tempura-sushi.webp` |
@@ -253,7 +252,7 @@ Main Course the truffle mushroom burger.
 
 </details>
 
-<details><summary><strong>Main Course</strong> — 77 missing</summary>
+<details><summary><strong>Main Course</strong> — 74 missing</summary>
 
 | Dish | Where | Path |
 | --- | --- | --- |
@@ -262,9 +261,9 @@ Main Course the truffle mushroom burger.
 | Romano Margherita | featured: Most Ordered | `/photos/main-course/pizza/veg/romano-margherita.webp` |
 | Spicy Buffalo Pulled Chicken | featured: Most Ordered | `/photos/main-course/sandwiches/non-veg/spicy-buffalo-pulled-chicken.webp` |
 | Lasagna | featured: Must Try | `/photos/main-course/pasta/lasagna.webp` |
-| Veggie Nepolitana Pizza | featured: Must Try | `/photos/main-course/pizza/veg/veggie-nepolitana-pizza.webp` |
+| Veggie Nepolitana | featured: Must Try | `/photos/main-course/pizza/veg/veggie-nepolitana.webp` |
 | Sloppy Joe | featured: Must Try | `/photos/main-course/sandwiches/non-veg/sloppy-joe.webp` |
-| Veux Katsu Burger | featured: Must Try | `/photos/main-course/burgers/veux-katsu-burger.webp` |
+| Veux Katsu | featured: Must Try | `/photos/main-course/burgers/veux-katsu.webp` |
 | Clear Tofu Soup | Soups | `/photos/main-course/soups/clear-tofu-soup.webp` |
 | Tom Yum | Soups | `/photos/main-course/soups/tom-yum.webp` |
 | Spicy Thai Coconut Soup | Soups | `/photos/main-course/soups/spicy-thai-coconut-soup.webp` |
@@ -277,7 +276,7 @@ Main Course the truffle mushroom burger.
 | Veggies Spring Roll | Appetizers — Veg | `/photos/main-course/appetizers/veg/veggies-spring-roll.webp` |
 | Japanese Vegetable Gyoza | Appetizers — Veg | `/photos/main-course/appetizers/veg/japanese-vegetable-gyoza.webp` |
 | Kung Pao Tofu Dry | Appetizers — Veg | `/photos/main-course/appetizers/veg/kung-pao-tofu-dry.webp` |
-| Edamame Steamed Truffle (Salted) | Appetizers — Veg | `/photos/main-course/appetizers/veg/edamame-steamed-truffle-salted.webp` |
+| Edamame with Pods | Appetizers — Veg | `/photos/main-course/appetizers/veg/edamame-steamed-truffle-salted.webp` |
 | Spicy Baby Potato | Appetizers — Veg | `/photos/main-course/appetizers/veg/spicy-baby-potato.webp` |
 | Lemongrass Mock Meat | Appetizers — Veg | `/photos/main-course/appetizers/veg/lemongrass-mock-meat.webp` |
 | Teriyaki Miso Eggplant | Appetizers — Veg | `/photos/main-course/appetizers/veg/teriyaki-miso-eggplant.webp` |
@@ -317,13 +316,10 @@ Main Course the truffle mushroom burger.
 | Macaroni | Pasta | `/photos/main-course/pasta/macaroni.webp` |
 | Asian Green | Pizza — Veg | `/photos/main-course/pizza/veg/asian-green.webp` |
 | Peri Peri Cottage Cheese | Pizza — Veg | `/photos/main-course/pizza/veg/peri-peri-cottage-cheese.webp` |
-| Veggie Nepolitana | Pizza — Veg | `/photos/main-course/pizza/veg/veggie-nepolitana.webp` |
 | Simply Cheese | Pizza — Veg | `/photos/main-course/pizza/veg/simply-cheese.webp` |
 | Hawaiian Delicacy | Pizza — Non-Veg | `/photos/main-course/pizza/non-veg/hawaiian-delicacy.webp` |
 | Chilli Garlic Shrimp | Pizza — Non-Veg | `/photos/main-course/pizza/non-veg/chilli-garlic-shrimp.webp` |
-| Crumbfried Truffle Mushroom | Burgers | `/photos/main-course/burgers/crumbfried-truffle-mushroom.webp` |
 | Cottage Cheese | Burgers | `/photos/main-course/burgers/cottage-cheese.webp` |
-| Veux Katsu | Burgers | `/photos/main-course/burgers/veux-katsu.webp` |
 | Egg Mustard Sandwich | Sandwiches | `/photos/main-course/sandwiches/non-veg/egg-mustard-sandwich.webp` |
 | Olive and Edamame Fried Rice | Rice & Noodles | `/photos/main-course/rice-and-noodles/olive-and-edamame-fried-rice.webp` |
 | Seafood Spicy XO Fried Rice | Rice & Noodles | `/photos/main-course/rice-and-noodles/seafood-spicy-xo-fried-rice.webp` |
@@ -345,4 +341,3 @@ Main Course the truffle mushroom burger.
 | Biscoff Cheesecake | — | `/photos/desserts/biscoff-cheesecake.webp` |
 
 </details>
-

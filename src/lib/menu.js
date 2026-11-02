@@ -103,6 +103,66 @@ export function assertUniqueSlugs(categories = menu) {
 
 assertUniqueSlugs();
 
+/**
+ * Dish URLs that existed once and were renamed since. A QR code, a shared
+ * link or a bookmark can carry an old slug long after the menu moves on, so
+ * each one is sent to the dish it used to open rather than dropping the
+ * guest on the category page.
+ *
+ * Keyed "category/old-slug" → "category/new-slug". The target may sit in a
+ * different category (the soups moved from Sushi & Japanese to Main Course).
+ * When a dish is renamed, add its old slug here.
+ */
+export const RENAMED = {
+  // 2026-11-02 — featured and full-menu names aligned
+  "mains/crumbfried-truffle-mushroom-burger": "mains/crumbfried-truffle-mushroom",
+  "mains/veggie-nepolitana-pizza": "mains/veggie-nepolitana",
+  "mains/veux-katsu-burger": "mains/veux-katsu",
+  "beverages/peach": "beverages/peach-cold-brew",
+  "beverages/cranberry": "beverages/cranberry-cold-brew",
+  "beverages/orange": "beverages/orange-cold-brew",
+  "beverages/blueberry-cheesecake-shake": "beverages/blueberry-cheesecake",
+  "signatures/exotic-asian-veg-cheese-dimsum": "signatures/exotic-asian-veg-cheese-dimsum-4pc",
+  "signatures/blue-pea-exotic-fried-rice": "signatures/blue-pea-exotic-veg-fried-rice",
+  "signatures/har-gow": "signatures/har-gow-prawns-dimsum-4pc",
+  "sushi/spicy-thai-basil-chicken-dimsum": "sushi/spicy-thai-basil-chicken-dimsum-4pc",
+  "sushi/har-gow": "sushi/har-gow-prawns-dimsum-4pc",
+  // Earlier renames. The bare fish names were shared by Nigiri and Sashimi;
+  // the old URL always opened the first, which was the Nigiri.
+  "sushi/avocado": "sushi/avocado-nigiri",
+  "sushi/teriyaki-baby-corn": "sushi/teriyaki-baby-corn-nigiri",
+  "sushi/asparagus": "sushi/asparagus-nigiri",
+  "sushi/salmon": "sushi/salmon-nigiri",
+  "sushi/tuna": "sushi/tuna-nigiri",
+  "sushi/yellowtail": "sushi/yellowtail-nigiri",
+  "sushi/clear-tofu-soup": "mains/clear-tofu-soup",
+  "sushi/tom-yum": "mains/tom-yum",
+  "sushi/spicy-thai-coconut-soup": "mains/spicy-thai-coconut-soup",
+  "sushi/miso-soup": "mains/miso-soup",
+  "mains/edamame-steamed-truffle-salted": "mains/edamame-with-pods",
+};
+
+/** Where an old dish URL lives now — "/menu/mains/veux-katsu" — or null. */
+export function renamedDishPath(categoryId, slug) {
+  const target = RENAMED[`${categoryId}/${slug}`];
+  return target ? `/menu/${target}` : null;
+}
+
+/* A redirect pointing at a dish that has since been renamed again (or
+   removed) would quietly fall back to the category page. Catch it in dev. */
+if (import.meta.env?.DEV) {
+  const broken = Object.entries(RENAMED).filter(([, to]) => {
+    const [cat, slug] = to.split("/");
+    const c = getCategory(cat);
+    return !c || !findDish(c, slug);
+  });
+  if (broken.length) {
+    console.warn(
+      `An old dish URL redirects to a dish that no longer exists. Update RENAMED in src/lib/menu.js:\n  ${broken.map(([a, b]) => `${a} → ${b}`).join("\n  ")}`
+    );
+  }
+}
+
 export function getCategory(id) {
   return menu.find((c) => c.id === id);
 }
