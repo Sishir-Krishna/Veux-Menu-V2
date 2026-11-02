@@ -4,8 +4,9 @@ Everything in the menu that needs a person to decide, grouped by who. Each
 item says what is missing and where it lives, so it can be answered without
 going looking.
 
-Generated from `src/data/menu.js` on 2026-10-31. Re-check it after any
-large edit to the data.
+Generated from `src/data/menu.js` on 2026-10-31. The two-descriptions, veg /
+non-veg and no-description sections were regenerated on 2026-11-02. Re-check
+it after any large edit to the data.
 
 ## For Krishna
 
@@ -45,46 +46,8 @@ the preview becomes a proper link rather than a bare image.
 
 ### 4. Two descriptions for the same dish
 
-There are **16** dishes whose featured-strip wording differs from their
-full-menu wording. A guest sees both on the same page. Pick one per dish, or
-confirm the difference is deliberate — the strip copy is generally the
-curated version, the full-menu copy the plainer one.
-
-**Chef’s Table**
-
-| Dish | In the featured strip | In the full menu |
-| --- | --- | --- |
-| Massaman Curry Lamb | Slow-braised lamb in a Thai curry with peanuts, potato, and warm spice. | — *(blank)* |
-| Salmon Carpaccio | Thin slices of raw salmon with onion, jalapeño, micro green, onion dressing. | Raw salmon, onion, jalapeño, micro green, onion dressing |
-
-**Beverages**
-
-| Dish | In the featured strip | In the full menu |
-| --- | --- | --- |
-| Biscoff Latte | Espresso layered with Biscoff spread — speculoos in a cup. | A shot of our espresso blended with Biscoff spread and steamed milk |
-| Coconut Pine Cooler | Tropical, refreshing, impossible to drink slowly. | — *(blank)* |
-| Tropical Punch | House signature blend — fruity, punchy, always a conversation starter. | — *(blank)* |
-| Cinnamon Brew | Hot or iced. Warm spice, smooth coffee, a finish that lingers. | Hot or iced |
-
-**Sushi & Japanese**
-
-| Dish | In the featured strip | In the full menu |
-| --- | --- | --- |
-| Chef Special Avocado Roll | Crunchy tempura, Hass avocado, truffle mayo, spring roll. | Crunchy tempura, Hass avocado, truffle mayo, spring roll |
-| Veg California Roll | Cucumber, cream cheese, asparagus wrapped with avocado, goma dressing. | Cucumber, cream cheese, asparagus wrapped with avocado, goma dressing |
-| Rainbow Sushi | Prawn tempura, crab stick, wrapped hamachi, salmon, tuna, teriyaki & spicy sauce. | Prawn tempura, crab stick, wrapped hamachi, salmon, tuna, teriyaki & spicy sauce |
-| Tiger Roll | Tempura soft shell crab, lettuce, tobiko, drizzle with teriyaki sauce. | Tempura soft shell crab, lettuce, tobiko, teriyaki sauce |
-
-**Main Course**
-
-| Dish | In the featured strip | In the full menu |
-| --- | --- | --- |
-| Caramelized Lamb Supreme | Double minced lamb, double cheese, red onion, garlic mayo, pickle veg & caramelized onion. | Non-veg — double minced lamb, double cheese, red onion, garlic mayo, pickle veg, caramelized onion |
-| Ravioli Pasta | Homemade ravioli with spinach & cottage cheese. Choice of Alfredo / Pink / Pesto / Arrabbiata. | Homemade — spinach & cottage cheese. Alfredo / Pink / Pesto / Arrabbiata |
-| Romano Margherita | Mozzarella, burrata cheese, bocconcini, tomato, olive, house-made pizza sauce. | Mozzarella, burrata, bocconcini, tomato, olive, pizza sauce |
-| Spicy Buffalo Pulled Chicken | Sriracha mayo, garlic mayo, fried egg, cheese. | Non-veg — sriracha mayo, garlic mayo, fried egg, cheese |
-| Lasagna | Layered baked pasta with pomodori pelati. | Layered baked pasta, pomodori pelati |
-| Sloppy Joe | Hoisin chicken, lettuce mayo, caramelized onion, cheddar, pulled chicken. | Non-veg — hoisin chicken, lettuce mayo, caramelized onion, cheddar, pulled chicken |
+Resolved. Every dish in a featured strip now carries the same description
+as its full-menu row, so a guest no longer sees two versions on one page.
 
 ### 5. One lowercase description
 
@@ -117,14 +80,14 @@ built once there is something to display.
 
 ### 2. Dishes still missing a veg / non-veg mark
 
-**101** of 180 rows. The mark was filled in only where a group heading
+**101** of 182 rows. The mark was filled in only where a group heading
 states it outright — `Appetizers — Veg`, `Curry — Non-Veg` and so on — which
 covered 81. The rest are mixed groups or drinks, and were deliberately left
 blank rather than guessed.
 
 Two worth looking at first:
 
-- **Sashimi (3 pcs)** — raw fish, but the group heading does not say so, so
+- **Sashimi (4 pcs)** — raw fish, but the group heading does not say so, so
   the rule did not apply. Three rows.
 - **Bruschetta (4pc)** sits under *Appetizers — Veg* and is marked vegetarian,
   but it carries a non-veg option at ₹349. One mark cannot say both.
@@ -148,7 +111,7 @@ Two worth looking at first:
 
 **Sushi & Japanese** — 3
 
-- *Sashimi (3 pcs)* (3): Salmon Sashimi, Tuna Sashimi, Yellowtail Sashimi
+- *Sashimi (4 pcs)* (3): Salmon Sashimi, Tuna Sashimi, Yellowtail Sashimi
 
 **Main Course** — 39
 
@@ -165,49 +128,7 @@ Two worth looking at first:
 
 ### 3. Dishes with no description
 
-**76** rows have nothing under the name. A guest reading the list sees a
-name and a price and has to ask. Not every dish needs a line, but these are
-the ones that have none.
-
-Four of them were emptied by this pass, when a second price was moved out of
-the description and into its own field, leaving nothing behind:
-
-- `Thai Green Curry with Steamed Jasmine Rice`
-- `Thai Red Curry with Steamed Jasmine Rice`
-- `Udon Noodles with Chilli Black Bean`
-- `Steamed Jasmine Rice (Half / Full)`
-
-Those four should be written first — they read as bare rows now.
-
-**Chef’s Table** — 3
-
-- *(no group)* (3): Thai Green Curry with Steamed Jasmine Rice, Thai Red Curry with Steamed Jasmine Rice, Massaman Curry Lamb
-
-**Beverages** — 27
-
-- *Signature* (4): Saigon Brew, Tropical Punch, Signature Hot Chocolate, Hot Chocolate
-- *Frappes* (5): Mocha, Brownie Blend, Cookies & Cream, Caramel Hazelnut Blend, Biscoff
-- *Mocktails* (8): Orange Basil Cooler, Heat & Melon, Blue Smoke, Wild Cat, Coconut Pine Cooler, Saffron Citrus Spritz, Berry Blend, Classic Mojito
-- *Milkshakes* (4): Brownie Indulgence, Cream Cookie, Strawberry Cheesecake, Blueberry Cheesecake
-- *Iced Teas* (3): Citrus Iced Tea, Summer Peach Tea, Raspberry Iced Tea
-- *Hot Tea* (3): Herbal Detox, Green Tea, Ginger & Lemon Infusion
-
-**Sushi & Japanese** — 15
-
-- *Sushi — Veg* (2): Asparagus Maki Roll / Cream Cheese, Asparagus & Cream Cheese Roll
-- *Sushi — Non-Veg* (4): Salmon Maki Roll, Tuna Maki Roll, Spicy Tuna Maki Roll, Ebi Tempura Sushi Roll
-- *Nigiri (4 pcs) — Veg* (3): Avocado Nigiri, Teriyaki Baby Corn Nigiri, Asparagus Nigiri
-- *Nigiri (4 pcs) — Non-Veg* (3): Salmon Nigiri, Tuna Nigiri, Yellowtail Nigiri
-- *Sashimi (3 pcs)* (3): Salmon Sashimi, Tuna Sashimi, Yellowtail Sashimi
-
-**Main Course** — 31
-
-- *Soups* (1): Clear Tofu Soup
-- *Appetizers — Veg* (5): Kung Pao Tofu Dry, Edamame Steamed Truffle (Salted), Spicy Baby Potato, Crispy Lotus Stem & Water Chestnut, Teriyaki Miso Eggplant
-- *Appetizers — Non-Veg* (7): Thai Style Chilli Chicken, Sichuan Mala Chicken, Leeks and Chicken Skewers, Chilli Basil Prawn, Wasabi Prawn, Thai Fish Cake, Crispy Tempura Calamari (Squid)
-- *Curry — Veg* (5): Stir Fry Aubergine in Thai Chilli Sauce, Assorted Wild Mushroom in Ginger Soy Sauce, Stir Fry Asian Green in Butter Garlic Sauce, Wok Tossed Mock Meat in Thai Chilli Paste, Stir Fry Tofu with Cashew Nut
-- *Curry — Non-Veg* (7): Pad Karpow Gai (Minced Chicken Chilli Basil), Stir Fried Chicken With Cashew Nut, Kung Pao Chicken, Stir Fried Chicken in Chilli Black Bean Sauce, Stir Fried Prawn in Chilli Basil Sauce, Wok Tossed Sea Bass in Thai Chilli Sauce, Wok Tossed Lamb in Chilli Black Bean Sauce
-- *Rice & Noodles* (6): Korean Kimchi Fried Rice, Garlic Fried Rice, Steamed Jasmine Rice (Half / Full), Pad Thai Noodle, Street Hakka Noodle, Udon Noodles with Chilli Black Bean
+Resolved. All 182 rows have a description.
 
 ---
 
@@ -322,9 +243,9 @@ Main Course the truffle mushroom burger.
 | Salmon Nigiri | Nigiri (4 pcs) — Non-Veg | `/photos/sushi-and-japanese/nigiri/non-veg/salmon-nigiri.webp` |
 | Tuna Nigiri | Nigiri (4 pcs) — Non-Veg | `/photos/sushi-and-japanese/nigiri/non-veg/tuna-nigiri.webp` |
 | Yellowtail Nigiri | Nigiri (4 pcs) — Non-Veg | `/photos/sushi-and-japanese/nigiri/non-veg/yellowtail-nigiri.webp` |
-| Salmon Sashimi | Sashimi (3 pcs) | `/photos/sushi-and-japanese/sashimi/salmon-sashimi.webp` |
-| Tuna Sashimi | Sashimi (3 pcs) | `/photos/sushi-and-japanese/sashimi/tuna-sashimi.webp` |
-| Yellowtail Sashimi | Sashimi (3 pcs) | `/photos/sushi-and-japanese/sashimi/yellowtail-sashimi.webp` |
+| Salmon Sashimi | Sashimi (4 pcs) | `/photos/sushi-and-japanese/sashimi/salmon-sashimi.webp` |
+| Tuna Sashimi | Sashimi (4 pcs) | `/photos/sushi-and-japanese/sashimi/tuna-sashimi.webp` |
+| Yellowtail Sashimi | Sashimi (4 pcs) | `/photos/sushi-and-japanese/sashimi/yellowtail-sashimi.webp` |
 
 </details>
 
