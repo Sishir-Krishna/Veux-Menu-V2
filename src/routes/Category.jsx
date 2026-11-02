@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Link, Navigate, useParams } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate, useParams } from "react-router-dom";
 import {
   getCategory,
   featuredStrips,
@@ -22,6 +22,8 @@ import "./Category.css";
 
 export default function Category() {
   const { categoryId, dishSlug } = useParams();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [query, setQuery] = useState("");
   const category = getCategory(categoryId);
 
@@ -49,12 +51,22 @@ export default function Category() {
   if (!category) return <Navigate to="/" replace />;
 
   // A renamed plate's old URL goes to the dish it used to open. A dish that
-  // no longer exists at all drops the guest onto the category rather than a
-  // dead end.
+  // no longer exists at all drops the guest onto the category, with a note
+  // saying why, rather than a dead end or a silent jump.
   const dish = dishSlug ? findDish(category, dishSlug) : null;
   if (dishSlug && !dish) {
-    return <Navigate to={renamedDishPath(categoryId, dishSlug) || `/menu/${categoryId}`} replace />;
+    const moved = renamedDishPath(categoryId, dishSlug);
+    return moved
+      ? <Navigate to={moved} replace />
+      : <Navigate to={`/menu/${categoryId}`} replace state={{ dishGone: true }} />;
   }
+
+  /* Carried in history state rather than the URL, so the address stays the
+     clean category link. Dismissing clears it from that history entry too,
+     so a reload or a trip back from a dish does not bring it back. */
+  const dishGone = Boolean(location.state?.dishGone);
+  const dismissGone = () =>
+    navigate(location.pathname, { replace: true, state: null });
 
   const { id, name, tagline, accent, notes, items } = category;
   const strips = featuredStrips(category);
@@ -82,6 +94,23 @@ export default function Category() {
       </div>
 
       <MenuSearch value={query} onChange={setQuery} matches={matchCount} />
+
+      {dishGone && (
+        <div className="gone-note" role="status">
+          <p className="gone-note__text">
+            This dish is no longer on the menu.
+            <span className="gone-note__sub">Here’s everything else in {name}.</span>
+          </p>
+          <button
+            type="button"
+            className="gone-note__close"
+            onClick={dismissGone}
+            aria-label="Dismiss"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+      )}
 
       <header className="masthead">
         <h1 className="masthead__name">{name}</h1>

@@ -171,6 +171,56 @@
   flex: none;
 }
 
+/* ── "No longer on the menu" ───────────────────────────── */
+/* Only rendered when a guest arrives on a dish that has gone, so it adds
+   nothing to the page — and moves nothing — the rest of the time. Dressed
+   like the kitchen note: the same paper, hairline and type. */
+.gone-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px var(--gutter) 0;
+  padding: 12px 8px 12px 14px;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-tile);
+}
+
+.gone-note__text {
+  flex: 1;
+  margin: 0;
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+.gone-note__sub {
+  display: block;
+  color: var(--ink-muted);
+}
+
+.gone-note__close {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin: -4px 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  color: var(--gold);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.gone-note__close:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
 /* ── Featured strips ───────────────────────────────────── */
 .strip {
   padding-top: 30px;
