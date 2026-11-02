@@ -4,9 +4,9 @@ Everything in the menu that needs a person to decide, grouped by who. Each
 item says what is missing and where it lives, so it can be answered without
 going looking.
 
-Generated from `src/data/menu.js` on 2026-10-31. The two-descriptions, veg /
-non-veg and no-description sections were regenerated on 2026-11-02. Re-check
-it after any large edit to the data.
+Generated from `src/data/menu.js` on 2026-10-31. The description, veg /
+non-veg and photo-count sections were re-checked against it on 2026-11-02.
+Re-check it after any large edit to the data.
 
 ## For Krishna
 
@@ -51,9 +51,8 @@ as its full-menu row, so a guest no longer sees two versions on one page.
 
 ### 5. One lowercase description
 
-`Mexican Tacos (3pc)` now reads `with sour cream`, because the price fragment
-was removed from the front of it and the rest was left exactly as written.
-It probably wants a capital, or a fuller sentence.
+Resolved. `Mexican Tacos (3pc)` now reads "Three tacos, sour cream. The
+lightest entry point on the menu."
 
 ---
 
@@ -134,9 +133,14 @@ Resolved. All 182 rows have a description.
 
 ## For the photo shoot
 
-**146** photographs are named in the menu data but have no file behind
+**143** photographs are named in the menu data but have no file behind
 them. Each one already has its path — drop a file in at exactly that path and
 it appears, with no other change needed. See the README for size and naming.
+
+The tables below have 146 rows, not 143, because a dish listed in more than
+one place keeps one path: Har Gow appears three times (Chef’s Table strip,
+Main Course strip, Main Course full menu) and Spicy Thai Basil Chicken Dimsum
+twice. One file covers every listing.
 
 The layout is built to work without them, so this is not urgent everywhere.
 It is urgent where marked below.
