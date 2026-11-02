@@ -388,7 +388,6 @@ const menu = [
         { name: "Spicy Thai Basil Chicken Dimsum (4pc)", price: 449, desc: "Thai basil chicken in starch-dough wrapper. Coconut-herb reduction.", diet: "Non-vegetarian", photo: "/photos/main-course/appetizers/non-veg/spicy-thai-basil-chicken-dimsum.webp" },
         { name: "Har Gow (Prawns Dimsum) (4pc)", price: 499, desc: "Translucent-skinned prawn dimsum, Cantonese style. Coconut-gochujang dip.", diet: "Non-vegetarian", photo: "/photos/main-course/appetizers/non-veg/har-gow.webp" },
         { name: "Malaysian Style Chicken", price: 399, desc: "Julienned chicken, peanuts, bell pepper, spinach. Green chilli sauce.", diet: "Non-vegetarian", photo: "/photos/main-course/appetizers/non-veg/malaysian-style-chicken.webp" },
-        { name: "Chicken Nuggets (2pc)", price: 349, desc: "Cheese-stuffed chicken breast, crumb-fried. Tartare sauce, greens.", diet: "Non-vegetarian", photo: "/photos/main-course/appetizers/non-veg/chicken-nuggets.webp" },
       ]},
       { group: "Curry — Veg", dishes: [
         { name: "Stir Fry Aubergine in Thai Chilli Sauce", price: 380, desc: "Wok-fried eggplant in Thai chilli paste. Smoky, sweet-hot. The cheapest main — doesn't eat like it.", diet: "Vegetarian", photo: "/photos/main-course/curry/veg/stir-fry-aubergine-in-thai-chilli-sauce.webp" },
@@ -459,10 +458,10 @@ const menu = [
         { name: "Udon Noodles with Chilli Black Bean", price: 450, variants: [{ label: "Chicken", price: 500 }, { label: "Seafood", price: 550 }], desc: "Thick wheat udon in fermented black bean and chilli. Chewy, salty, heavy.", photo: "/photos/main-course/rice-and-noodles/udon-noodles-with-chilli-black-bean.webp" },
       ]},
       { group: "Around the World", dishes: [
-        { name: "Mexican Tacos (3pc)", price: 299, variants: [{ label: "Chicken", price: 399 }], desc: "Three tacos, sour cream. The lightest entry point on the menu.", photo: "/photos/main-course/around-the-world/mexican-tacos.webp" },
-        { name: "Mexican Rice Bowl", price: 399, variants: [{ label: "Chicken", price: 499 }, { label: "Prawns", price: 599 }], desc: "Rice, pomodori pelati sauce, cheese. A bowl format, not a burrito.", photo: "/photos/main-course/around-the-world/mexican-rice-bowl.webp" },
-        { name: "Falafel with Hummus (5pc)", price: 499, desc: "Chickpea falafel, crisp outside, soft centre. Hummus on the side.", photo: "/photos/main-course/around-the-world/falafel-with-hummus.webp" },
-        { name: "Chicken Nuggets (2pc)", price: 349, desc: "Cheese-stuffed chicken breast, crumb-fried. Tartare sauce, greens.", photo: "/photos/main-course/appetizers/non-veg/chicken-nuggets.webp" },
+        { name: "Mexican Tacos (3pc)", price: 299, variants: [{ label: "Chicken", price: 399 }], desc: "Three tacos, sour cream. The lightest entry point on the menu.", diet: "Vegetarian", photo: "/photos/main-course/around-the-world/mexican-tacos.webp" },
+        { name: "Mexican Rice Bowl", price: 399, variants: [{ label: "Chicken", price: 499 }, { label: "Prawns", price: 599 }], desc: "Rice, pomodori pelati sauce, cheese. A bowl format, not a burrito.", diet: "Vegetarian", photo: "/photos/main-course/around-the-world/mexican-rice-bowl.webp" },
+        { name: "Falafel with Hummus (5pc)", price: 499, desc: "Chickpea falafel, crisp outside, soft centre. Hummus on the side.", diet: "Vegetarian", photo: "/photos/main-course/around-the-world/falafel-with-hummus.webp" },
+        { name: "Chicken Nuggets (2pc)", price: 349, desc: "Cheese-stuffed chicken breast, crumb-fried. Tartare sauce, greens.", diet: "Non-vegetarian", photo: "/photos/main-course/appetizers/non-veg/chicken-nuggets.webp" },
       ]},
     ],
   },
