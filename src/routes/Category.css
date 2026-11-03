@@ -331,12 +331,38 @@
   color: rgba(250, 247, 242, 0.78);
 }
 
-.fcard__price {
-  display: block;
+.fcard__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
   margin-top: 6px;
+}
+
+.fcard__price {
   font-size: var(--fs-small);
   letter-spacing: 0.06em;
   color: var(--fc-price);
+}
+
+/* Same colour as the price: full gold on cream, light gold on aubergine —
+   both pass contrast, which the faded decorative gold would not. */
+.fcard__allergens {
+  order: 2;
+  display: flex;
+  align-items: center;
+  color: var(--fc-price);
+}
+
+.fcard__allergens .allergens {
+  display: flex;
+  gap: 5px;
+}
+
+.fcard__allergens svg {
+  flex: none;
+  min-width: 13px;
+  min-height: 13px;
 }
 
 /* No photograph: the caption takes the whole card instead of sitting under
@@ -361,7 +387,7 @@
   min-height: 0;
 }
 
-.fcard--typeonly .fcard__price {
+.fcard--typeonly .fcard__foot {
   margin-top: 12px;
 }
 

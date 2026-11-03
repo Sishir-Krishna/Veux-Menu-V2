@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import SmartImage from "./SmartImage.jsx";
 import { Rule } from "./Ornaments.jsx";
+import { AllergenMarks, ALLERGEN_ORDER } from "./Allergens.jsx";
 import { slugify, leadPhoto, formatPrice } from "../lib/menu.js";
 
 /**
@@ -49,6 +50,7 @@ function tagsWorthShowing(dishes, stripTitle) {
 
 function FeaturedCard({ dish, categoryId, tag, dark }) {
   const photo = leadPhoto(dish);
+  const allergens = ALLERGEN_ORDER.filter((k) => dish.allergens?.includes(k));
 
   return (
     <Link
@@ -72,7 +74,19 @@ function FeaturedCard({ dish, categoryId, tag, dark }) {
         {tag && <span className="label fcard__tag">{tag}</span>}
         <span className="fcard__name">{dish.name}</span>
         {dish.desc && <span className="fcard__desc">{dish.desc}</span>}
-        <span className="fcard__price rupee">{formatPrice(dish.price)}</span>
+        {/* Price and marks share one line. The marks come first in the
+            markup so a screen reader hears name, allergens, price — the
+            same order as a list row — and CSS moves them to the right. */}
+        <span className="fcard__foot">
+          {allergens.length > 0 && (
+            <span className="fcard__allergens">
+              <span className="sr-only">, </span>
+              <AllergenMarks kinds={allergens} size={13} />
+              <span className="sr-only">, </span>
+            </span>
+          )}
+          <span className="fcard__price rupee">{formatPrice(dish.price)}</span>
+        </span>
       </span>
     </Link>
   );
