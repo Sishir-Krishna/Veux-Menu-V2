@@ -1,0 +1,1346 @@
+[
+ {
+  "category": "signatures",
+  "dish": "Chef Special Avocado Roll",
+  "where": "featured:Most Ordered",
+  "group": null,
+  "desc": "Hass avocado, crunchy tempura crumb, truffle mayo. The rich one on the veg side."
+ },
+ {
+  "category": "signatures",
+  "dish": "7 Spice Chicken",
+  "where": "featured:Most Ordered",
+  "group": null,
+  "desc": "Tempura-battered fried chicken, shichimi togarashi dust."
+ },
+ {
+  "category": "signatures",
+  "dish": "Vietnamese Rice Paper Roll",
+  "where": "featured:Most Ordered",
+  "group": null,
+  "desc": "Grilled paneer and seasonal greens in rice paper. Peanut sauce. No fry."
+ },
+ {
+  "category": "signatures",
+  "dish": "Exotic Asian Veg & Cheese Dimsum (4pc)",
+  "where": "featured:Most Ordered",
+  "group": null,
+  "desc": "Steamed — vegetables, water chestnut, cheese filling. Green curry reduction."
+ },
+ {
+  "category": "signatures",
+  "dish": "Massaman Curry Lamb",
+  "where": "featured:Must Try",
+  "group": null,
+  "desc": "Slow-cooked lamb in massaman paste, coconut milk, peanut, potato. The heaviest curry on the menu. Thai-Malay crossover."
+ },
+ {
+  "category": "signatures",
+  "dish": "Blue Pea Exotic Veg Fried Rice",
+  "where": "featured:Must Try",
+  "group": null,
+  "desc": "Jasmine rice coloured with butterfly pea flower. Edamame, seasonal vegetables. Looks vivid, tastes clean."
+ },
+ {
+  "category": "signatures",
+  "dish": "Salmon Carpaccio",
+  "where": "featured:Must Try",
+  "group": null,
+  "desc": "Thin-sliced raw salmon, jalapeño, microgreens, onion dressing. Plated cold."
+ },
+ {
+  "category": "signatures",
+  "dish": "Har Gow (Prawns Dimsum) (4pc)",
+  "where": "featured:Must Try",
+  "group": null,
+  "desc": "Translucent-skinned prawn dimsum, Cantonese style. Coconut-gochujang dip."
+ },
+ {
+  "category": "signatures",
+  "dish": "Salmon Carpaccio",
+  "where": "list",
+  "group": null,
+  "desc": "Thin-sliced raw salmon, jalapeño, microgreens, onion dressing. Plated cold."
+ },
+ {
+  "category": "signatures",
+  "dish": "Tuna Carpaccio",
+  "where": "list",
+  "group": null,
+  "desc": "Thin-sliced raw tuna, tri-pepper, spring onion, togarashi. Yuzu dressing. Sharper than the salmon."
+ },
+ {
+  "category": "signatures",
+  "dish": "Thai Green Curry with Steamed Jasmine Rice",
+  "where": "list",
+  "group": null,
+  "desc": "Green chilli paste, coconut milk, Thai basil, seasonal vegetables. Served with steamed jasmine rice. Add chicken or prawn."
+ },
+ {
+  "category": "signatures",
+  "dish": "Thai Red Curry with Steamed Jasmine Rice",
+  "where": "list",
+  "group": null,
+  "desc": "Red chilli paste, coconut milk, bamboo shoot, kaffir lime. Served with steamed jasmine rice. Add chicken or prawn."
+ },
+ {
+  "category": "signatures",
+  "dish": "Massaman Curry Lamb",
+  "where": "list",
+  "group": null,
+  "desc": "Slow-cooked lamb in massaman paste, coconut milk, peanut, potato. The heaviest curry on the menu. Thai-Malay crossover."
+ },
+ {
+  "category": "beverages",
+  "dish": "Biscoff Latte",
+  "where": "featured:Most Ordered",
+  "group": null,
+  "desc": "Biscoff spread blended into espresso and steamed milk. Speculoos in a cup."
+ },
+ {
+  "category": "beverages",
+  "dish": "Tropical Punch",
+  "where": "featured:Most Ordered",
+  "group": null,
+  "desc": "Orange, cranberry, pineapple and mango over ice cream. Thick and cold."
+ },
+ {
+  "category": "beverages",
+  "dish": "Cinnamon Brew",
+  "where": "featured:Must Try",
+  "group": null,
+  "desc": "Espresso, steamed milk and cinnamon under a foam cap. Hot or iced."
+ },
+ {
+  "category": "beverages",
+  "dish": "Cranberry Cold Brew",
+  "where": "featured:Must Try",
+  "group": null,
+  "desc": "Cold brew cut with cranberry juice. Tart against the smooth."
+ },
+ {
+  "category": "beverages",
+  "dish": "Blueberry Cheesecake",
+  "where": "featured:Must Try",
+  "group": null,
+  "desc": "Blueberry, cream cheese and biscuit crumble in a glass."
+ },
+ {
+  "category": "beverages",
+  "dish": "Saigon Brew",
+  "where": "list",
+  "group": "Signature",
+  "desc": "Condensed milk under a double shot, over ice. Vietnamese style."
+ },
+ {
+  "category": "beverages",
+  "dish": "Cinnamon Brew",
+  "where": "list",
+  "group": "Signature",
+  "desc": "Espresso, steamed milk and cinnamon under a foam cap. Hot or iced."
+ },
+ {
+  "category": "beverages",
+  "dish": "Tropical Punch",
+  "where": "list",
+  "group": "Signature",
+  "desc": "Orange, cranberry, pineapple and mango over ice cream. Thick and cold."
+ },
+ {
+  "category": "beverages",
+  "dish": "Signature Hot Chocolate",
+  "where": "list",
+  "group": "Signature",
+  "desc": "Melted chocolate, milk, fresh cream and a hazelnut finish."
+ },
+ {
+  "category": "beverages",
+  "dish": "Hot Chocolate",
+  "where": "list",
+  "group": "Signature",
+  "desc": "Melted chocolate, milk and fresh cream. Thick, not powdery."
+ },
+ {
+  "category": "beverages",
+  "dish": "Single Origin Espresso",
+  "where": "list",
+  "group": "Hot Coffees",
+  "desc": "A single 30 ml shot. Nothing added."
+ },
+ {
+  "category": "beverages",
+  "dish": "Double Espresso",
+  "where": "list",
+  "group": "Hot Coffees",
+  "desc": "Two shots, 60 ml. No milk."
+ },
+ {
+  "category": "beverages",
+  "dish": "Americano",
+  "where": "list",
+  "group": "Hot Coffees",
+  "desc": "A shot of espresso lengthened with 180 ml hot water."
+ },
+ {
+  "category": "beverages",
+  "dish": "Classic Cappuccino",
+  "where": "list",
+  "group": "Hot Coffees",
+  "desc": "A single shot under 100 ml of steamed milk and fine microfoam."
+ },
+ {
+  "category": "beverages",
+  "dish": "Latte",
+  "where": "list",
+  "group": "Hot Coffees",
+  "desc": "A shot of espresso in 120 ml steamed milk. Milkier than the cappuccino."
+ },
+ {
+  "category": "beverages",
+  "dish": "House Mocha",
+  "where": "list",
+  "group": "Hot Coffees",
+  "desc": "Espresso, dark chocolate, steamed milk. The sweet one."
+ },
+ {
+  "category": "beverages",
+  "dish": "Hazelnut Velvet",
+  "where": "list",
+  "group": "Hot Coffees",
+  "desc": "Hazelnut syrup, espresso, steamed milk."
+ },
+ {
+  "category": "beverages",
+  "dish": "Biscoff Latte",
+  "where": "list",
+  "group": "Hot Coffees",
+  "desc": "Biscoff spread blended into espresso and steamed milk. Speculoos in a cup."
+ },
+ {
+  "category": "beverages",
+  "dish": "Nutella Cappuccino",
+  "where": "list",
+  "group": "Hot Coffees",
+  "desc": "Nutella blended into espresso and steamed milk."
+ },
+ {
+  "category": "beverages",
+  "dish": "Iced Long Black",
+  "where": "list",
+  "group": "On The Rocks",
+  "desc": "A double shot over 210 ml cold water and ice. No milk."
+ },
+ {
+  "category": "beverages",
+  "dish": "Iced Over Coffee",
+  "where": "list",
+  "group": "On The Rocks",
+  "desc": "Espresso over cold soda and ice. Sharp and fizzy."
+ },
+ {
+  "category": "beverages",
+  "dish": "Iced Velvet Latte",
+  "where": "list",
+  "group": "On The Rocks",
+  "desc": "Espresso, cold milk, ice, and a cap of velvet foam."
+ },
+ {
+  "category": "beverages",
+  "dish": "Iced House Mocha",
+  "where": "list",
+  "group": "On The Rocks",
+  "desc": "Espresso, chocolate and cold milk over ice, finished with foam."
+ },
+ {
+  "category": "beverages",
+  "dish": "Veux Cold Coffee",
+  "where": "list",
+  "group": "On The Rocks",
+  "desc": "Espresso, milk and ice cream, blended thick."
+ },
+ {
+  "category": "beverages",
+  "dish": "Signature Frappe",
+  "where": "list",
+  "group": "On The Rocks",
+  "desc": "Espresso, milk and ice cream, blended thick."
+ },
+ {
+  "category": "beverages",
+  "dish": "Classic Cold Brew",
+  "where": "list",
+  "group": "Cold Brews",
+  "desc": "Steeped cold for hours, never heated. Served long over ice."
+ },
+ {
+  "category": "beverages",
+  "dish": "Peach Cold Brew",
+  "where": "list",
+  "group": "Cold Brews",
+  "desc": "Cold brew with peach. A lighter, sweeter cup."
+ },
+ {
+  "category": "beverages",
+  "dish": "Cranberry Cold Brew",
+  "where": "list",
+  "group": "Cold Brews",
+  "desc": "Cold brew cut with cranberry juice. Tart against the smooth."
+ },
+ {
+  "category": "beverages",
+  "dish": "Orange Cold Brew",
+  "where": "list",
+  "group": "Cold Brews",
+  "desc": "Cold brew and orange juice in equal measure. Citrus-forward."
+ },
+ {
+  "category": "beverages",
+  "dish": "Mocha",
+  "where": "list",
+  "group": "Frappes",
+  "desc": "Chocolate, espresso, milk and ice cream, blended."
+ },
+ {
+  "category": "beverages",
+  "dish": "Brownie Blend",
+  "where": "list",
+  "group": "Frappes",
+  "desc": "Blended with a whole brownie, chocolate, espresso and ice cream."
+ },
+ {
+  "category": "beverages",
+  "dish": "Cookies & Cream",
+  "where": "list",
+  "group": "Frappes",
+  "desc": "Cookie syrup, caramel, espresso and ice cream, blended."
+ },
+ {
+  "category": "beverages",
+  "dish": "Caramel Hazelnut Blend",
+  "where": "list",
+  "group": "Frappes",
+  "desc": "Caramel and hazelnut blended with espresso and ice cream."
+ },
+ {
+  "category": "beverages",
+  "dish": "Biscoff",
+  "where": "list",
+  "group": "Frappes",
+  "desc": "Biscoff blended with espresso and ice cream."
+ },
+ {
+  "category": "beverages",
+  "dish": "Brownie Indulgence",
+  "where": "list",
+  "group": "Milkshakes",
+  "desc": "Four scoops, a whole brownie, hazelnut and chocolate. No coffee."
+ },
+ {
+  "category": "beverages",
+  "dish": "Cream Cookie",
+  "where": "list",
+  "group": "Milkshakes",
+  "desc": "Cookie syrup, caramel, fresh cream and three cookies, blended."
+ },
+ {
+  "category": "beverages",
+  "dish": "Strawberry Cheesecake",
+  "where": "list",
+  "group": "Milkshakes",
+  "desc": "Strawberry, cream cheese and biscuit crumble in a glass."
+ },
+ {
+  "category": "beverages",
+  "dish": "Blueberry Cheesecake",
+  "where": "list",
+  "group": "Milkshakes",
+  "desc": "Blueberry, cream cheese and biscuit crumble in a glass."
+ },
+ {
+  "category": "beverages",
+  "dish": "Iced Matcha Latte",
+  "where": "list",
+  "group": "Matcha",
+  "desc": "Ceremonial matcha whisked into cold milk, over ice."
+ },
+ {
+  "category": "beverages",
+  "dish": "Mango Infused Matcha",
+  "where": "list",
+  "group": "Matcha",
+  "desc": "Matcha and mango whisked into cold milk, over ice."
+ },
+ {
+  "category": "beverages",
+  "dish": "Infused Strawberry Matcha",
+  "where": "list",
+  "group": "Matcha",
+  "desc": "Matcha and strawberry pulp whisked into cold milk, over ice."
+ },
+ {
+  "category": "sushi",
+  "dish": "Chef Special Avocado Roll",
+  "where": "featured:Most Ordered",
+  "group": null,
+  "desc": "Hass avocado, crunchy tempura crumb, truffle mayo. The rich one on the veg side."
+ },
+ {
+  "category": "sushi",
+  "dish": "Veg California Roll",
+  "where": "featured:Most Ordered",
+  "group": null,
+  "desc": "Cucumber, cream cheese, asparagus inside. Avocado-wrapped. Goma dressing."
+ },
+ {
+  "category": "sushi",
+  "dish": "Spicy Thai Basil Chicken Dimsum (4pc)",
+  "where": "featured:Most Ordered",
+  "group": null,
+  "desc": "Thai basil chicken in starch-dough wrapper. Coconut-herb reduction."
+ },
+ {
+  "category": "sushi",
+  "dish": "Rainbow Sushi",
+  "where": "featured:Must Try",
+  "group": null,
+  "desc": "Prawn tempura and crab stick inside. Hamachi, salmon, and tuna draped on top. Teriyaki and spicy sauce. The showpiece roll."
+ },
+ {
+  "category": "sushi",
+  "dish": "Tiger Roll",
+  "where": "featured:Must Try",
+  "group": null,
+  "desc": "Tempura soft shell crab inside. Tobiko on top, teriyaki drizzle. Substantial."
+ },
+ {
+  "category": "sushi",
+  "dish": "Har Gow (Prawns Dimsum) (4pc)",
+  "where": "featured:Must Try",
+  "group": null,
+  "desc": "Translucent-skinned prawn dimsum, Cantonese style. Coconut-gochujang dip."
+ },
+ {
+  "category": "sushi",
+  "dish": "Asparagus Maki Roll / Cream Cheese",
+  "where": "list",
+  "group": "Sushi — Veg",
+  "desc": "Asparagus and cream cheese, rolled, sliced. Clean and simple."
+ },
+ {
+  "category": "sushi",
+  "dish": "Mexican Hat Boy",
+  "where": "list",
+  "group": "Sushi — Veg",
+  "desc": "Asparagus tempura, cream cheese inside. Spicy sauce, sliced jalapeño on top."
+ },
+ {
+  "category": "sushi",
+  "dish": "Chef Special Avocado Roll",
+  "where": "list",
+  "group": "Sushi — Veg",
+  "desc": "Hass avocado, crunchy tempura crumb, truffle mayo. The rich one on the veg side."
+ },
+ {
+  "category": "sushi",
+  "dish": "Veg California Roll",
+  "where": "list",
+  "group": "Sushi — Veg",
+  "desc": "Cucumber, cream cheese, asparagus inside. Avocado-wrapped. Goma dressing."
+ },
+ {
+  "category": "sushi",
+  "dish": "Truffle Edamame & Asparagus Roll",
+  "where": "list",
+  "group": "Sushi — Veg",
+  "desc": "Edamame paste and Thai asparagus inside. Tempura crunch, truffle mayo, spring onion on top."
+ },
+ {
+  "category": "sushi",
+  "dish": "Veg Tempura Sushi",
+  "where": "list",
+  "group": "Sushi — Veg",
+  "desc": "Carrot, asparagus, mushroom — battered and rolled. Furikake seasoning, spicy mayo drizzle."
+ },
+ {
+  "category": "sushi",
+  "dish": "Asparagus & Cream Cheese Roll",
+  "where": "list",
+  "group": "Sushi — Veg",
+  "desc": "Asparagus, cream cheese, nori-wrapped. Straightforward."
+ },
+ {
+  "category": "sushi",
+  "dish": "Salmon Maki Roll",
+  "where": "list",
+  "group": "Sushi — Non-Veg",
+  "desc": "Salmon, sushi rice, nori. The baseline."
+ },
+ {
+  "category": "sushi",
+  "dish": "Alaska Roll",
+  "where": "list",
+  "group": "Sushi — Non-Veg",
+  "desc": "Salmon-wrapped outside. Avocado, cream cheese inside. Tobiko on top."
+ },
+ {
+  "category": "sushi",
+  "dish": "Tuna Maki Roll",
+  "where": "list",
+  "group": "Sushi — Non-Veg",
+  "desc": "Tuna, sushi rice, nori. Clean cut."
+ },
+ {
+  "category": "sushi",
+  "dish": "Spicy Tuna Maki Roll",
+  "where": "list",
+  "group": "Sushi — Non-Veg",
+  "desc": "Tuna with spicy mayo, rolled. More heat than the standard maki."
+ },
+ {
+  "category": "sushi",
+  "dish": "Rainbow Sushi",
+  "where": "list",
+  "group": "Sushi — Non-Veg",
+  "desc": "Prawn tempura and crab stick inside. Hamachi, salmon, and tuna draped on top. Teriyaki and spicy sauce. The showpiece roll."
+ },
+ {
+  "category": "sushi",
+  "dish": "Ebi Tempura Sushi Roll",
+  "where": "list",
+  "group": "Sushi — Non-Veg",
+  "desc": "Prawn tempura inside, rolled and sliced. Crisp centre, soft rice."
+ },
+ {
+  "category": "sushi",
+  "dish": "Classic California Roll",
+  "where": "list",
+  "group": "Sushi — Non-Veg",
+  "desc": "Crab stick, avocado, cucumber. Tobiko and wasabi mayo. The one everyone knows."
+ },
+ {
+  "category": "sushi",
+  "dish": "Tiger Roll",
+  "where": "list",
+  "group": "Sushi — Non-Veg",
+  "desc": "Tempura soft shell crab inside. Tobiko on top, teriyaki drizzle. Substantial."
+ },
+ {
+  "category": "sushi",
+  "dish": "Classic Ebi Tempura Sushi",
+  "where": "list",
+  "group": "Sushi — Non-Veg",
+  "desc": "Crab stick and avocado with prawn tempura. Japanese mayo."
+ },
+ {
+  "category": "sushi",
+  "dish": "Chicken Katsu Sushi",
+  "where": "list",
+  "group": "Sushi — Non-Veg",
+  "desc": "Panko-fried chicken inside, cream cheese. A crossover roll — not traditional, deliberately so."
+ },
+ {
+  "category": "sushi",
+  "dish": "Avocado Nigiri",
+  "where": "list",
+  "group": "Nigiri (4 pcs) — Veg",
+  "desc": "Hass avocado over pressed rice. Four pieces."
+ },
+ {
+  "category": "sushi",
+  "dish": "Teriyaki Baby Corn Nigiri",
+  "where": "list",
+  "group": "Nigiri (4 pcs) — Veg",
+  "desc": "Baby corn, teriyaki glaze, pressed rice. Four pieces."
+ },
+ {
+  "category": "sushi",
+  "dish": "Asparagus Nigiri",
+  "where": "list",
+  "group": "Nigiri (4 pcs) — Veg",
+  "desc": "Blanched asparagus over pressed rice. Four pieces."
+ },
+ {
+  "category": "sushi",
+  "dish": "Salmon Nigiri",
+  "where": "list",
+  "group": "Nigiri (4 pcs) — Non-Veg",
+  "desc": "Raw salmon over pressed rice. Four pieces."
+ },
+ {
+  "category": "sushi",
+  "dish": "Tuna Nigiri",
+  "where": "list",
+  "group": "Nigiri (4 pcs) — Non-Veg",
+  "desc": "Raw tuna over pressed rice. Four pieces."
+ },
+ {
+  "category": "sushi",
+  "dish": "Yellowtail Nigiri",
+  "where": "list",
+  "group": "Nigiri (4 pcs) — Non-Veg",
+  "desc": "Raw hamachi over pressed rice. Four pieces. The fattiest of the three."
+ },
+ {
+  "category": "sushi",
+  "dish": "Salmon Sashimi",
+  "where": "list",
+  "group": "Sashimi (3 pcs)",
+  "desc": "Three slices, raw. No rice."
+ },
+ {
+  "category": "sushi",
+  "dish": "Tuna Sashimi",
+  "where": "list",
+  "group": "Sashimi (3 pcs)",
+  "desc": "Three slices, raw. Leaner, cleaner."
+ },
+ {
+  "category": "sushi",
+  "dish": "Yellowtail Sashimi",
+  "where": "list",
+  "group": "Sashimi (3 pcs)",
+  "desc": "Three slices, raw. Buttery."
+ },
+ {
+  "category": "mains",
+  "dish": "Caramelized Lamb Supreme",
+  "where": "featured:Most Ordered",
+  "group": null,
+  "desc": "Double lamb mince, double cheese, garlic mayo, pickled vegetables, caramelised onion. The heaviest burger on the menu."
+ },
+ {
+  "category": "mains",
+  "dish": "Ravioli Pasta",
+  "where": "featured:Most Ordered",
+  "group": null,
+  "desc": "Handmade in-house. Spinach and cottage cheese filling. Choose alfredo, pink, pesto, or arrabbiata sauce."
+ },
+ {
+  "category": "mains",
+  "dish": "Romano Margherita",
+  "where": "featured:Most Ordered",
+  "group": null,
+  "desc": "Mozzarella, tomato, olive. The straightforward one."
+ },
+ {
+  "category": "mains",
+  "dish": "Spicy Buffalo Pulled Chicken",
+  "where": "featured:Most Ordered",
+  "group": null,
+  "desc": "Pulled chicken in buffalo sauce, sriracha mayo, garlic mayo, fried egg, cheese. Double sauce, double mayo — not subtle."
+ },
+ {
+  "category": "mains",
+  "dish": "Lasagna",
+  "where": "featured:Must Try",
+  "group": null,
+  "desc": "Layered baked pasta, pomodori pelati sauce. English vegetables (veg) or minced chicken (non-veg)."
+ },
+ {
+  "category": "mains",
+  "dish": "Crumbfried Truffle Mushroom",
+  "where": "featured:Must Try",
+  "group": null,
+  "desc": "Crumb-fried mushroom patty, truffle finish. Truffle mayo, tonkatsu sauce, cheese. Served with fries."
+ },
+ {
+  "category": "mains",
+  "dish": "Veggie Nepolitana",
+  "where": "featured:Must Try",
+  "group": null,
+  "desc": "Mozzarella, bell peppers, cherry tomato, mushroom, olive, spiced pineapple. Loaded."
+ },
+ {
+  "category": "mains",
+  "dish": "Sloppy Joe",
+  "where": "featured:Must Try",
+  "group": null,
+  "desc": "Hoisin-marinated pulled chicken, cheddar, lettuce, garlic mayo. Asian take on the American original."
+ },
+ {
+  "category": "mains",
+  "dish": "Veux Katsu",
+  "where": "featured:Must Try",
+  "group": null,
+  "desc": "Panko-fried chicken, Asian slaw, fried egg, sriracha mayo, cheese. The house burger — Japanese-inspired, substantial."
+ },
+ {
+  "category": "mains",
+  "dish": "Clear Tofu Soup",
+  "where": "list",
+  "group": "Soups",
+  "desc": "Silken tofu in clear broth, scallion, white pepper. Light start."
+ },
+ {
+  "category": "mains",
+  "dish": "Tom Yum",
+  "where": "list",
+  "group": "Soups",
+  "desc": "Thai hot-and-sour. Lemongrass, galangal, kaffir lime, chilli. Add chicken or prawn."
+ },
+ {
+  "category": "mains",
+  "dish": "Spicy Thai Coconut Soup",
+  "where": "list",
+  "group": "Soups",
+  "desc": "Coconut milk, galangal, lemongrass, chilli. Creamy base, sharp heat. Add chicken or prawn."
+ },
+ {
+  "category": "mains",
+  "dish": "Miso Soup",
+  "where": "list",
+  "group": "Soups",
+  "desc": "White miso, silken tofu, wakame. The Japanese daily."
+ },
+ {
+  "category": "mains",
+  "dish": "Exotic Asian Green Salad",
+  "where": "list",
+  "group": "Salads — Veg",
+  "desc": "Arugula, edamame, asparagus, broccoli over mixed greens. Creamy wasabi dressing."
+ },
+ {
+  "category": "mains",
+  "dish": "Silken Tofu Salad",
+  "where": "list",
+  "group": "Salads — Veg",
+  "desc": "Silken tofu, crisp lotus stem, cherry tomato, cucumber. Goma sesame dressing."
+ },
+ {
+  "category": "mains",
+  "dish": "Tempura Soft Shell Crab Salad",
+  "where": "list",
+  "group": "Salads — Non-Veg",
+  "desc": "Whole soft shell crab in tempura over avocado and cherry tomato. Wasabi sesame dressing."
+ },
+ {
+  "category": "mains",
+  "dish": "Asian Grilled Chicken Salad",
+  "where": "list",
+  "group": "Salads — Non-Veg",
+  "desc": "Grilled chicken, tomato, celery, fresh mint, spring onion. House dressing."
+ },
+ {
+  "category": "mains",
+  "dish": "Yum Woon Sen",
+  "where": "list",
+  "group": "Salads — Non-Veg",
+  "desc": "Thai glass noodle salad. Prawn, black fungus, chilli-lime dressing. Served cold."
+ },
+ {
+  "category": "mains",
+  "dish": "Veggies Spring Roll",
+  "where": "list",
+  "group": "Appetizers — Veg",
+  "desc": "Crisp-fried vegetable rolls. Sweet chilli dip."
+ },
+ {
+  "category": "mains",
+  "dish": "Japanese Vegetable Gyoza",
+  "where": "list",
+  "group": "Appetizers — Veg",
+  "desc": "Pan-seared vegetable dumplings, crisp base, soft top. Chilli ponzu."
+ },
+ {
+  "category": "mains",
+  "dish": "Kung Pao Tofu Dry",
+  "where": "list",
+  "group": "Appetizers — Veg",
+  "desc": "Wok-tossed tofu, peanuts, dried chilli, Sichuan pepper. No sauce."
+ },
+ {
+  "category": "mains",
+  "dish": "Edamame with Pods",
+  "where": "list",
+  "group": "Appetizers — Veg",
+  "desc": "Steamed edamame pods, truffle oil, sea salt."
+ },
+ {
+  "category": "mains",
+  "dish": "Spicy Baby Potato",
+  "where": "list",
+  "group": "Appetizers — Veg",
+  "desc": "Crisp baby potatoes in chilli-garlic glaze. Wok-finished."
+ },
+ {
+  "category": "mains",
+  "dish": "Lemongrass Mock Meat",
+  "where": "list",
+  "group": "Appetizers — Veg",
+  "desc": "Lemongrass-marinated plant protein, crisp-fried. Spicy chilli dip."
+ },
+ {
+  "category": "mains",
+  "dish": "Crispy Lotus Stem & Water Chestnut",
+  "where": "list",
+  "group": "Appetizers — Veg",
+  "desc": "Batter-fried lotus stem and water chestnut. Light crunch, clean flavour."
+ },
+ {
+  "category": "mains",
+  "dish": "Teriyaki Miso Eggplant",
+  "where": "list",
+  "group": "Appetizers — Veg",
+  "desc": "Eggplant in teriyaki-miso glaze. Caramelised edges."
+ },
+ {
+  "category": "mains",
+  "dish": "Vietnamese Rice Paper Roll",
+  "where": "list",
+  "group": "Appetizers — Veg",
+  "desc": "Grilled paneer and seasonal greens in rice paper. Peanut sauce. No fry."
+ },
+ {
+  "category": "mains",
+  "dish": "Exotic Asian Veg & Cheese Dimsum (4pc)",
+  "where": "list",
+  "group": "Appetizers — Veg",
+  "desc": "Steamed — vegetables, water chestnut, cheese filling. Green curry reduction."
+ },
+ {
+  "category": "mains",
+  "dish": "Thai Style Tofu Satay",
+  "where": "list",
+  "group": "Appetizers — Veg",
+  "desc": "Firm tofu, Thai herb and lime marinade, grilled. Peanut sauce."
+ },
+ {
+  "category": "mains",
+  "dish": "Bruschetta (4pc)",
+  "where": "list",
+  "group": "Appetizers — Veg",
+  "desc": "Toasted bread, avocado salsa or tomato salsa. Choose one."
+ },
+ {
+  "category": "mains",
+  "dish": "Arancini (Sicilian Rice Balls)",
+  "where": "list",
+  "group": "Appetizers — Veg",
+  "desc": "Mozzarella-stuffed risotto balls, fried golden. Marinara."
+ },
+ {
+  "category": "mains",
+  "dish": "Thai Chicken Satay",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Grilled chicken skewers, charred edges. Thai peanut sauce."
+ },
+ {
+  "category": "mains",
+  "dish": "Thai Style Chilli Chicken",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Batter-fried chicken in sweet chilli glaze. Wok-tossed."
+ },
+ {
+  "category": "mains",
+  "dish": "Japanese Chicken Gyoza",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Pan-seared chicken dumplings. Chilli ponzu dip."
+ },
+ {
+  "category": "mains",
+  "dish": "Sichuan Mala Chicken",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Chicken in mala numbing-spice sauce. Sichuan peppercorn, dried chilli, real heat."
+ },
+ {
+  "category": "mains",
+  "dish": "Leeks and Chicken Skewers",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Chicken and leek, skewered and grilled. Clean char, simple seasoning."
+ },
+ {
+  "category": "mains",
+  "dish": "Panko Crumbed Prawn",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Panko-crusted prawns, deep-fried crisp. Japanese tartare sauce."
+ },
+ {
+  "category": "mains",
+  "dish": "Chilli Basil Prawn",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Prawns wok-tossed with fresh Thai basil and bird's eye chilli."
+ },
+ {
+  "category": "mains",
+  "dish": "Wasabi Prawn",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Crisp-fried prawns in wasabi mayo. Sharp, creamy heat."
+ },
+ {
+  "category": "mains",
+  "dish": "Thai Fish Cake",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Pan-fried Thai fish cakes, aromatic herbs. Sweet chilli dip."
+ },
+ {
+  "category": "mains",
+  "dish": "Crispy Tempura Calamari (Squid)",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Squid rings in light tempura batter. Not heavy."
+ },
+ {
+  "category": "mains",
+  "dish": "Crispy Soft Shell Crab",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Whole soft shell crab, batter-fried. Chilli-garlic toss."
+ },
+ {
+  "category": "mains",
+  "dish": "Almond Prawn Roll (4pc)",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Chopped prawn and crushed almond in spring roll wrapper. Sesame oil finish."
+ },
+ {
+  "category": "mains",
+  "dish": "7 Spice Chicken",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Tempura-battered fried chicken, shichimi togarashi dust."
+ },
+ {
+  "category": "mains",
+  "dish": "Prawn Tempura with Ponzu",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Tiger prawns in tempura batter. Ponzu dip."
+ },
+ {
+  "category": "mains",
+  "dish": "Chicken Katsu with Tonkatsu Dip",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Panko-crusted chicken breast, Japanese slaw. Tonkatsu sauce."
+ },
+ {
+  "category": "mains",
+  "dish": "Spicy Thai Basil Chicken Dimsum (4pc)",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Thai basil chicken in starch-dough wrapper. Coconut-herb reduction."
+ },
+ {
+  "category": "mains",
+  "dish": "Har Gow (Prawns Dimsum) (4pc)",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Translucent-skinned prawn dimsum, Cantonese style. Coconut-gochujang dip."
+ },
+ {
+  "category": "mains",
+  "dish": "Malaysian Style Chicken",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Julienned chicken, peanuts, bell pepper, spinach. Green chilli sauce."
+ },
+ {
+  "category": "mains",
+  "dish": "Chicken Nuggets (2pc)",
+  "where": "list",
+  "group": "Appetizers — Non-Veg",
+  "desc": "Cheese-stuffed chicken breast, crumb-fried. Tartare sauce, greens."
+ },
+ {
+  "category": "mains",
+  "dish": "Stir Fry Aubergine in Thai Chilli Sauce",
+  "where": "list",
+  "group": "Curry — Veg",
+  "desc": "Wok-fried eggplant in Thai chilli paste. Smoky, sweet-hot. The cheapest main — doesn't eat like it."
+ },
+ {
+  "category": "mains",
+  "dish": "Assorted Wild Mushroom in Ginger Soy Sauce",
+  "where": "list",
+  "group": "Curry — Veg",
+  "desc": "Mixed mushrooms, ginger, soy. Wok-finished. Clean umami."
+ },
+ {
+  "category": "mains",
+  "dish": "Stir Fry Asian Green in Butter Garlic Sauce",
+  "where": "list",
+  "group": "Curry — Veg",
+  "desc": "Seasonal Asian greens — pak choi, broccoli, morning glory or similar — in butter-garlic. Simple wok work."
+ },
+ {
+  "category": "mains",
+  "dish": "Wok Tossed Mock Meat in Thai Chilli Paste",
+  "where": "list",
+  "group": "Curry — Veg",
+  "desc": "Plant protein in Thai chilli paste, wok-tossed. Same treatment as the chicken mains, different protein."
+ },
+ {
+  "category": "mains",
+  "dish": "Stir Fry Tofu with Cashew Nut",
+  "where": "list",
+  "group": "Curry — Veg",
+  "desc": "Firm tofu, roasted cashew, dried chilli, bell pepper. Wok-fried. The protein-heavy veg option."
+ },
+ {
+  "category": "mains",
+  "dish": "Stir Fry Baby Bokchoy, Bamboo Shoot & Broccoli",
+  "where": "list",
+  "group": "Curry — Veg",
+  "desc": "Three vegetables in soy-garlic sauce. Light, clean, intentionally simple."
+ },
+ {
+  "category": "mains",
+  "dish": "Pad Karpow Gai (Minced Chicken Chilli Basil)",
+  "where": "list",
+  "group": "Curry — Non-Veg",
+  "desc": "Minced chicken, holy basil, bird's eye chilli, fish sauce. Thai street standard. Properly spicy."
+ },
+ {
+  "category": "mains",
+  "dish": "Stir Fried Chicken With Cashew Nut",
+  "where": "list",
+  "group": "Curry — Non-Veg",
+  "desc": "Chicken, roasted cashew, dried chilli, onion. Wok-fried. The familiar one — done with better ingredients."
+ },
+ {
+  "category": "mains",
+  "dish": "Kung Pao Chicken",
+  "where": "list",
+  "group": "Curry — Non-Veg",
+  "desc": "Chicken, peanut, dried chilli, Sichuan pepper. Sweet-sour-spicy. Classic Sichuan, dry style."
+ },
+ {
+  "category": "mains",
+  "dish": "Stir Fried Chicken in Chilli Black Bean Sauce",
+  "where": "list",
+  "group": "Curry — Non-Veg",
+  "desc": "Chicken wok-tossed in fermented black bean and chilli. Salty, pungent, rich. Pairs with steamed rice."
+ },
+ {
+  "category": "mains",
+  "dish": "Stir Fried Prawn in Chilli Basil Sauce",
+  "where": "list",
+  "group": "Curry — Non-Veg",
+  "desc": "Prawns with Thai basil and fresh chilli. Wok heat, quick cook. The lighter seafood main."
+ },
+ {
+  "category": "mains",
+  "dish": "Wok Tossed Sea Bass in Thai Chilli Sauce",
+  "where": "list",
+  "group": "Curry — Non-Veg",
+  "desc": "Sea bass fillet in Thai chilli paste. Wok-seared, not deep-fried. Premium fish, premium price."
+ },
+ {
+  "category": "mains",
+  "dish": "Wok Tossed Lamb in Chilli Black Bean Sauce",
+  "where": "list",
+  "group": "Curry — Non-Veg",
+  "desc": "Lamb in fermented black bean and chilli. The heaviest main on the menu. Slow-braised protein, wok-finished sauce."
+ },
+ {
+  "category": "mains",
+  "dish": "Penne (Choice of Sauce)",
+  "where": "list",
+  "group": "Pasta",
+  "desc": "Choose your sauce: alfredo, arrabbiata, or creamy pesto. Add chicken, prawn, or lamb meatball."
+ },
+ {
+  "category": "mains",
+  "dish": "Fettuccine (Choice of Sauce)",
+  "where": "list",
+  "group": "Pasta",
+  "desc": "Flat ribbon pasta. Creamy pesto, pomodoro, or alfredo. Add chicken, prawn, or lamb meatball."
+ },
+ {
+  "category": "mains",
+  "dish": "Spaghetti (Choice of Sauce)",
+  "where": "list",
+  "group": "Pasta",
+  "desc": "Four sauce options: alfredo, arrabbiata, creamy pesto, or aglio olio. Add chicken, prawn, or lamb meatball."
+ },
+ {
+  "category": "mains",
+  "dish": "Macaroni",
+  "where": "list",
+  "group": "Pasta",
+  "desc": "Baked in triple cheese sauce. No sauce choice — this one's decided for you."
+ },
+ {
+  "category": "mains",
+  "dish": "Tortellini Pasta",
+  "where": "list",
+  "group": "Pasta",
+  "desc": "Handmade in-house. Potato and cream filling. Choose alfredo, pink, pesto, or arrabbiata sauce."
+ },
+ {
+  "category": "mains",
+  "dish": "Ravioli Pasta",
+  "where": "list",
+  "group": "Pasta",
+  "desc": "Handmade in-house. Spinach and cottage cheese filling. Choose alfredo, pink, pesto, or arrabbiata sauce."
+ },
+ {
+  "category": "mains",
+  "dish": "Lasagna",
+  "where": "list",
+  "group": "Pasta",
+  "desc": "Layered baked pasta, pomodori pelati sauce. English vegetables (veg) or minced chicken (non-veg)."
+ },
+ {
+  "category": "mains",
+  "dish": "Asian Green",
+  "where": "list",
+  "group": "Pizza — Veg",
+  "desc": "Wok-tossed Asian vegetables, mozzarella, pizza sauce. The crossover pizza."
+ },
+ {
+  "category": "mains",
+  "dish": "Peri Peri Cottage Cheese",
+  "where": "list",
+  "group": "Pizza — Veg",
+  "desc": "Spiced cottage cheese, bell peppers, black olive, mozzarella, marinara base. Moderate heat."
+ },
+ {
+  "category": "mains",
+  "dish": "Romano Margherita",
+  "where": "list",
+  "group": "Pizza — Veg",
+  "desc": "Mozzarella, tomato, olive. The straightforward one."
+ },
+ {
+  "category": "mains",
+  "dish": "Veggie Nepolitana",
+  "where": "list",
+  "group": "Pizza — Veg",
+  "desc": "Mozzarella, bell peppers, cherry tomato, mushroom, olive, spiced pineapple. Loaded."
+ },
+ {
+  "category": "mains",
+  "dish": "Simply Cheese",
+  "where": "list",
+  "group": "Pizza — Veg",
+  "desc": "Mozzarella, orange cheddar, parmesan. Three cheeses, nothing else. For when you just want cheese."
+ },
+ {
+  "category": "mains",
+  "dish": "Thai Chilli Chicken",
+  "where": "list",
+  "group": "Pizza — Non-Veg",
+  "desc": "Thai chilli chicken, mozzarella, onion, red pepper, red paprika. Asian-Italian crossover, sharper than the Hawaiian."
+ },
+ {
+  "category": "mains",
+  "dish": "Hawaiian Delicacy",
+  "where": "list",
+  "group": "Pizza — Non-Veg",
+  "desc": "Smoked chicken breast, spiced pineapple, mozzarella, cheddar, parmesan, béchamel. Sweet-savoury."
+ },
+ {
+  "category": "mains",
+  "dish": "Chilli Garlic Shrimp",
+  "where": "list",
+  "group": "Pizza — Non-Veg",
+  "desc": "Wok-tossed shrimp, feta crumble, mozzarella, peppers, onion. The premium pizza — priced accordingly."
+ },
+ {
+  "category": "mains",
+  "dish": "Crumbfried Truffle Mushroom",
+  "where": "list",
+  "group": "Burgers",
+  "desc": "Crumb-fried mushroom patty, truffle finish. Truffle mayo, tonkatsu sauce, cheese. Served with fries."
+ },
+ {
+  "category": "mains",
+  "dish": "Cottage Cheese",
+  "where": "list",
+  "group": "Burgers",
+  "desc": "Grilled cottage cheese, kimchi, truffle mayo, cheese. Served with fries. The Korean-leaning one."
+ },
+ {
+  "category": "mains",
+  "dish": "Veux Katsu",
+  "where": "list",
+  "group": "Burgers",
+  "desc": "Panko-fried chicken, Asian slaw, fried egg, sriracha mayo, cheese. The house burger — Japanese-inspired, substantial."
+ },
+ {
+  "category": "mains",
+  "dish": "Basil Chicken Mince",
+  "where": "list",
+  "group": "Burgers",
+  "desc": "Grilled chicken mince patty, garlic mayo, Asian slaw, cheese. Lighter than the Katsu."
+ },
+ {
+  "category": "mains",
+  "dish": "Caramelized Lamb Supreme",
+  "where": "list",
+  "group": "Burgers",
+  "desc": "Double lamb mince, double cheese, garlic mayo, pickled vegetables, caramelised onion. The heaviest burger on the menu."
+ },
+ {
+  "category": "mains",
+  "dish": "Grilled Veg Croissant Sandwich",
+  "where": "list",
+  "group": "Sandwiches",
+  "desc": "Peri peri grilled vegetables, three-cheese blend, pesto mayo in a croissant. Lighter side of the menu."
+ },
+ {
+  "category": "mains",
+  "dish": "Smoked Cottage Cheese in Focaccia",
+  "where": "list",
+  "group": "Sandwiches",
+  "desc": "Cottage cheese cubes, sriracha mayo, pickled vegetables, cheese. Focaccia bread."
+ },
+ {
+  "category": "mains",
+  "dish": "Japanese Egg Sandwich",
+  "where": "list",
+  "group": "Sandwiches",
+  "desc": "Japanese-style omelette in multigrain bread. Herb butter, lettuce, pumpkin crackers. Clean and light."
+ },
+ {
+  "category": "mains",
+  "dish": "Egg Mustard Sandwich",
+  "where": "list",
+  "group": "Sandwiches",
+  "desc": "Boiled egg with Dijon mustard in multigrain bread. Pumpkin crackers. The café sandwich — simple, done well."
+ },
+ {
+  "category": "mains",
+  "dish": "Sloppy Joe",
+  "where": "list",
+  "group": "Sandwiches",
+  "desc": "Hoisin-marinated pulled chicken, cheddar, lettuce, garlic mayo. Asian take on the American original."
+ },
+ {
+  "category": "mains",
+  "dish": "Creole Chicken in Croissant",
+  "where": "list",
+  "group": "Sandwiches",
+  "desc": "Sriracha mayo, garlic mayo, kimchi, cheddar, chicken in a croissant. The spicy option."
+ },
+ {
+  "category": "mains",
+  "dish": "Spicy Buffalo Pulled Chicken",
+  "where": "list",
+  "group": "Sandwiches",
+  "desc": "Pulled chicken in buffalo sauce, sriracha mayo, garlic mayo, fried egg, cheese. Double sauce, double mayo — not subtle."
+ },
+ {
+  "category": "mains",
+  "dish": "Olive and Edamame Fried Rice",
+  "where": "list",
+  "group": "Rice & Noodles",
+  "desc": "Jasmine rice wok-fried with olive, edamame, garlic. Veg. Clean, Mediterranean-meets-Asian."
+ },
+ {
+  "category": "mains",
+  "dish": "Blue Pea Exotic Veg Fried Rice",
+  "where": "list",
+  "group": "Rice & Noodles",
+  "desc": "Jasmine rice coloured with butterfly pea flower. Edamame, seasonal vegetables. Looks vivid, tastes clean."
+ },
+ {
+  "category": "mains",
+  "dish": "Seafood Spicy XO Fried Rice",
+  "where": "list",
+  "group": "Rice & Noodles",
+  "desc": "Jasmine rice with mixed seafood in XO sauce. The premium fried rice — XO sauce is not a cheap ingredient."
+ },
+ {
+  "category": "mains",
+  "dish": "Korean Kimchi Fried Rice",
+  "where": "list",
+  "group": "Rice & Noodles",
+  "desc": "Jasmine rice, house kimchi, sesame oil. Wok-charred. Veg. Fermented tang."
+ },
+ {
+  "category": "mains",
+  "dish": "Khao Pad Kar Pow",
+  "where": "list",
+  "group": "Rice & Noodles",
+  "desc": "Spicy Thai basil fried rice. Veg. Same flavour profile as the Pad Karpow Gai main, in rice form."
+ },
+ {
+  "category": "mains",
+  "dish": "Garlic Fried Rice",
+  "where": "list",
+  "group": "Rice & Noodles",
+  "desc": "Jasmine rice, garlic, wok-finished. The base. Add chicken or prawn."
+ },
+ {
+  "category": "mains",
+  "dish": "Steamed Jasmine Rice (Half / Full)",
+  "where": "list",
+  "group": "Rice & Noodles",
+  "desc": "Plain steamed jasmine rice. Half or full portion. Meant to go with a curry or main."
+ },
+ {
+  "category": "mains",
+  "dish": "Drunken Noodle",
+  "where": "list",
+  "group": "Rice & Noodles",
+  "desc": "Thai flat noodles, chilli, basil, soy. Wok-charred. Veg. The name is the Thai pad kee mao — \"drunken\" refers to the heat, not the ingredients."
+ },
+ {
+  "category": "mains",
+  "dish": "Pad Thai Noodle",
+  "where": "list",
+  "group": "Rice & Noodles",
+  "desc": "Rice noodles, tamarind sauce, crushed peanut, bean sprout, lime. The one everyone orders first."
+ },
+ {
+  "category": "mains",
+  "dish": "Street Hakka Noodle",
+  "where": "list",
+  "group": "Rice & Noodles",
+  "desc": "Stir-fried egg noodles, Indo-Chinese style. Soy, chilli, vegetables. The comfort option."
+ },
+ {
+  "category": "mains",
+  "dish": "Pan Fried Noodles Hunan Style",
+  "where": "list",
+  "group": "Rice & Noodles",
+  "desc": "Crisp-bottomed noodles, Hunan chilli sauce. Exotic greens (veg) or grilled chicken (non-veg). Textural — crunchy base, saucy top."
+ },
+ {
+  "category": "mains",
+  "dish": "Udon Noodles with Chilli Black Bean",
+  "where": "list",
+  "group": "Rice & Noodles",
+  "desc": "Thick wheat udon in fermented black bean and chilli. Veg, chicken, or seafood. Chewy, salty, heavy."
+ },
+ {
+  "category": "mains",
+  "dish": "Mexican Tacos (3pc)",
+  "where": "list",
+  "group": "Around the World",
+  "desc": "Three tacos — veg or chicken. Sour cream. The lightest entry point on the menu."
+ },
+ {
+  "category": "mains",
+  "dish": "Mexican Rice Bowl",
+  "where": "list",
+  "group": "Around the World",
+  "desc": "Rice, pomodori pelati sauce, cheese. Veg, chicken, or prawns. A bowl format, not a burrito."
+ },
+ {
+  "category": "mains",
+  "dish": "Falafel with Hummus (5pc)",
+  "where": "list",
+  "group": "Around the World",
+  "desc": "Chickpea falafel, crisp outside, soft centre. Hummus on the side."
+ },
+ {
+  "category": "mains",
+  "dish": "Chicken Nuggets (2pc)",
+  "where": "list",
+  "group": "Around the World",
+  "desc": "Cheese-stuffed chicken breast, crumb-fried. Tartare sauce, greens."
+ }
+]
